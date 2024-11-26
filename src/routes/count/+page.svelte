@@ -4,7 +4,7 @@
 
 //functions
     const add = () => {
-
+        count++
     }
     const subtract = () => {
         count--
