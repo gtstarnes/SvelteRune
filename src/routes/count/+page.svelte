@@ -15,7 +15,7 @@
 </script>
 
 <div class="container">
-    <div>{count}</div>
+    <div class="count">{count}</div>
     <div>
         <button onclick={add}>Increase</button>
         <button onclick={reset}>Reset</button>
@@ -32,5 +32,8 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
+    }
+    .count {
+        font-size: 7rem;
     }
 </style>
