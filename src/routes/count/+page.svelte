@@ -36,4 +36,11 @@
     .count {
         font-size: 7rem;
     }
+
+    button {
+        border: 4px solid black;
+        padding: 0.5rem;
+        cursor: pointer;
+        font-weight: bold;
+    }
 </style>
