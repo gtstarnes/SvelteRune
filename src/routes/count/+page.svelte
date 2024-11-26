@@ -4,7 +4,7 @@
 </script>
 
 <div>
-    <div></div>
+    <div>{count}</div>
     <div>
         <button></button>
         <button></button>
