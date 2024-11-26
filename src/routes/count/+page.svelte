@@ -7,7 +7,7 @@
 
     }
     const subtract = () => {
-
+        count--
     }
     const reset = () => {
         count = 0
