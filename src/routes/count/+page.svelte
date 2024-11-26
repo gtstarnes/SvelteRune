@@ -10,7 +10,7 @@
 
     }
     const reset = () => {
-
+        count = 0
     }
 </script>
 
