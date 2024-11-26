@@ -17,9 +17,9 @@
 <div>
     <div>{count}</div>
     <div>
-        <button>Increase</button>
-        <button>Reset</button>
-        <button>Decrease</button>
+        <button onclick={add}>Increase</button>
+        <button onclick={reset}>Reset</button>
+        <button onclick={subtract}>Decrease</button>
     </div>
 </div>
 
