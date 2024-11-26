@@ -14,7 +14,7 @@
     }
 </script>
 
-<div>
+<div class="container">
     <div>{count}</div>
     <div>
         <button onclick={add}>Increase</button>
@@ -24,5 +24,13 @@
 </div>
 
 <style>
-
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+    }
 </style>
