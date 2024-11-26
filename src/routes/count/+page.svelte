@@ -6,9 +6,9 @@
 <div>
     <div>{count}</div>
     <div>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button>Increase</button>
+        <button>Reset</button>
+        <button>Decrease</button>
     </div>
 </div>
 
