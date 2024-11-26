@@ -1,6 +1,17 @@
 <script lang="ts">
 //variables
     let count = $state<number>(0)
+
+//functions
+    const add = () => {
+
+    }
+    const subtract = () => {
+
+    }
+    const reset = () => {
+
+    }
 </script>
 
 <div>
