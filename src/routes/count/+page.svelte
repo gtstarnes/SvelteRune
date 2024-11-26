@@ -18,7 +18,7 @@
     <div class="count">{count}</div>
     <div>
         <button onclick={add}>Increase</button>
-        <button onclick={reset}>Reset</button>
+        <button class="reset" onclick={reset}>Reset</button>
         <button onclick={subtract}>Decrease</button>
     </div>
 </div>
@@ -36,11 +36,15 @@
     .count {
         font-size: 7rem;
     }
+    .reset {
+        background-color: red;
+    }
 
     button {
-        border: 4px solid black;
+        border: none;
         padding: 0.5rem;
         cursor: pointer;
         font-weight: bold;
+        background-color: orange;
     }
 </style>
