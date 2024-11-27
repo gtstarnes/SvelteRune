@@ -7,8 +7,8 @@
     }
 //VARIABLES
     let tasks = $state<Task[]>([])
-    let newTask = ''
-    let error = ''
+    let newTask = $state<string>('')
+    let error = $state<string>('')
 
 //FUNCTIONS
     const addTask = () => {
