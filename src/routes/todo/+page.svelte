@@ -31,14 +31,18 @@
     </div>
     <div>{error}</div>
     <div class="taskList">
-        {#each tasks as task (task.task)}
-            <div class="task">
-                <input type="checkbox" />
-                <div>{task.task}</div>
-                <button>Edit</button>
-                <button>Del</button>
-            </div>
-        {/each}
+        {#if tasks.length === 0}
+            <div>There are no tasks</div>
+        {:else}   
+            {#each tasks as task (task.task)}
+                <div class="task">                
+                    <input type="checkbox" />
+                    <div>{task.task}</div>
+                    <button>Edit</button>
+                    <button>Del</button>
+                </div>
+            {/each}
+        {/if}
     </div>
 </div>
 
