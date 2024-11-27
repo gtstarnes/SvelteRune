@@ -29,10 +29,10 @@
         <button>Add</button>
         <button>Mass Del</button>
     </div>
-    <div>error</div>
-    <div>
+    <div>{error}</div>
+    <div class="taskList">
         {#each tasks as task (task.task)}
-            <div>
+            <div class="task">
                 <input type="checkbox" />
                 <div>{task.task}</div>
                 <button>Edit</button>
@@ -43,5 +43,10 @@
 </div>
 
 <style>
-
+    .task {
+        display: flex;
+    }
+    .taskList {
+        margin-top: 1.5rem;
+    }
 </style>
