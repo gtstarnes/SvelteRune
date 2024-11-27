@@ -6,6 +6,7 @@
             task: ''
         }
     ])
+    let newTask = ''
 
 //FUNCTIONS
     const addTask = () => {
