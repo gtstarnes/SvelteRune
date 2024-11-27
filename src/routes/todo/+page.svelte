@@ -43,10 +43,12 @@
 </script>
 
 <div>
-    <div>
+    <div class="controlPanel">
         <input type="text" placeholder="add new task" bind:value={newTask} />
-        <button onclick={addTask}>Add</button>
-        <button>Mass Del</button>
+        <div class="controlButtons">
+            <button onclick={addTask}>Add</button>
+            <button>Mass Del</button>
+        </div>
     </div>
     <div>{error}</div>
     <div class="taskList">
@@ -66,6 +68,14 @@
 </div>
 
 <style>
+    .controlPanel {
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .controlButtons {
+        margin-right: 1rem;
+    }
     .task {
         display: flex;
     }
