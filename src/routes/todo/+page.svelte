@@ -14,15 +14,18 @@
     const addTask = () => {
         if (noError()) {
             tasks.push({status: false, task: newTask, edit: false})
-            newTask = ''  
+            
         }
+        newTask = ''  
     }
-
     const noError = () => {
         let noError = true
         if (newTask === '') {
             noError = false
             error = 'Tasks cannot be empty'
+        } else if (newTask.length > 20) {
+            noError = false
+            error = 'Tasks cannot be longer than 20 characters'
         } else {
             resetError()
         }
@@ -39,7 +42,7 @@
 
 <div>
     <div>
-        <input type="text" placeholder="add new task" bind:value={newTask} onchange={resetError} />
+        <input type="text" placeholder="add new task" bind:value={newTask} />
         <button onclick={addTask}>Add</button>
         <button>Mass Del</button>
     </div>
