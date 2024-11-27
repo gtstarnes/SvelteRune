@@ -1,11 +1,12 @@
 <script lang="ts">
+//TYPES
+    interface Task {
+        status: boolean,
+        task: string,
+        edit: boolean
+    }
 //VARIABLES
-    let tasks = $state([
-        {
-            status: false,
-            task: ''
-        }
-    ])
+    let tasks = $state<Task[]>([])
     let newTask = ''
     let error = ''
 
