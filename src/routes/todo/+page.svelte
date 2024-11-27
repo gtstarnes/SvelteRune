@@ -36,7 +36,9 @@
     }
 
     const deleteTask = (t:string) => {
-
+        tasks = tasks.filter(task => {
+            return task.task !== t
+        })
     }
 </script>
 
@@ -56,7 +58,7 @@
                     <input type="checkbox" bind:checked={task.status} />
                     <div class:finished={task.status === true}>{task.task}</div>
                     <button>Edit</button>
-                    <button>Del</button>
+                    <button onclick={() => deleteTask(task.task)}>Del</button>
                 </div>
             {/each}
         {/if}
