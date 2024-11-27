@@ -12,11 +12,24 @@
 
 //FUNCTIONS
     const addTask = () => {
-        tasks.push({status: false, task: newTask, edit: false})
+        if (noError()) {
+            tasks.push({status: false, task: newTask, edit: false})
+            newTask = ''  
+        }
     }
 
-    const changeStatus = (t:string) => {
-
+    const noError = () => {
+        let noError = true
+        if (newTask === '') {
+            noError = false
+            error = 'Tasks cannot be empty'
+        } else {
+            resetError()
+        }
+        return noError
+    }
+    const resetError = () => {
+        error = ''
     }
 
     const deleteTask = (t:string) => {
@@ -26,8 +39,8 @@
 
 <div>
     <div>
-        <input type="text" placeholder="add new task" bind:value={newTask} />
-        <button>Add</button>
+        <input type="text" placeholder="add new task" bind:value={newTask} onchange={resetError} />
+        <button onclick={addTask}>Add</button>
         <button>Mass Del</button>
     </div>
     <div>{error}</div>
