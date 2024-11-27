@@ -26,7 +26,7 @@
 
 <div>
     <div>
-        <input type="text" placeholder="add new task" />
+        <input type="text" placeholder="add new task" bind:value={newTask} />
         <button>Add</button>
         <button>Mass Del</button>
     </div>
