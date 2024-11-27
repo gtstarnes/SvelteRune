@@ -53,8 +53,8 @@
         {:else}   
             {#each tasks as task (task.task)}
                 <div class="task">                
-                    <input type="checkbox" />
-                    <div>{task.task}</div>
+                    <input type="checkbox" bind:checked={task.status} />
+                    <div class:finished={task.status === true}>{task.task}</div>
                     <button>Edit</button>
                     <button>Del</button>
                 </div>
@@ -69,5 +69,9 @@
     }
     .taskList {
         margin-top: 1.5rem;
+    }
+    .finished {
+        text-decoration: line-through;
+        color: grey;
     }
 </style>
