@@ -69,12 +69,9 @@
 
 <style>
     .controlPanel {
-        width: 100vw;
+        width: 100%;
         display: flex;
         justify-content: space-between;
-    }
-    .controlButtons {
-        margin-right: 1rem;
     }
     .task {
         display: flex;
