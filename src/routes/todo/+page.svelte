@@ -12,14 +12,14 @@
 
 //FUNCTIONS
     const addTask = () => {
+        tasks.push({status: false, task: newTask, edit: false})
+    }
+
+    const changeStatus = (t:string) => {
 
     }
 
-    const changeStatus = () => {
-
-    }
-
-    const deleteTask = () => {
+    const deleteTask = (t:string) => {
 
     }
 </script>
