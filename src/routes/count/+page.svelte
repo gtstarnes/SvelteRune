@@ -37,4 +37,7 @@ const reset = () => {
         font-size: 6rem;
         margin-bottom: 1rem;
     }
+    .counters {
+        background-color: orange;
+    }
 </style>
