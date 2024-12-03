@@ -2,6 +2,17 @@
 //VARIABLES
     let count = $state<number>(0)
 //FUNCTIONS
+const add = () => {
+
+}
+
+const sub = () => {
+
+}
+
+const reset = () => {
+    
+}
 </script>
 
 <div>
