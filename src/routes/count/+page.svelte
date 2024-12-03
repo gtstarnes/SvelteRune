@@ -15,12 +15,12 @@ const reset = () => {
 }
 </script>
 
-<div>
-    <div>{count}</div>
+<div class="container">
+    <div class="count">{count}</div>
     <div>
-        <button onclick={add}>Increase</button>
+        <button class="counters" onclick={add}>Increase</button>
         <button onclick={reset}>Reset</button>
-        <button onclick={sub}>Decrease</button>
+        <button class="counters" onclick={sub}>Decrease</button>
     </div>
 </div>
 
