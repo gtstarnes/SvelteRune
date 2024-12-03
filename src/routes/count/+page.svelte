@@ -47,4 +47,8 @@ const reset = () => {
         cursor: pointer;
         font-weight: bold;
     }
+    button:active {
+        scale:90%;
+        background-color: darkorange;
+    }
 </style>
