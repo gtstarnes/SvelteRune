@@ -3,24 +3,24 @@
     let count = $state<number>(0)
 //FUNCTIONS
 const add = () => {
-
+    count++
 }
 
 const sub = () => {
-
+    count--
 }
 
 const reset = () => {
-    
+    count = 0
 }
 </script>
 
 <div>
     <div>{count}</div>
     <div>
-        <button>Increase</button>
-        <button>Reset</button>
-        <button>Decrease</button>
+        <button onclick={add}>Increase</button>
+        <button onclick={reset}>Reset</button>
+        <button onclick={sub}>Decrease</button>
     </div>
 </div>
 
