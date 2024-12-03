@@ -1,13 +1,15 @@
 <script lang="ts">
-
+//VARIABLES
+    let count = $state<number>(0)
+//FUNCTIONS
 </script>
 
 <div>
-    <div></div>
+    <div>{count}</div>
     <div>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button>Increase</button>
+        <button>Reset</button>
+        <button>Decrease</button>
     </div>
 </div>
 
