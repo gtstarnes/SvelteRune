@@ -28,7 +28,7 @@
         display: flex;
         flex-direction: column;
         height: 100vh;
-        margin: auto;
+        margin: 0;
         justify-content: center;
         align-items: center;
         gap: 1rem;
@@ -46,5 +46,8 @@
         cursor: pointer;
         font-weight: bold;
         background-color: orange;
+    }
+    button:active {
+        scale: 0.85;
     }
 </style>
