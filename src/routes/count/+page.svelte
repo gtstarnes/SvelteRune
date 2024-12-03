@@ -33,4 +33,8 @@ const reset = () => {
         align-items: center;
         justify-content: center;
     }
+    .count {
+        font-size: 6rem;
+        margin-bottom: 1rem;
+    }
 </style>
