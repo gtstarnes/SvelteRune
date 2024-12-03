@@ -40,4 +40,11 @@ const reset = () => {
     .counters {
         background-color: orange;
     }
+    button {
+        height: 3rem;
+        width: 6rem;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+    }
 </style>
