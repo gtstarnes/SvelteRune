@@ -1,5 +1,6 @@
 <script lang="ts">
-
+//IMPORTS
+    import { error } from "@sveltejs/kit";
 </script>
 
 
@@ -8,5 +9,5 @@
 </h2>
 
 <style>
-    
+
 </style>
