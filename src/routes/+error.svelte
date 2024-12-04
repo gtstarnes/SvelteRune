@@ -4,9 +4,9 @@
 </script>
 
 
-<h2>
- TEXT
-</h2>
+<h2>ENHANCE YOUR CALM</h2>
+<div>This {$page.status} error occured:</div>
+<p>{$page.error?.message}</p>
 
 <style>
 
