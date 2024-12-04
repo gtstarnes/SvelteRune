@@ -1,6 +1,6 @@
 <script lang="ts">
 //IMPORTS
-    import { error } from "@sveltejs/kit";
+    import { page } from "$app/stores";
 </script>
 
 
