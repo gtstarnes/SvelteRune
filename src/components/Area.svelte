@@ -1,11 +1,13 @@
 <script lang="ts">
 let {height = 0, width = 0} = $props();
-let area = $derived(height * width)
+let areaSq = $derived(height * width)
+let areaTri = $derived((height*width) / 2)
 </script>
 
 
 <div>
-    {area}
+    <div>Square: {areaSq}</div>
+    <div>Triangle: {areaTri}</div>
 </div>
 
 
