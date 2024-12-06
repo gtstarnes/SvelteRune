@@ -3,8 +3,8 @@
 	import Area from "../../components/Area.svelte";
 
 //VARIABLES
-    let height = $state(0);
-    let width = $state(0);
+    let height = $state<number>();
+    let width = $state<number>();
 </script>
 
 <div>
