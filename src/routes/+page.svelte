@@ -8,6 +8,7 @@
         <ul>
             <li><a href="/count">Rune Count</a></li>
             <li><a href="/todo">Rune Todo</a></li>
+            <li><a href="/area">Rune Area</a></li>
         </ul>
     </div>
 </div>
