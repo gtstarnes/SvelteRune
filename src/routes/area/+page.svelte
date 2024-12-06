@@ -1,4 +1,7 @@
 <script lang="ts">
+//IMPORTS
+	import Area from "../../components/Area.svelte";
+
 //VARIABLES
     let height = $state(0);
     let width = $state(0);
@@ -12,6 +15,7 @@
         <label for="width">Width: </label>
         <input type="number" id="width" bind:value={width}/>
     </div>
+    <Area {height} {width} />
 </div>
 
 <style>
