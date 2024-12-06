@@ -1,12 +1,16 @@
 <script lang="ts">
-
+//VARIABLES
+    let height = $state(0);
+    let width = $state(0);
 </script>
 
 <div>
     <h3>Enter Height and Width</h3>
     <div>
-        <input type="number" placeholder="height" />
-        <input type="number" placeholder="width"/>
+        <label for="height">Height: </label>
+        <input type="number" id="height" bind:value={height} />
+        <label for="width">Width: </label>
+        <input type="number" id="width" bind:value={width}/>
     </div>
 </div>
 
