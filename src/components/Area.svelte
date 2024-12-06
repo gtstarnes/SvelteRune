@@ -1,5 +1,5 @@
 <script lang="ts">
-let {height, width} = $props();
+let {height = 0, width = 0} = $props();
 let area = $derived(height * width)
 </script>
 
