@@ -8,9 +8,6 @@
     <div>
         Parent:
     </div>
-    <div>
-        Child:
-    </div>
     <Parent />
 </div>
 
