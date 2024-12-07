@@ -2,7 +2,7 @@
     let {count = 0}: {count: number} = $props()
 </script>
 
-<button>
+<button onclick={()=>count++}>
     Count (child): {count}
 </button>
 
