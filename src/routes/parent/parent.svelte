@@ -7,7 +7,7 @@ let count = $state(0)
 
 <div>
     <button onclick={()=>count++}>
-        count (parent): {count}
+        parent
     </button>
     <Child {count} />
 </div>
