@@ -3,7 +3,7 @@
 </script>
 
 <button onclick={()=>count++}>
-    Count (child): {count}
+    child: {count}
 </button>
 
 
