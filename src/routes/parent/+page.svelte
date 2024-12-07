@@ -12,7 +12,7 @@
 <button onclick={add}>
     count (parent): {count}
 </button>
-<Child />
+<Child {count} />
 
 <style>
 
