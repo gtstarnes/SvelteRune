@@ -1,5 +1,5 @@
 <script lang="ts">
-    let {count = $bindable()} = $props()
+    let {count} = $props()
 </script>
 
 <button onclick={()=>count++}>
