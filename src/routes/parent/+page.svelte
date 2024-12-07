@@ -1,10 +1,11 @@
 <script lang="ts">
 
+    let count = $state(0)
 </script>
 
-<div>
-
-</div>
+<button>
+    count (parent): {count}
+</button>
 
 
 <style>
