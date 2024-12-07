@@ -6,7 +6,7 @@
 </script>
 
 <div>
-   
+   {input}
 </div>
 <ChildB bind:input={input} />
 
