@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Child from "./child.svelte";
+
 
     let count = $state(0)
 
@@ -10,7 +12,7 @@
 <button onclick={add}>
     count (parent): {count}
 </button>
-
+<Child />
 
 <style>
 
