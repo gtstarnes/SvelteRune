@@ -1,9 +1,13 @@
 <script lang="ts">
 
     let count = $state(0)
+
+    const add = () => {
+        count++
+    }
 </script>
 
-<button>
+<button onclick={add}>
     count (parent): {count}
 </button>
 
