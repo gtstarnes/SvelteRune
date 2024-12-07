@@ -2,7 +2,7 @@
     let {input = $bindable<string>("")} = $props()
 </script>
 
-<input type="text" />
+<input type="text" bind:value={input} />
 
 <style>
     
