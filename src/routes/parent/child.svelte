@@ -1,5 +1,5 @@
 <script lang="ts">
-    let count = $state<number>(0);
+    let {count}: {count: number} = $props();
 
     const add = () => {
         count++
