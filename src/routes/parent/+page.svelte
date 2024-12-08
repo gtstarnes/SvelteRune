@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Parent from "./parent.svelte";
-
     let {count = $bindable(0)} = $props()
 </script>
 
@@ -8,7 +7,10 @@
     <div>
         Parent: {count}
     </div>
-    <Parent bind:count={count}/>
+    <div>
+        Child: 
+    </div>
+    <Parent {count} />
 </div>
 
 <style>
