@@ -1,0 +1,1 @@
+export let child = $state({count: 0});
