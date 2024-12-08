@@ -10,7 +10,7 @@
     <div>
         Child: 
     </div>
-    <Parent {count} />
+    <Parent bind:count={count} />
 </div>
 
 <style>
