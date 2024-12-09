@@ -9,7 +9,7 @@
     <button>
         Parent
     </button>
-    <Child />
+    <Child {count} />
 </div>
 
 <style>
