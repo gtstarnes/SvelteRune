@@ -1,12 +1,13 @@
 <script lang="ts">
 	import Parent from "./parent.svelte";
+	import { count } from "./state.svelte";
 
 
 </script>
 
 <div>
-    <div> Parent: </div>
-    <div> Child: </div>
+    <div> Parent: {count.parent}</div>
+    <div> Child: {count.child} </div>
     <Parent />
 </div>
 
