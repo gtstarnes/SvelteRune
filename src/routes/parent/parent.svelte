@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Child from "./child.svelte";
+
 
 </script>
 
@@ -6,6 +8,7 @@
     <button>
         Parent
     </button>
+    <Child />
 </div>
 
 <style>
