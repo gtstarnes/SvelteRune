@@ -1,9 +1,13 @@
 <script lang="ts">
     let {count = $bindable()} = $props();
+
+    const add =() => {
+        count++
+    }
 </script>
 
 
-<button>
+<button onclick={add}>
     Child
 </button>
 
