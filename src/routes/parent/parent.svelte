@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { count } from "./state.svelte";
+	import Child from "./child.svelte";
+import { count } from "./state.svelte";
 
 
     const add = () => {
@@ -8,9 +9,12 @@
     }
 </script>
 
-<button onclick={add}>
-    Parent
-</button>
+<div>
+    <button onclick={add}>
+        Parent
+    </button>
+    <Child />
+</div>
 
 <style>
 
