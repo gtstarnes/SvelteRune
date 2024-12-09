@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Child from "./child.svelte";
 
+    let {count = $bindable(0)}: {count: number} = $props<number>()
 
 </script>
 
