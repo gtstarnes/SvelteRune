@@ -1,5 +1,5 @@
 <script lang="ts">
-    let {count = $bindable()} = $props();
+    let {count = 0}: {count: number} = $props();
 
     const add =() => {
         count++
