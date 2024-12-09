@@ -1,4 +1,5 @@
 <script lang="ts">
+//IMPORTS
 	import Parent from "./parent.svelte";
 	import { count } from "./state.svelte";
 
