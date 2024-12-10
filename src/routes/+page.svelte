@@ -1,4 +1,5 @@
 <script lang="ts">
+//IMPORTS
 	import Link from "../components/Link.svelte";
 
 
@@ -8,16 +9,17 @@
     <div>Mini Projects:</div>
     <div>
         <ul>
-            <li><a href="/count">Rune Count</a></li>
-            <li><a href="/todo">Rune Todo</a></li>
-            <li><a href="/area">Rune Area</a></li>
-            <li><a href="/parent">Rune Parent Count</a></li>
-            <li><a href="/binder">Rune Bindable</a></li>
-            <Link />
+            <li><Link text="Rune Count" href="/count" /></li>
+            <li><Link text="Rune Todo" href="/todo" /></li>
+            <li><Link text="Rune Area" href="/area" /></li>
+            <li><Link text="Rune Parent" href="/parent" /></li>
+            <li><Link text="Rune Binder" href="/binder" /></li>
         </ul>
     </div>
 </div>
 
 <style>
-
+    ul {
+        list-style: none;
+    }
 </style>
