@@ -5,7 +5,13 @@
 </script>
 
 <div>
-
+    <div>{count}</div>
+    <div>
+        <button>+</button>
+        <button>Reset</button>
+        <button>-</button>
+    </div>
+    <div>{countSquared}</div>
 </div>
 
 <style>
