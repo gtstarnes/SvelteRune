@@ -7,5 +7,16 @@
 </button>
 
 <style>
-
+    a {
+       text-decoration: none; 
+       color: black;
+    }
+    button {
+        height: 3rem;
+        width: 6rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
