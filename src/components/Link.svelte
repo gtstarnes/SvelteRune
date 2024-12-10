@@ -2,21 +2,20 @@
     const {text = "text", href = "#"} = $props()
 </script>
 
-<button>
-    <a href={href}>{text}</a>
-</button>
+
+<a href={href}>{text}</a>
+
 
 <style>
     a {
-       text-decoration: none; 
-       color: black;
-    }
-    button {
+        text-decoration: none; 
+        color: black;
         height: 3rem;
         width: 6rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: grey;
     }
 </style>
