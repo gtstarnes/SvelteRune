@@ -16,13 +16,13 @@
 </script>
 
 <div class="container">
-    <div>{count}</div>
+    <div class="count">{count}</div>
     <div>
-        <button onclick={add}>+</button>
-        <button onclick={reset}>Reset</button>
-        <button onclick={sub}>-</button>
+        <button class="math" onclick={add}>+</button>
+        <button class="reset" onclick={reset}>Reset</button>
+        <button class="math" onclick={sub}>-</button>
     </div>
-    <div>{countSquared}</div>
+    <div class="count">{countSquared}</div>
 </div>
 
 <style>
@@ -33,4 +33,25 @@
         justify-content: center;
         align-items: center;
     }
+    .count {
+        font-size: 6rem;
+    }
+    .math {
+        background-color: orange;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    button {
+        height: 3rem;
+        width: 6rem;
+        border: none;
+        border-radius: 2%;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    .math:active {
+        background-color: darkorange;
+        scale: 95%;
+    }
+
 </style>
