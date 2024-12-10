@@ -10,6 +10,9 @@
     const reset = () => {
         count = 0
     }
+    const sub = () => {
+        count--
+    }
 </script>
 
 <div>
@@ -17,7 +20,7 @@
     <div>
         <button onclick={add}>+</button>
         <button onclick={reset}>Reset</button>
-        <button>-</button>
+        <button onclick={sub}>-</button>
     </div>
     <div>{countSquared}</div>
 </div>
