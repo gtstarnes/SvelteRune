@@ -15,7 +15,7 @@
     }
 </script>
 
-<div>
+<div class="container">
     <div>{count}</div>
     <div>
         <button onclick={add}>+</button>
@@ -26,5 +26,11 @@
 </div>
 
 <style>
-
+    .container {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
