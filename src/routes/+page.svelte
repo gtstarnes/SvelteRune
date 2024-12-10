@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Link from "../components/Link.svelte";
+
 
 </script>
 
@@ -11,6 +13,7 @@
             <li><a href="/area">Rune Area</a></li>
             <li><a href="/parent">Rune Parent Count</a></li>
             <li><a href="/binder">Rune Bindable</a></li>
+            <Link />
         </ul>
     </div>
 </div>
