@@ -4,7 +4,7 @@
 </script>
 
 <button>
-    
+    <a href={href}>{text}</a>
 </button>
 
 <style>
