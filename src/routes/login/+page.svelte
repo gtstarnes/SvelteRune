@@ -1,5 +1,5 @@
 <script lang="ts">
-
+    let newDetails = $state({username: "", password: ""});
 </script>
 
 <form>
