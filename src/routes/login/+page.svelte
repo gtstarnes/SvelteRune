@@ -1,5 +1,9 @@
 <script lang="ts">
-    let newDetails = $state({username: "", password: ""});
+    interface Details {
+        username: string,
+        password: string
+    }
+    let newDetails = $state<Details>({username: "", password: ""});
 </script>
 
 <form>
