@@ -1,11 +1,17 @@
 <script lang="ts">
+//TYPES
     interface Details {
         username: string,
         password: string
     }
-    let {input = $bindable({username: "", password: ""})}: {input: Details} = $props()
+//VARIABLES
+    let input = $state<Details>({username: '', password: ''})
+    let {details = $bindable({username: "", password: ""})}: {details: Details} = $props()
+//FUNCTIONS
     const submit = (e: Event) => {
         e.preventDefault
+        details = {...input}
+        input = {username: '', password: ''}
     }
 </script>
 
