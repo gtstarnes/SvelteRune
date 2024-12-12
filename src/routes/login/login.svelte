@@ -3,15 +3,13 @@
         username: string,
         password: string
     }
-    let input = $state<Details>({username: "", password: ""});
-
-
-    const handleSubmit = (e: Event) => {
-      e.preventDefault
+    let {input = $bindable({username: "", password: ""})}: {input: Details} = $props()
+    const submit = (e: Event) => {
+        e.preventDefault
     }
 </script>
 
-<form onsubmit={handleSubmit}>
+<form onsubmit={submit}>
     <div>
         <label for="username">Username</label>
         <input id="username" name="username" type="text" bind:value={input.username} />
