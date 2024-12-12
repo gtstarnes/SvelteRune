@@ -5,8 +5,12 @@
 </script>
 
 <div>
-
-    <Login  bind:input={details} />
+    {#if details.username === ''}
+        <div></div>
+    {:else}
+        <div>Hello: {details.username}</div>
+    {/if}
+    <Login  bind:details={details} />
 </div>
 
 <style>
