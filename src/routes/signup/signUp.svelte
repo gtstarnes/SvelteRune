@@ -1,8 +1,17 @@
 <script lang="ts">
+	import { users } from "./users.svelte";
+
     let newUser = $state({name: "", username: "", password: ""})
+
+    const handleSubmit = (e: Event) => {
+        e.preventDefault
+        users.push(newUser)
+        newUser = {name: "", username: "", password: ""}
+    }
+    
 </script>
 
-<form>
+<form onsubmit={handleSubmit}>
     <div>
         <label for="name">Name</label>
         <input type="text" id="name" name="name" bind:value={newUser.name}   />
