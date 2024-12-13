@@ -4,3 +4,8 @@ interface User {
     password: string,
     id: number,
 }
+
+const users = $state<User[]>([]);
+
+
+export {users}
