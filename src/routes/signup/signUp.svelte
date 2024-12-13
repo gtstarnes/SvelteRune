@@ -1,4 +1,6 @@
-<script lang="ts"></script>
+<script lang="ts">
+    let newUser = $state({name: "", username: "", password: ""})
+</script>
 
 <form>
     <div>
