@@ -8,7 +8,10 @@
         users.push(newUser)
         newUser = {name: "", username: "", password: ""}
     }
-    
+
+    const reset = () => {
+        newUser = {name: "", username: "", password: ""}
+    }
 </script>
 
 <form onsubmit={handleSubmit}>
@@ -26,7 +29,7 @@
     </div>
     <div>
         <button>Sign Up</button>
-        <button>Reset</button>
+        <button onclick={reset}>Reset</button>
     </div>
 </form>
 
