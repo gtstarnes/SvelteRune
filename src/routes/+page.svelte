@@ -15,6 +15,7 @@
             <li><Link text="Rune Parent" href="/parent" /></li>
             <li><Link text="Rune Binder" href="/binder" /></li>
             <li><Link text="Rune Login" href="/login" /></li>
+            <li><Link text="Rune SignUp" href="/signup" /></li>
         </ul>
     </div>
 </div>
