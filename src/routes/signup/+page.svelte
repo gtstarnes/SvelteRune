@@ -1,5 +1,13 @@
-<script lang="ts"></script>
+<script lang="ts">
+	import SignUp from "./signUp.svelte";
 
-<div></div>
+</script>
+
+<div>
+    <SignUp />
+    <div>
+        
+    </div>
+</div>
 
 <style></style>
