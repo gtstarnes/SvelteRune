@@ -19,9 +19,18 @@ function del(id: number) {
         return c.id !== id
     })
 }
+function like(id: number){
+   const comment = comments.find(c => {
+    return c.id === id
+   })
+   if (!comment){
+    return
+   }
+   comment.likes += 1
+}
 
 function getComments() {
     return comments
 }
 
-export {add, del, getComments}
+export {add, del, like, getComments}
