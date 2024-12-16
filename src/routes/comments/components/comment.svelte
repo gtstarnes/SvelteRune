@@ -4,8 +4,8 @@
 const {text, likes, id}: {text: string, likes: number, id: number} = $props();
 </script>
 
-<div>
-    <div>
+<div class="container">
+    <div class="controls">
         <div>{likes}</div>
         <button onclick={()=>like(id)}>Like</button>
     </div>
@@ -14,5 +14,21 @@ const {text, likes, id}: {text: string, likes: number, id: number} = $props();
 </div>
 
 <style>
-    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3rem;
+        background-color: green;
+        padding: 0.5rem;
+    }
+    .controls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2px;
+    }
+    button {
+        cursor: pointer;
+    }
 </style>
