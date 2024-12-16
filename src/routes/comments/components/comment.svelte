@@ -1,5 +1,7 @@
 <script lang="ts">
-const {text, likes}: {text: string, likes: number} = $props();
+	import { del } from "./comments.svelte";
+
+const {text, likes, id}: {text: string, likes: number, id: number} = $props();
 </script>
 
 <div>
@@ -8,6 +10,7 @@ const {text, likes}: {text: string, likes: number} = $props();
         <button>Like</button>
     </div>
     <div>{text}</div>
+    <button onclick={()=>del(id)}>X</button>
 </div>
 
 <style>
