@@ -14,5 +14,10 @@ function add(c: string) {
     }
     comments = [...comments, newComment]
 }
+function del(id: number) {
+    comments = comments.filter(c => {
+        return c.id !== id
+    })
+}
 
-export {add, }
+export {add, del}
