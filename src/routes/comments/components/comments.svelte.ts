@@ -4,3 +4,5 @@ interface Comment {
     likes: number,
     id: number
 }
+
+let comments = $state<Comment[]>([])
