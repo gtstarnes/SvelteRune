@@ -19,5 +19,7 @@ import { getComments } from "./comments.svelte";
 </div>
 
 <style>
-    
+    ul {
+        list-style: none;
+    }
 </style>
