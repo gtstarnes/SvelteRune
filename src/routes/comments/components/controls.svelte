@@ -7,12 +7,13 @@
         if(input !== "") {
             add(input)
         }
+        input = ""
     }
 </script>
 
 <div>
     <input type="text" bind:value={input} />
-    <button onclick={() => add}>Add</button>
+    <button onclick={check}>Add</button>
 </div>
 
 <style>
