@@ -20,4 +20,8 @@ function del(id: number) {
     })
 }
 
-export {add, del}
+function getComments() {
+    return comments
+}
+
+export {add, del, getComments}
