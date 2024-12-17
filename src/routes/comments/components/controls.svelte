@@ -15,13 +15,21 @@
     }
 
     const checkError = () => {
-        
+        let err;
+        if (input === '') {
+            err = true
+            error = "Comment cannot be empty"
+        } else {
+            err = false
+            error = ""
+        }
+        return err
     }
 </script>
 
 <div>
     <input type="text" placeholder="add comment" bind:value={input} />
-    <button>Add Comment</button>
+    <button onclick={() => addComment}>Add Comment</button>
 </div>
 <div>{error}</div>
 
