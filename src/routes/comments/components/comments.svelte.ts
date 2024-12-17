@@ -3,7 +3,7 @@ interface Comment {
     count: number,
     id: number,
 }
-type Vote = 'up' | 'down'
+type Like = 'up' | 'down'
 
 
 let comments = $state<Comment[]>([]);
@@ -17,8 +17,23 @@ const add = (c: string) => {
     comments = [...comments, newComment]
 }
 
-const vote = (id: number, action: Vote) => {
-    
+const like = (id: number, action: Like) => {
+    const comment = comments.find(c => {
+        return c.id === id;
+    })
+
+    if (!comment) {
+        return
+    }
+
+    switch(action){
+        case 'up':
+            return comment.count += 1
+        case 'down':
+            return comment.count -= 1
+        default:
+            throw new Error('There was an error')
+    }
 }
 
 function getComments() {
@@ -26,4 +41,4 @@ function getComments() {
 }
 
 
-export { getComments, add, }
+export { getComments, add, like, }
