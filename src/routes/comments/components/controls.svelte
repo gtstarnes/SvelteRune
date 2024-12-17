@@ -1,8 +1,22 @@
 <script lang="ts">
+	import { add } from "./comments.svelte";
+
 
 //VARIABLES
     let input = $state("")
     let error = $state("")
+
+//FUNCTIONS
+    const addComment = () => {
+        if (!checkError) {
+            add(input)
+        }
+        input = ""
+    }
+
+    const checkError = () => {
+        
+    }
 </script>
 
 <div>
