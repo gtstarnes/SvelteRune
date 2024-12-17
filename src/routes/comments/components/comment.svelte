@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { like } from "./comments.svelte";
+	import { del, like } from "./comments.svelte";
 
 //VARIABLES
     let {text, count, id}: {text: string, count: number, id: number} = $props()
@@ -12,7 +12,7 @@
         <button onclick={() => like(id, "down")}>v</button>
     </div>
     <div>{text}</div>
-    <button>Delete</button>
+    <button onclick={() => del(id)}>Delete</button>
 </div>
 
 <style>
