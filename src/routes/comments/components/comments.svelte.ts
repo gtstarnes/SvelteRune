@@ -36,9 +36,15 @@ const like = (id: number, action: Like) => {
     }
 }
 
+const del = (id: number) => {
+    comments = comments.filter(c => {
+        return c.id !== id
+    })
+}
+
 function getComments() {
     return comments
 }
 
 
-export { getComments, add, like, }
+export { getComments, add, like, del}
