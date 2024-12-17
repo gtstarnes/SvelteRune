@@ -6,3 +6,10 @@ interface Comment {
 
 
 let comments = $state<Comment[]>([]);
+
+function getComments() {
+    return comments
+}
+
+
+export { getComments,}
