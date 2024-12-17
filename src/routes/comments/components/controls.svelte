@@ -8,7 +8,7 @@
 
 //FUNCTIONS
     const addComment = () => {
-        if (!checkError) {
+        if (!checkError()) {
             add(input)
         }
         input = ""
@@ -29,7 +29,7 @@
 
 <div>
     <input type="text" placeholder="add comment" bind:value={input} />
-    <button onclick={() => addComment}>Add Comment</button>
+    <button onclick={() => addComment()}>Add Comment</button>
 </div>
 <div>{error}</div>
 
