@@ -5,8 +5,8 @@
     let {text, count, id}: {text: string, count: number, id: number} = $props()
 </script>
 
-<div>
-    <div>
+<div class="container">
+    <div class="like">
         <button onclick={() => like(id, "up")}>^</button>
         <span>{count}</span>
         <button onclick={() => like(id, "down")}>v</button>
@@ -16,5 +16,15 @@
 </div>
 
 <style>
-
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .like {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 </style>
