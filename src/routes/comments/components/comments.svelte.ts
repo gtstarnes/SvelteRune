@@ -3,3 +3,6 @@ interface Comment {
     count: number,
     id: number,
 }
+
+
+let comments = $state<Comment[]>([]);
