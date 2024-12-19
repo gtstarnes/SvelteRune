@@ -5,7 +5,13 @@
 </script>
 
 <div>
-    <Login />
+    <Login bind:username />
+
+    {#if username === ''}
+        <span></span>
+    {:else}
+        <span>Hello, {username}</span>
+    {/if}
 </div>
 
 <style>
