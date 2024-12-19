@@ -1,8 +1,40 @@
 const links = [
     {
-        text: "",
-        href: "",
-    }
+        text: "Rune Count",
+        href: "/count",
+    },
+    {
+        text: "Rune Todo",
+        href: "/todo",
+    },
+    {
+        text: "Rune Area ",
+        href: "/area",
+    },
+    {
+        text: "Rune Parent",
+        href: "/parent",
+    },
+    {
+        text: "Rune Binder",
+        href: "/binder",
+    },
+    {
+        text: "Rune Login",
+        href: "/login",
+    },
+    {
+        text: "Rune Sign Up",
+        href: "/signup",
+    },
+    {
+        text: "Rune Comments",
+        href: "/comments",
+    },
+    {
+        text: "Rune Colors",
+        href: "/colors",
+    },
 ]
 
 export { links }
