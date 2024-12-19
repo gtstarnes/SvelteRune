@@ -13,12 +13,19 @@
     .color {
         height: 6rem;
         width: 5rem;
+        border-radius: 2%;
+        transition: width 0.25s ease-in;
     }
     .container {
         display: flex;
-        gap:2rem;
+        gap:1rem;
         justify-content: center;
         align-items: center;
         height: 90vh;
+    }
+    .color:hover {
+        width: 8rem;
+        cursor: pointer;
+        transition: width 0.5s ease-out;
     }
 </style>
