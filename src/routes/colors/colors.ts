@@ -1,4 +1,4 @@
-const color = [
+const colors = [
     {
         color: "orange",
         id: Math.random(),
@@ -21,4 +21,4 @@ const color = [
     },
 ]
 
-export { color } 
+export { colors } 
