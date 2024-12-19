@@ -14,4 +14,11 @@
         height: 6rem;
         width: 5rem;
     }
+    .container {
+        display: flex;
+        gap:2rem;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
 </style>
