@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { VSCODE_HANDLES_UNCAUGHT_ERRORS } from "$env/static/private";
-
 //VARIABLES
     let {username = $bindable(""), loggedIn = $bindable(false)}: {
         username: string,
@@ -10,7 +8,6 @@
         username: "",
         password: ""
     })
-    let password = $state("")
     let error = $state("")
 
     const handleSubmit = (e: SubmitEvent) => {
@@ -37,7 +34,7 @@
 </script>
 
 <div>
-    <form>
+    <form onsubmit={handleSubmit}>
         <span>
             <label for="username">Username: </label>
             <input type="text" id="username" name="username" bind:value={input.username} />
@@ -47,7 +44,7 @@
             <input type="password" id="password" name="password" bind:value={input.password} />
         </span>
         <div>{error}</div>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
     </form>
 </div>
 
