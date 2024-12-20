@@ -1,5 +1,9 @@
 <script lang="ts">
-
+//VARIABLES
+    let {username = $bindable(""), loggedIn = $bindable(false)}: {
+        username: string,
+        loggedIn: boolean
+    } = $props()
 </script>
 
 <div>
