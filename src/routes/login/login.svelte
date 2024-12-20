@@ -18,6 +18,7 @@
             <label for="password">Password: </label>
             <input type="password" id="password" name="password" bind:value={password} />
         </span>
+        <div>{error}</div>
         <button>Submit</button>
     </form>
 </div>
