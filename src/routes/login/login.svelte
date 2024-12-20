@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { VSCODE_HANDLES_UNCAUGHT_ERRORS } from "$env/static/private";
+
 //VARIABLES
     let {username = $bindable(""), loggedIn = $bindable(false)}: {
         username: string,
@@ -13,9 +15,18 @@
 
     const handleSubmit = (e: SubmitEvent) => {
         e.preventDefault()
-        if (username !== "" && password !== "") {
-            
+        if (input.username !== "" && input.password !== "") {
+            username = input.username
+            loggedIn = true
+            error = ""
+        } else {
+            handleError()
         }
+        input = {username: '', password: ''}
+    }
+
+    const handleError = () => {
+
     }
 </script>
 
