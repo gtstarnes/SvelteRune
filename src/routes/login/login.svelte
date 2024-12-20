@@ -26,7 +26,13 @@
     }
 
     const handleError = () => {
-
+        if (input.username === '' && input.password === ''){
+            error = "Username and password are required"
+        } else if (input.username === ""){
+            error = "Username is required"
+        } else {
+            error = "Password is required"
+        }
     }
 </script>
 
