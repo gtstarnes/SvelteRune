@@ -19,6 +19,18 @@ const colors = [
         color: "gold",
         id: Math.random(),
     },
+    {
+        color: "green",
+        id: Math.random(),
+    },
+    {
+        color: "blue",
+        id: Math.random(),
+    },
+    {
+        color: "olive",
+        id: Math.random(),
+    },
 ]
 
 export { colors } 
