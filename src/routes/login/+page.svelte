@@ -14,8 +14,8 @@
         <Login bind:username  bind:loggedIn/>
         <div></div>
     {:else}
-        <button onclick={logOut}>Log Out</button>
         <div>HELLO: {username.toUpperCase()}</div>
+        <button onclick={logOut}>Log Out</button>
     {/if}
 </div>
 
