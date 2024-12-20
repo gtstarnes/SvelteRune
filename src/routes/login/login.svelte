@@ -4,6 +4,7 @@
         username: string,
         loggedIn: boolean
     } = $props()
+    let password = $state("")
 </script>
 
 <div>
