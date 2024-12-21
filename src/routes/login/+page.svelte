@@ -8,6 +8,11 @@
     let username = $state('');
     let loggedIn = $state(false);
 
+//FUNCTIONS
+    const logOut = () => {
+        username = ''
+        loggedIn = false
+    }
 </script>
 
 <div>
@@ -16,7 +21,7 @@
     {:else}
         <div>
             <span>Hello, {username}</span>
-            <button>Log Out</button>
+            <button onclick={logOut}>Log Out</button>
         </div>
     {/if}
 </div>
