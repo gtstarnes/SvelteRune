@@ -9,6 +9,14 @@
         userError: '', passError:'',
     })
 
+    const handleSubmit = (e: SubmitEvent) => {
+
+    }
+
+    const handleError = () => {
+
+    }
+
 </script>
 
 <div>
