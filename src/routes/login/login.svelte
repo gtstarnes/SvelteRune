@@ -10,17 +10,23 @@
     })
 
     const handleSubmit = (e: SubmitEvent) => {
-
+        e.preventDefault()
+        if (!handleError()) {
+            username = input.username
+            loggedIn = true
+        }
+        input = {...input, username: '', password: ''}
     }
 
     const handleError = () => {
-
+        let err = true
+        return err;
     }
 
 </script>
 
 <div>
-    <form>
+    <form onsubmit={handleSubmit}>
         <span>
             <label for="Username">Username: </label>
             <input type="text" id="username" 
