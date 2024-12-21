@@ -25,9 +25,13 @@
             input.passError = "Password is required"
         } else if (input.username === '') {
             input.userError = "Username is required"
+            input.passError = ""
         } else if (input.password === '') {
             input.passError = "Password is required"
+            input.userError = ""
         } else {
+            input.userError = ""
+            input.passError = ""
             err = false
         }
         return err;
