@@ -1,4 +1,8 @@
 <script lang="ts">
+/**
+ * InSTRUCTIONS:
+ * Rep: 2
+ */
 //VARIABLES
     let {
         username = $bindable(""),
@@ -9,6 +13,7 @@
         userError: '', passError:'',
     })
 
+//FUNCTIONS
     const handleSubmit = (e: SubmitEvent) => {
         e.preventDefault()
         if (!handleError()) {
