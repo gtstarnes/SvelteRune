@@ -1,5 +1,6 @@
 <script lang="ts">
     let {username = $bindable(""), loggedIn = $bindable(false)} = $props();
+    let input = $state({username: '', password: '', error: ''});
 
 </script>
 
