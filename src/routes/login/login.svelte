@@ -41,16 +41,20 @@
 
 <div>
     <form onsubmit={handleSubmit}>
-        <span>
-            <label for="Username">Username: </label>
-            <input type="text" id="username" 
-                name="username" bind:value={input.username} />
+        <span class="inputContainer">
+            <span>
+                <label for="Username">Username: </label>
+                <input type="text" id="username" 
+                    name="username" bind:value={input.username} />
+            </span>
             <span>{input.userError}</span>
         </span>
-        <span>
-            <label for="password">Password: </label>
-            <input type="password" id="password" 
-                name="password" bind:value={input.password} />
+        <span class="inputContainer">
+            <span>
+                <label for="password">Password: </label>
+                <input type="password" id="password" 
+                    name="password" bind:value={input.password} />
+            </span>
             <span>{input.passError}</span>
         </span>
         <button type="submit">Login</button>
@@ -58,5 +62,11 @@
 </div>
 
 <style>
-
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+    }
+    form {
+        display: flex;
+    }
 </style>
