@@ -20,6 +20,16 @@
 
     const handleError = () => {
         let err = true
+        if (input.username === '' && input.password === '') {
+            input.userError = "Username is required"
+            input.passError = "Password is required"
+        } else if (input.username === '') {
+            input.userError = "Username is required"
+        } else if (input.password === '') {
+            input.passError = "Password is required"
+        } else {
+            err = false
+        }
         return err;
     }
 
