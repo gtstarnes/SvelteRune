@@ -1,7 +1,7 @@
 <script lang="ts">
 /**
  * InSTRUCTIONS:
- * Rep: 2
+ * Rep: 3
  */
 //VARIABLES
     let {
