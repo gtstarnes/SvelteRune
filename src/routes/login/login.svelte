@@ -1,6 +1,7 @@
 <script lang="ts">
+//VARIABLES
     let {username = $bindable(""), loggedIn = $bindable(false)} = $props();
-    let input = $state({username: '', password: '', error: ''});
+    let input = $state({username: '', password: '', userError: '', passError:''});
 
 </script>
 
@@ -9,6 +10,7 @@
         <span>
             <label for="Username">Username: </label>
             <input type="text" id="username" name="username" />
+            <span></span>
         </span>
         <span>
             <label for="password">Password: </label>
@@ -16,6 +18,7 @@
         </span>
         <button type="submit">Login</button>
     </form>
+
 </div>
 
 <style>
