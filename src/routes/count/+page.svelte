@@ -52,7 +52,12 @@ function reset(){
     .math {
         background-color: orange;
     }
+    .math:active {
+        background-color: darkorange;
+        scale: 95%;
+    }
     .reset {
+        offset: -100%;
     }
     button {
         height: 4rem;
