@@ -29,4 +29,7 @@ let count = $state(0)
         justify-content: center;
         height: 90vh;
     }
+    span{
+        font-size: 6rem;
+    }
 </style>
