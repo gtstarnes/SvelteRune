@@ -21,8 +21,12 @@ function changeActive(link: string) {
             {#each navLinks as link (link)}
                 <li class:active={link === active} onclick={() => changeActive(link)}>{link}</li>
             {/each}
-        </ul>
+        </ul>    
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M2 15.5v2h20v-2zm0-5v2h20v-2zm0-5v2h20v-2z"/>
+        </svg>
     </nav>
+
 </div>
 
 <style>
@@ -49,5 +53,8 @@ function changeActive(link: string) {
     .active {
         color: gold;
         border-bottom: 2px solid gold;
+    }
+    svg {
+        cursor: pointer;
     }
 </style>
