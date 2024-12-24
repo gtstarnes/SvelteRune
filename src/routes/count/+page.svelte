@@ -1,6 +1,6 @@
 <script lang="ts">
 /**
- * REP: 8
+ * REP: 9
  * Instructions:
  *      Create counter and counter squared
  *      center everything
