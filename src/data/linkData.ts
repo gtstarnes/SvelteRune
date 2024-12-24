@@ -35,6 +35,10 @@ const links = [
         text: "Rune Colors",
         href: "/colors",
     },
+    {
+        text: "Rune Burger",
+        href: "a/hamburger",
+    },
 ]
 
 export { links }
