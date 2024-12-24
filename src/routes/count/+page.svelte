@@ -11,12 +11,23 @@
 //VARIABLES
 let count = $state(0)
 let squared = $derived(count * count)
+
+//FUNCTIONS
+function add() {
+    count++
+}
+function minus(){
+
+}
+function reset(){
+
+}
 </script>
 
 <div class="container">
     <span>{count}</span>
     <div>
-        <button>+</button>
+        <button onclick={add}>+</button>
         <button>Reset</button>
         <button>-</button>
     </div>
