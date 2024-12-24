@@ -2,14 +2,17 @@
 /**
  * REP: 1
 */
+const navLinks = ["Home", "About", "Projects"]
+
+let active = $state("Home")
 </script>
 
 <div>
     <nav>
         <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Projects</li>
+            {#each navLinks as link (link)}
+                <li>{link}</li>
+            {/each}
         </ul>
     </nav>
 </div>
