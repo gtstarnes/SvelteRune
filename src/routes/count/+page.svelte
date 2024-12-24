@@ -27,9 +27,9 @@ function reset(){
 <div class="container">
     <span>{count}</span>
     <div>
-        <button onclick={add}>+</button>
-        <button onclick={reset}>Reset</button>
-        <button onclick={minus}>-</button>
+        <button class="math" onclick={add}>+</button>
+        <button class="reset" onclick={reset}>Reset</button>
+        <button class="math" onclick={minus}>-</button>
     </div>
     <span>{squared}</span>
 </div>
@@ -42,11 +42,15 @@ function reset(){
         justify-content: center;
         height: 90vh;
     }
+    .math {
+        background-color: orange;
+    }
     button {
         height: 4rem;
         width: 8rem;
         font-size: 2rem;
         cursor: pointer;
+        border: none;
     }
     span{
         font-size: 6rem;
