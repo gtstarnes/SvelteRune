@@ -8,14 +8,16 @@
  *      commit after task blocks
  */
 
+//VARIABLES
+let count = $state(0)
 </script>
 
 <div >
-    <span></span>
+    <span>{count}</span>
     <div>
         <button>+</button>
         <button>Reset</button>
-        <button>_</button>
+        <button>-</button>
     </div>
 </div>
 
