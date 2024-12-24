@@ -26,7 +26,7 @@ function reset(){
 
 <div class="container">
     <span>{count}</span>
-    <div>
+    <div class="controls">
         <button class="math" onclick={add}>+</button>
         <button class="reset" onclick={reset}>Reset</button>
         <button class="math" onclick={minus}>-</button>
@@ -42,8 +42,17 @@ function reset(){
         justify-content: center;
         height: 90vh;
     }
+    .controls {
+        height: 8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
     .math {
         background-color: orange;
+    }
+    .reset {
     }
     button {
         height: 4rem;
