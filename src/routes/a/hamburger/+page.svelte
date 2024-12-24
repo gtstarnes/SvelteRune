@@ -11,7 +11,7 @@ let active = $state("Home")
     <nav>
         <ul>
             {#each navLinks as link (link)}
-                <li>{link}</li>
+                <li class:active={link === active}>{link}</li>
             {/each}
         </ul>
     </nav>
@@ -32,8 +32,14 @@ let active = $state("Home")
         cursor: pointer;
         padding: 2px;
         width: 4rem;
+        display: flex;
+        justify-content: center;
     }
     li:hover {
         font-weight: bold;
+    }
+    .active {
+        color: gold;
+        border-bottom: 2px solid gold;
     }
 </style>
