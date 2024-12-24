@@ -57,7 +57,7 @@ function reset(){
         scale: 95%;
     }
     .reset {
-        offset: -100%;
+        margin-top: 20px;
     }
     button {
         height: 4rem;
