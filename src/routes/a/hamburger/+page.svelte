@@ -15,5 +15,17 @@
 </div>
 
 <style>
-
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 10px;
+    }
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+    }
+    li {
+        cursor: pointer;
+    }
 </style>
