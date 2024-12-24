@@ -27,5 +27,10 @@
     }
     li {
         cursor: pointer;
+        padding: 2px;
+        width: 4rem;
+    }
+    li:hover {
+        font-weight: bold;
     }
 </style>
