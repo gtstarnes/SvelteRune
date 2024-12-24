@@ -20,7 +20,7 @@ function minus(){
     count--
 }
 function reset(){
-
+    count = 0
 }
 </script>
 
@@ -28,7 +28,7 @@ function reset(){
     <span>{count}</span>
     <div>
         <button onclick={add}>+</button>
-        <button>Reset</button>
+        <button onclick={reset}>Reset</button>
         <button onclick={minus}>-</button>
     </div>
     <span>{squared}</span>
