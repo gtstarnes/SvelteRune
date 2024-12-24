@@ -29,6 +29,12 @@ let count = $state(0)
         justify-content: center;
         height: 90vh;
     }
+    button {
+        height: 4rem;
+        width: 8rem;
+        font-size: 2rem;
+        cursor: pointer;
+    }
     span{
         font-size: 6rem;
     }
