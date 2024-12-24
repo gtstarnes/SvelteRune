@@ -1,4 +1,11 @@
 <script lang="ts">
+/**
+ * REP: 8
+ * Instructions:
+ *      Create counter and counter squared
+ *      center everything
+ *      style
+ */
 //VARIABLES
     let count = $state<number>(0)
     let countSquared = $derived<number>(count*count)
