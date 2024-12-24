@@ -10,6 +10,7 @@
 
 //VARIABLES
 let count = $state(0)
+let squared = $derived(count * count)
 </script>
 
 <div class="container">
@@ -19,6 +20,7 @@ let count = $state(0)
         <button>Reset</button>
         <button>-</button>
     </div>
+    <span>{squared}</span>
 </div>
 
 <style>
