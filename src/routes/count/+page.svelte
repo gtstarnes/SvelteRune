@@ -5,6 +5,7 @@
  *      Create counter and counter squared
  *      center everything
  *      style
+ *      commit after task blocks
  */
 
 </script>
