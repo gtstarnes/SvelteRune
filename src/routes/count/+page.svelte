@@ -10,7 +10,12 @@
 </script>
 
 <div >
-
+    <span></span>
+    <div>
+        <button>+</button>
+        <button>Reset</button>
+        <button>_</button>
+    </div>
 </div>
 
 <style>
