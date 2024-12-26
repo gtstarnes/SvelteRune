@@ -7,6 +7,13 @@
 const tabs = ['Home', 'About', 'Projects']
 let active = $state('Home');
 
+//FUNCTIONS
+function changeTab(tab: string) {
+    if (tab !== active){
+        active = tab
+    }
+}
+
 </script>
 
 <div>
@@ -15,7 +22,7 @@ let active = $state('Home');
         <span>LOGO</span>
         <ul>
             {#each tabs as tab (tab)}
-                <li>{tab}</li>
+                <li onclick={() => changeTab(tab)}>{tab}</li>
             {/each}
         </ul>
     </nav>
