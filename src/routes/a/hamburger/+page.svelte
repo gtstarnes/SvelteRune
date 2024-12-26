@@ -14,7 +14,9 @@ let active = $state('Home');
         <span>COMPANY</span>
         <span>LOGO</span>
         <ul>
-
+            {#each tabs as tab (tab)}
+                <li>{tab}</li>
+            {/each}
         </ul>
     </nav>
 
