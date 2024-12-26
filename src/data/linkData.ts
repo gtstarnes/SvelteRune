@@ -1,7 +1,7 @@
 const links = [
     {
         text: "Rune Count",
-        href: "/count",
+        href: "b/count",
     },
     {
         text: "Rune Todo",
