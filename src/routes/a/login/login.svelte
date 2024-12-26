@@ -9,12 +9,12 @@
 <div>
     <form>
         <span>
-            <label for=""></label>
-            <input type="" id="" name="" />
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" />
         </span>
         <span>
-            <label for=""></label>
-            <input type="" id="" name="" />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" />
         </span>
         <button type="submit">Login</button>
     </form>
