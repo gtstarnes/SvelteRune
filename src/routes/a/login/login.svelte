@@ -11,6 +11,15 @@ let input = $state({
     password: '',
     error: ''
 })
+
+function handleSubmit(e: SubmitEvent) {
+    e.preventDefault()
+
+}
+function isError() {
+    let safe = true
+    return safe
+}
 </script>
 
 <div class="container">
