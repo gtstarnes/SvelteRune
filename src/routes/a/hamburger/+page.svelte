@@ -30,5 +30,17 @@ function changeTab(tab: string) {
 </div>
 
 <style>
-
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 2px;
+    }
+    li {
+        width: 4rem;
+    }
 </style>
