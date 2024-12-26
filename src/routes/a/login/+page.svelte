@@ -5,10 +5,15 @@
 
 	import Login from "./login.svelte";
 
+//VARIABLES
+let {username, loggedIn} = $state({
+    username: '',
+    loggedIn: false,
+})
 </script>
 
 <div>
-    <Login />
+    <Login bind:username bind:loggedIn />
 </div>
 
 
