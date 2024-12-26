@@ -3,6 +3,8 @@
  * REP: 1
 */
 
+	import Hamburger from "./hamburger.svelte";
+
 //VARIABLES
 const tabs = ['Home', 'About', 'Projects']
 let active = $state('Home');
@@ -36,6 +38,10 @@ $effect(() => {
     <nav>
         <span>COMPANY</span>
         <span>LOGO</span>
+        {#if width < 1024}
+            <Hamburger />
+        {:else}
+        {/if}
         <ul>
             {#each tabs as tab (tab)}
                 <li onclick={() => changeTab(tab)}
