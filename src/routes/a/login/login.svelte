@@ -21,7 +21,17 @@ function handleSubmit(e: SubmitEvent) {
     resetInput()
 }
 function isError() {
-    let safe = true
+    let safe = false
+    if (input.username === '' && input.password === ''){
+        input.error = 'Username and Password are required'
+    } else if (input.username === ''){
+        input.error = 'Username is required'
+    } else if (input.password === ''){
+        input.error = 'Password is required'
+    } else {
+        input.error = ''
+        safe = true
+    }
     return safe
 }
 function resetInput() {
