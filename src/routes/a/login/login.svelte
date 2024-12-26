@@ -41,7 +41,7 @@ function resetInput() {
 </script>
 
 <div class="container">
-    <form>
+    <form onsubmit={handleSubmit}>
         <span>{input.error}</span>
         <span>
             <label for="username">Username:</label>
