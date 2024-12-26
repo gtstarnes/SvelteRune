@@ -5,6 +5,7 @@
 
 //VARIABLES
 const tabs = ['Home', 'About', 'Projects']
+let active = $state('Home');
 
 </script>
 
