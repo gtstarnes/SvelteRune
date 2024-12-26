@@ -6,10 +6,16 @@
 
  //VARIABLES
 let {username = $bindable(""), loggedIn = $bindable(false)} = $props();
+let input = $state({
+    username: '',
+    password: '',
+    error: ''
+})
 </script>
 
 <div class="container">
     <form>
+        <span>{input.error}</span>
         <span>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" />
