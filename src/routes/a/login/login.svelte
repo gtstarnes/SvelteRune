@@ -7,7 +7,17 @@
 </script>
 
 <div>
-
+    <form>
+        <span>
+            <label for=""></label>
+            <input type="" id="" name="" />
+        </span>
+        <span>
+            <label for=""></label>
+            <input type="" id="" name="" />
+        </span>
+        <button type="submit">Login</button>
+    </form>
 </div>
 
 <style>
