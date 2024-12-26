@@ -8,7 +8,13 @@
 </script>
 
 <div>
-
+    <nav>
+        <span>COMPANY</span>
+        <span>LOGO</span>
+        <ul>
+            
+        </ul>
+    </nav>
 
 </div>
 
