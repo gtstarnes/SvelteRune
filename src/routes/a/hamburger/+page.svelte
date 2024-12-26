@@ -37,17 +37,17 @@ $effect(() => {
 <div>
     <nav>
         <span>COMPANY</span>
-        <span>LOGO</span>
+        <span class="logo">LOGO</span>
         {#if width < 1024}
             <Hamburger />
         {:else}
+            <ul>
+                {#each tabs as tab (tab)}
+                    <li onclick={() => changeTab(tab)}
+                        class:active={tab === active}>{tab}</li>
+                {/each}
+            </ul>
         {/if}
-        <ul>
-            {#each tabs as tab (tab)}
-                <li onclick={() => changeTab(tab)}
-                    class:active={tab === active}>{tab}</li>
-            {/each}
-        </ul>
     </nav>
 
 </div>
@@ -57,6 +57,7 @@ $effect(() => {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 4rem;
     }
     ul {
         display: flex;
@@ -73,5 +74,8 @@ $effect(() => {
     .active {
         color: pink;
         border-bottom: 1px solid pink;
+    }
+    .logo {
+        justify-self: center;
     }
 </style>
