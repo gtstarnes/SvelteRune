@@ -22,7 +22,8 @@ function changeTab(tab: string) {
         <span>LOGO</span>
         <ul>
             {#each tabs as tab (tab)}
-                <li onclick={() => changeTab(tab)}>{tab}</li>
+                <li onclick={() => changeTab(tab)}
+                    class:active={tab === active}>{tab}</li>
             {/each}
         </ul>
     </nav>
@@ -42,5 +43,13 @@ function changeTab(tab: string) {
     }
     li {
         width: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .active {
+        color: pink;
+        border-bottom: 1px solid pink;
     }
 </style>
