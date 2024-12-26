@@ -42,7 +42,6 @@ function resetInput() {
 
 <div class="container">
     <form onsubmit={handleSubmit}>
-        <span>{input.error}</span>
         <span>
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" bind:value={input.username} />
@@ -52,7 +51,9 @@ function resetInput() {
             <input type="password" id="password" name="password" bind:value={input.password} />
         </span>
         <button type="submit">Login</button>
+        <span>{input.error}</span>
     </form>
+    
 </div>
 
 <style>
