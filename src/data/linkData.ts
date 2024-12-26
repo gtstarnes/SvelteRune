@@ -21,7 +21,7 @@ const links = [
     },
     {
         text: "Rune Login",
-        href: "/login",
+        href: "a/login",
     },
     {
         text: "Rune Sign Up",
