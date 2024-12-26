@@ -3,7 +3,8 @@
  * REP: 1
 */
 
-
+//VARIABLES
+const tabs = ['Home', 'About', 'Projects']
 
 </script>
 
@@ -12,7 +13,7 @@
         <span>COMPANY</span>
         <span>LOGO</span>
         <ul>
-            
+
         </ul>
     </nav>
 
