@@ -41,7 +41,7 @@ const links = [
     },
     {
         text: "Rune Screen",
-        href: "/screensaver",
+        href: "a/screensaver",
     },
 ]
 
