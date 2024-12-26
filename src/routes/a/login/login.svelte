@@ -4,6 +4,8 @@
  * Rep: 3
  */
 
+ //VARIABLES
+let {username = $bindable(""), loggedIn = $bindable(false)} = $props();
 </script>
 
 <div class="container">
