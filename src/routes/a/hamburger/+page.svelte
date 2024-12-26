@@ -6,6 +6,7 @@
 //VARIABLES
 const tabs = ['Home', 'About', 'Projects']
 let active = $state('Home');
+let width = $state(0)
 
 //FUNCTIONS
 function changeTab(tab: string) {
@@ -13,6 +14,21 @@ function changeTab(tab: string) {
         active = tab
     }
 }
+
+//EFFECTS
+$effect(() => {
+    function handleResize() {
+        if (typeof window !== 'undefined') {
+            width = window.innerWidth
+        }
+    }
+    window.addEventListener('resize', handleResize)
+
+    return () => {
+        window.removeEventListener('resize', handleResize)
+    }
+    
+})
 
 </script>
 
