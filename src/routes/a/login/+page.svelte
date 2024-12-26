@@ -1,6 +1,6 @@
 <script lang="ts">
 /**
- * Rep: 3
+ * Rep: 4
 */
 
 	import Login from "./login.svelte";
@@ -21,7 +21,7 @@ function handleLogOut() {
     {#if loggedIn === false}
         <Login bind:username bind:loggedIn />
     {:else}
-        <div>
+        <div class="message">
             <span>Hello, {username}</span>
             <button onclick={handleLogOut}>Log Out</button>
         </div>
@@ -36,5 +36,8 @@ function handleLogOut() {
         height: 90vh;
         justify-content: center;
         align-items: center;
+    }
+    .message {
+        font-size: 3rem;
     }
 </style>
