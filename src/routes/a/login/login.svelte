@@ -18,11 +18,11 @@ let input = $state({
         <span>{input.error}</span>
         <span>
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" />
+            <input type="text" id="username" name="username" bind:value={input.username} />
         </span>
         <span>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" />
+            <input type="password" id="password" name="password" bind:value={input.password} />
         </span>
         <button type="submit">Login</button>
     </form>
