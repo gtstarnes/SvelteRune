@@ -42,7 +42,7 @@ function resetInputs() {
 </script>
 
 <div>
-    <form>
+    <form onsubmit={handleSubmit}>
         <div class="inputBlock">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" bind:value={input.username} />
