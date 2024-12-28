@@ -14,10 +14,15 @@ let input = $state({
 
 //FUNCTIONS
 function handleSubmit(e: SubmitEvent) {
-
+    e.preventDefault()
+    if (checkErrors()) {
+        username = input.username
+        loggedIn = input.password
+    }
 }
 function checkErrors() {
-
+    let noError = true
+    return noError
 }
 </script>
 
