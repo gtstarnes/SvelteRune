@@ -3,7 +3,7 @@
  * InSTRUCTIONS:
  * Rep: 4
  */
-
+let {username = $bindable(), loggedIn = $bindable()} = $props() 
 
 </script>
 
