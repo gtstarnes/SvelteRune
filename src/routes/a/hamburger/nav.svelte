@@ -4,7 +4,8 @@
     */
     //VARIABLES
     const tabs = ['Home', 'About', 'Projects',] 
-    let {activeTab = $bindable("Home")} = $props()
+    let {activeTab = $bindable("Home")} = $props();
+    let width = $state(0)
     
     //FUNCTIONS
     function changeTab (tab: string) {
@@ -12,6 +13,21 @@
             activeTab = tab
         }
     }
+
+    //EFFECTS
+    $effect(() => {
+        function handleResize() {
+            if (typeof window.innerWidth !== undefined){
+                width === window.innerWidth
+            }
+        }
+
+        window.addEventListener('resize', handleResize)
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    })
     
     </script>
     
