@@ -41,7 +41,8 @@ function resetInputs() {
 }
 </script>
 
-<div>
+<div class="container">
+    
     <form onsubmit={handleSubmit}>
         <div class="inputBlock">
             <label for="username">Username</label>
@@ -51,11 +52,38 @@ function resetInputs() {
             <label for="password">Password</label>
             <input type="password" id="password" name="password" bind:value={input.password} />
         </div>
-        <div>{input.error}</div>
         <button>Login</button>
+        
     </form>
+    <div class="error">{input.error}</div>
 </div>
 
 <style>
-
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+    .error {
+        color: red;
+        font-size: 85%;
+        margin-top: 1rem;
+    }
+    .inputBlock {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+    button {
+        width: 50%;
+        height: 1.5rem;
+        cursor: pointer;
+        align-self: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
 </style>
