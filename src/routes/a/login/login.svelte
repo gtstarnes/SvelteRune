@@ -5,7 +5,7 @@
  */
 
 //VARIABLES
-let {username = $bindable(), loggedIn = $bindable()} = $props() 
+let {username = $bindable(""), loggedIn = $bindable(false)} = $props() 
 let input = $state({
     username: '',
     password: '',
@@ -17,7 +17,7 @@ function handleSubmit(e: SubmitEvent) {
     e.preventDefault()
     if (checkErrors()) {
         username = input.username
-        loggedIn = input.password
+        loggedIn = true
     }
     resetInputs()
 }
