@@ -19,10 +19,15 @@ function handleSubmit(e: SubmitEvent) {
         username = input.username
         loggedIn = input.password
     }
+    resetInputs()
 }
 function checkErrors() {
     let noError = true
     return noError
+}
+function resetInputs() {
+    input.username = ''
+    input.password = ''
 }
 </script>
 
