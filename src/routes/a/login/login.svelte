@@ -3,6 +3,8 @@
  * InSTRUCTIONS:
  * Rep: 4
  */
+
+//VARIABLES
 let {username = $bindable(), loggedIn = $bindable()} = $props() 
 let input = $state({
     username: '',
@@ -10,6 +12,13 @@ let input = $state({
     error: '',
 })
 
+//FUNCTIONS
+function handleSubmit(e: SubmitEvent) {
+
+}
+function checkErrors() {
+
+}
 </script>
 
 <div>
