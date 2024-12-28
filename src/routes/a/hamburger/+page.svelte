@@ -16,7 +16,14 @@ function changeTab (tab: string) {
 </script>
 
 <div>
-
+    <nav>
+        <div>Company Logo</div>
+        <ul>
+            {#each tabs as tab (tab)}
+                <li><button onclick={()=> changeTab(tab)}>{tab}</button></li>
+            {/each}
+        </ul>
+    </nav>
 </div>
 
 <style>
