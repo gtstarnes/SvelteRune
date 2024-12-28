@@ -1,7 +1,10 @@
 <script lang="ts">
     /**
-     * REP: 2
+     * REP: 3
     */
+
+	import Hamburger from "./hamburger.svelte";
+
     //VARIABLES
     const tabs = ['Home', 'About', 'Projects',] 
     let {activeTab = $bindable("Home")} = $props();
@@ -16,16 +19,17 @@
 
     //EFFECTS
     $effect(() => {
-        function handleResize() {
-            if (typeof window.innerWidth !== undefined){
-                width === window.innerWidth
+        if (typeof window !== 'undefined'){
+            function handleResize() {
+                    width = window.innerWidth
             }
-        }
+        
 
-        window.addEventListener('resize', handleResize)
+            window.addEventListener('resize', handleResize)
 
-        return () => {
-            window.removeEventListener('resize', handleResize)
+            return () => {
+                window.removeEventListener('resize', handleResize)
+            }
         }
     })
     
@@ -34,11 +38,15 @@
     <div>
         <nav>
             <div>Company Logo</div>
-            <ul>
-                {#each tabs as tab (tab)}
-                    <li class:active={tab === activeTab}><button  onclick={()=> changeTab(tab)}>{tab}</button></li>
-                {/each}
-            </ul>
+            {#if width < 1040}
+                <Hamburger />
+            {:else}
+                <ul>
+                    {#each tabs as tab (tab)}
+                        <li class:active={tab === activeTab}><button  onclick={()=> changeTab(tab)}>{tab}</button></li>
+                    {/each}
+                </ul>
+            {/if}
         </nav>
     </div>
     
