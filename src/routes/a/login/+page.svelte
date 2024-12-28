@@ -8,6 +8,14 @@
 //VARIABLES
     let username = $state('')
     let loggedIn = $state(false)
+
+//functions
+function logOut() {
+    if (loggedIn === true) {
+        loggedIn = false
+        username = '';
+    }
+}
 </script>
 
 <div>
