@@ -3,12 +3,12 @@
  * REP: 2
 */
 
-	import Nav from "./nav.svelte";
-
+import Nav from "./nav.svelte";
+let activeTab = $state("Home")
 </script>
 
 <div>
-    <Nav />
+    <Nav bind:activeTab />
 </div>
 
 <style>
