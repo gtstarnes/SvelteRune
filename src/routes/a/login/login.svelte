@@ -9,13 +9,13 @@
 
 <div>
     <form>
-        <div>
-            <label for=""></label>
-            <input type="" id="" name="" />
+        <div class="inputBlock">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" />
         </div>
-        <div>
-            <label for=""></label>
-            <input type="" id="" name="" />
+        <div class="inputBlock">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" />
         </div>
         <button>Login</button>
     </form>
