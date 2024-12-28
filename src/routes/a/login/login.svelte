@@ -16,12 +16,13 @@ let input = $state({
     <form>
         <div class="inputBlock">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username" />
+            <input type="text" id="username" name="username" bind:value={input.username} />
         </div>
         <div class="inputBlock">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" />
+            <input type="password" id="password" name="password" bind:value={input.password} />
         </div>
+        <div>{input.error}</div>
         <button>Login</button>
     </form>
 </div>
