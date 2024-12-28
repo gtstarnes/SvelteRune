@@ -13,13 +13,20 @@
 function logOut() {
     if (loggedIn === true) {
         loggedIn = false
-        username = '';
+        username = ''
     }
 }
 </script>
 
 <div>
-    <Login bind:username bind:loggedIn />
+    {#if loggedIn === false}
+        <Login bind:username bind:loggedIn />
+    {:else}
+        <div>
+            <div>Hello, {username}</div>
+            <button onclick={logOut}>Log Out</button>
+        </div>
+    {/if}
 </div>
 
 
