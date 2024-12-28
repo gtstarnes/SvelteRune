@@ -44,19 +44,17 @@ function resetInputs() {
     input.password = ''
 }
 function checkUsers() {
-    let found = false;
     let status = users.find(user => {
         return user.username === input.username
     })
-    if (status === undefined) {
+    if (!status) {
         input.error = "User Not Found"
     } else if (status.password !== input.password) {
         input.error = "Password is incorrect"
     } else {
-        found = true
         input.error = '';
     }
-    return found
+    return status
 }
 </script>
 
