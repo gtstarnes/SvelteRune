@@ -9,6 +9,15 @@ let activeTab = $state("Home")
 
 <div>
     <Nav bind:activeTab />
+    <div>
+        {#if activeTab === "About"}
+            <div>About Me</div>
+        {:else if activeTab === "Projects"}
+            <div>Projects</div>
+        {:else}
+            <div>Welcome</div>
+        {/if}
+    </div>
 </div>
 
 <style>
