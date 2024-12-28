@@ -9,7 +9,7 @@ let activeTab = $state("Home")
 
 <div>
     <Nav bind:activeTab />
-    <div>
+    <div class="page">
         {#if activeTab === "About"}
             <div>About Me</div>
         {:else if activeTab === "Projects"}
@@ -21,5 +21,11 @@ let activeTab = $state("Home")
 </div>
 
 <style>
-
+    .page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+        font-size: 8rem;
+    }
 </style>
