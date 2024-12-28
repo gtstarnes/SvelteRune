@@ -4,6 +4,11 @@
  * Rep: 4
  */
 let {username = $bindable(), loggedIn = $bindable()} = $props() 
+let input = $state({
+    username: '',
+    password: '',
+    error: '',
+})
 
 </script>
 
