@@ -7,12 +7,19 @@
 
 </script>
 
-<div>
-    {#each colors as color (color.id)}
-        <div>{color.color}</div>
-    {/each}
+<div class="container">
+    <div>
+        {#each colors as color (color.id)}
+            <div>{color.color}</div>
+        {/each}
+    </div>
 </div>
 
 <style>
+    .container {
+        display: flex;
+        width: 100vw;
+        height: 100vh
 
+    }
 </style>
