@@ -8,7 +8,7 @@
 </script>
 
 <div class="container">
-    <div>
+    <div class="row">
         {#each colors as color (color.id)}
             <div>{color.color}</div>
         {/each}
@@ -22,5 +22,12 @@
         height: 90vh;
         justify-content: center;
         align-items: center;
+    }
+    .row {
+        display: flex;
+        width: 90vw;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
     }
 </style>
