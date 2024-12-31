@@ -3,10 +3,12 @@
  * REP: III
 */
 
+	import Nav from "./nav.svelte";
+
 </script>
 
 <div>
-
+    <Nav />
 </div>
 
 <style>
