@@ -4,7 +4,7 @@
     */    
 
     const links = ["Home", "About", "Projects"]
-    let active = $state('Home')
+    let {active = $bindable('Home')} = $props()
 
     function changeActive(a: string) {
         if (a !== active) {
