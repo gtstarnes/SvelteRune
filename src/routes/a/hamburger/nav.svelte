@@ -1,7 +1,10 @@
 <script lang="ts">
     /**
      * REP: III
-    */    
+    */
+import Hamburger from "./hamburger.svelte";
+
+    
 
     const links = ["Home", "About", "Projects"]
     let {active = $bindable('Home')} = $props()
@@ -18,13 +21,17 @@
         <nav>
             <div>LOGO</div>
             <div>
-                <ul>
-                    {#each links as link (link)}
-                        <li><button 
-                            class:active={link === active}
-                            onclick={() => changeActive(link)}>{link}</button></li>
-                    {/each}
-                </ul>
+                {#if width > 1040}
+                    <ul>
+                        {#each links as link (link)}
+                            <li><button 
+                                class:active={link === active}
+                                onclick={() => changeActive(link)}>{link}</button></li>
+                        {/each}
+                    </ul>
+                {:else}
+                    <Hamburger />
+                {/if}
 
             </div>
         </nav>
