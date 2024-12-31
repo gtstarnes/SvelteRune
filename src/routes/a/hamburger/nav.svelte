@@ -5,6 +5,12 @@
 
     const links = ["Home", "About", "Projects"]
     let active = $state('Home')
+
+    function changeActive(a: string) {
+        if (a !== active) {
+            active = a
+        }
+    }
     </script>
     
     <div>
