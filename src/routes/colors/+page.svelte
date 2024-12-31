@@ -10,7 +10,7 @@
 <div class="container">
     <div class="row">
         {#each colors as color (color.id)}
-            <div>{color.color}</div>
+            <div class="block" style={`background-color: ${color.color}`}>{color.color}</div>
         {/each}
     </div>
 </div>
@@ -25,9 +25,18 @@
     }
     .row {
         display: flex;
-        width: 90vw;
+        width: 100vw;
         justify-content: center;
         align-items: center;
         height: 20vh;
+        gap: 2%;
+    }
+    .block {
+        width: 10vw;
+        height: 14vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
     }
 </style>
