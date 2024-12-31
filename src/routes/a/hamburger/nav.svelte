@@ -4,6 +4,7 @@
     */    
 
     const links = ["Home", "About", "Projects"]
+    let active = $state('Home')
     </script>
     
     <div>
