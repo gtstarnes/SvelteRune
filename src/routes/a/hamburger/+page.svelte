@@ -7,19 +7,31 @@
     let active = $state("Home");
 </script>
 
-<div>
+<div class="container">
     <Nav bind:active />
-    <section>
+    <section >
         {#if active === "Home"}
-            <span>welcome</span>
+            <span>welcome.</span>
         {:else if active === "About"}
-            <span>about me</span>
+            <span>about me.</span>
         {:else}
-            <span>projects</span>
+            <span>projects.</span>
         {/if}
     </section>
 </div>
 
 <style>
+    section {
+        display: flex;
+        height: 90%;
+        justify-content: center;
+        align-items: center;
 
+    }
+    span {
+        font-size: 8rem;
+    }
+    .container {
+        height: 90vh;
+    }
 </style>
