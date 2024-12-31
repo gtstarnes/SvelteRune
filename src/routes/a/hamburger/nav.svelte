@@ -5,6 +5,7 @@
 
     const links = ["Home", "About", "Projects"]
     let {active = $bindable('Home')} = $props()
+    let width = $state(0);
 
     function changeActive(a: string) {
         if (a !== active) {
