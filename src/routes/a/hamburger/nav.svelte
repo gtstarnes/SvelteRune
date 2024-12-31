@@ -19,7 +19,9 @@
             <div>
                 <ul>
                     {#each links as link (link)}
-                        <li><button>{link}</button></li>
+                        <li><button 
+                            class:active={link === active}
+                            onclick={() => changeActive(link)}>{link}</button></li>
                     {/each}
                 </ul>
 
@@ -42,5 +44,10 @@
             border: none;
             background-color: inherit;
             cursor: pointer;
+            width: 10vw;
+        }
+        .active {
+            font-weight: bold;
+            color: gold;
         }
     </style>
