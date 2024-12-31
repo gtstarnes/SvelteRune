@@ -38,5 +38,10 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
+        transition: width 0.50s ease-out;
+    }
+    .block:hover {
+        width: 18vw;
+        transition: width 0.25s ease-in;
     }
 </style>
