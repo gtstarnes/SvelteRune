@@ -2,12 +2,21 @@
     /**
      * REP: III
     */    
+
+    const links = ["Home", "About", "Projects"]
     </script>
     
     <div>
         <nav>
             <div>LOGO</div>
-            <div>LIST</div>
+            <div>
+                <ul>
+                    {#each links as link (link)}
+                        <li>{link}</li>
+                    {/each}
+                </ul>
+
+            </div>
         </nav>
     </div>
     
