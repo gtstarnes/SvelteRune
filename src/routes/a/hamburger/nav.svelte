@@ -12,5 +12,9 @@
     </div>
     
     <style>
-
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
     </style>
