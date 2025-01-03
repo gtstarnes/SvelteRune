@@ -18,7 +18,7 @@ function handleLogOut() {
 }
 </script>
 
-<div>
+<div class="container">
     {#if loggedIn === false}
         <Login bind:username bind:loggedIn />
     {:else}
@@ -29,5 +29,16 @@ function handleLogOut() {
 
 
 <style>
-
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+    span {
+        font-size: 5rem;
+    }
+    button {
+        cursor: pointer;
+    }
 </style>
