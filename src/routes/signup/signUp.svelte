@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { users } from "./users.svelte";
+	import { getUsers, addUser } from "./users.svelte";
 
 /**
  * REP: I
@@ -10,13 +10,15 @@ let details = $state({
     password: '',
     error: '',
 })
+const users = $derived(getUsers());
 
 
 //FUNCTIONS
 function handleSubmit(e: SubmitEvent) {
     e.preventDefault
-    if (!checkError() && checkUsers()){
+    if (!checkError() && !checkUsers()){
         const newUser  = {username: details.username, name: details.name, password: details.password}
+        addUser(newUser);
     }
     resetForm()
 }
@@ -37,12 +39,12 @@ function checkError(){
     return err
 }
 function checkUsers(){
-    let err = false
+    let err = true
     const found = users.find(user => {
         return user.username === details.username
     })
-    if (found) {
-        err = true
+    if (!found) {
+        err = false
         details.error = "username already exists"
     }
     return err
