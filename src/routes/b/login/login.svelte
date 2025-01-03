@@ -6,7 +6,13 @@
  * Rep: IV
  */
 
-
+//variables
+let {username = $bindable(null), loggedIn = $bindable(false)} = $props();
+let details = $state({
+    username: '',
+    password: '',
+    error: '',
+})
 </script>
 
 <div>
