@@ -11,7 +11,12 @@
 </script>
 
 <div>
-    <Login bind:username bind:loggedIn />
+    {#if loggedIn === false}
+        <Login bind:username bind:loggedIn />
+    {:else}
+        <span>Hello, {username}</span>
+        <button>Log Out</button>
+    {/if}
 </div>
 
 
