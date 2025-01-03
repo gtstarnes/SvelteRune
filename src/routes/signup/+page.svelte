@@ -29,5 +29,11 @@ const users = $derived(getUsers());
         width: 99vw;
         height: 90vh;
     }
-
+    ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        width: 99vw;
+        text-align: center;
+    }
 </style>
