@@ -3,10 +3,12 @@
  * Rep: 4
 */
 
+	import Login from "./login.svelte";
+
 </script>
 
 <div>
-
+    <Login />
 </div>
 
 
