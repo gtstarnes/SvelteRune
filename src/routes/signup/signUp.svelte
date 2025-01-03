@@ -8,6 +8,20 @@ let details = $state({
     password: '',
     error: '',
 })
+
+//FUNCTIONS
+function handleSubmit() {
+
+}
+function checkError(){
+
+}
+function checkUsers(){
+
+}
+function resetForm(){
+    
+}
 </script>
 
 <form>
