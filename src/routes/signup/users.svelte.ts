@@ -24,5 +24,9 @@ const initial = [
 
 const users = $state<User[]>(initial);
 
+function getUsers() {
+    return users
+}
 
-export {users}
+
+export {users, getUsers}

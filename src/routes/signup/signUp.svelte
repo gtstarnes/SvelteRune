@@ -16,7 +16,7 @@ let details = $state({
 function handleSubmit(e: SubmitEvent) {
     e.preventDefault
     if (!checkError() && checkUsers()){
-
+        const newUser  = {username: details.username, name: details.name, password: details.password}
     }
     resetForm()
 }
@@ -28,7 +28,7 @@ function checkError(){
     } else if (details.username === ''){
         details.error = 'username is required'
     } else if (details.password === ''){
-        details.error = 'password is reuqired'
+        details.error = 'password is required'
     } else {
         err = false;
         details.error = '';

@@ -4,9 +4,9 @@
 */
 
 	import SignUp from "./signUp.svelte";
-	import { users } from "./users.svelte";
+	import { getUsers } from "./users.svelte";
 
-
+const users = getUsers();
 </script>
 
 <div>
