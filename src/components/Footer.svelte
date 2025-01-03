@@ -4,7 +4,7 @@
 
 
 <footer>
-    <div>Copyright© {year}</div>
+    <div>Copyright© 2024-{year} All Rights Reserved</div>
 </footer>
 
 <style>
