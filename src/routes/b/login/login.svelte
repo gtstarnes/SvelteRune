@@ -73,10 +73,28 @@ function resetForm(){
 </div>
 
 <style>
+    button {
+        cursor: pointer;
+        margin-top: 0.25rem;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 90vh;
+    }
+    .error {
+        color: red;
+        text-align: center;
+    }
+    .inputs {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: space-between;
     }
 </style>
