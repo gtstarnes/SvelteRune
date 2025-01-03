@@ -10,8 +10,9 @@ let details = $state({
 })
 
 //FUNCTIONS
-function handleSubmit() {
-
+function handleSubmit(e: SubmitEvent) {
+    e.preventDefault
+    resetForm()
 }
 function checkError(){
 
@@ -29,18 +30,18 @@ function resetForm(){
 }
 </script>
 
-<form>
+<form onsubmit={handleSubmit}>
     <span>
         <label for="name">Name</label>
-        <input id="name" name="name" type="text" />
+        <input bind:value={details.name} id="name" name="name" type="text" />
     </span>
     <span>
         <label for="username">Username</label>
-        <input id="username" name="username" type="text" placeholder="(required)" />
+        <input bind:value={details.username} id="username" name="username" type="text" placeholder="(required)" />
     </span>
     <span>
         <label for="password">Password</label>
-        <input id="password" name="password" type="password" placeholder="(required)" />
+        <input bind:value={details.password} id="password" name="password" type="password" placeholder="(required)" />
     </span>
     <button>Sign Up</button>
 </form>
