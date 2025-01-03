@@ -43,7 +43,7 @@ function checkUsers(){
     const found = users.find(user => {
         return user.username === details.username
     })
-    if (!found) {
+    if (found) {
         err = false
         details.error = "username already exists"
     }
@@ -56,19 +56,38 @@ function resetForm(){
 
 <form onsubmit={handleSubmit}>
     <span>{details.error}</span>
-    <span>
+    <span class="input">
         <label for="name">Name</label>
         <input bind:value={details.name} id="name" name="name" type="text" />
     </span>
-    <span>
+    <span class="input">
         <label for="username">Username</label>
         <input bind:value={details.username} id="username" name="username" type="text" placeholder="(required)" />
     </span>
-    <span>
+    <span class="input">
         <label for="password">Password</label>
         <input bind:value={details.password} id="password" name="password" type="password" placeholder="(required)" />
     </span>
     <button type="submit">Sign Up</button>
 </form>
 
-<style></style>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        gap: 0.25rem;
+    }
+    .input {
+        display: flex;
+        justify-content: space-between;
+    }
+    input {
+        text-align: end;
+        width: 70%;
+        padding-right: 8px;
+    }
+    button {
+        cursor: pointer;
+    }
+</style>
