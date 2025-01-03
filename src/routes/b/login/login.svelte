@@ -20,11 +20,19 @@ function handleLogin(e: SubmitEvent) {
     if (!checkError()){
 
     }
+    resetForm();
 }
 function checkError(){
     let err = true
     if (details.username === "" && details.password === ''){
         details.error = "username and password are required"
+    } else if (details.username === ""){
+        details.error = 'username is required'
+    } else if (details.password === ""){
+        details.error = "password is required"
+    } else {
+        err = false;
+        details.error = ''
     }
     return err
 }
@@ -32,7 +40,8 @@ function checkUsers(){
 
 }
 function resetForm(){
-
+    details.username = ''
+    details.password = ''
 }
 </script>
 
