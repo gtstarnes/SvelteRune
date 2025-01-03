@@ -16,7 +16,7 @@ const users = $derived(getUsers());
 //FUNCTIONS
 function handleSubmit(e: SubmitEvent) {
     e.preventDefault
-    if (!checkError() && !checkUsers()){
+    if (!checkError() && checkUsers()){
         const newUser  = {username: details.username, name: details.name, password: details.password}
         addUser(newUser);
     }

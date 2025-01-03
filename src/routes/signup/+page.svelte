@@ -29,4 +29,5 @@ const users = $derived(getUsers());
         width: 99vw;
         height: 90vh;
     }
+
 </style>
