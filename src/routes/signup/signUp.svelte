@@ -20,7 +20,12 @@ function checkUsers(){
 
 }
 function resetForm(){
-    
+    details = {
+        ...details,
+        name: '',
+        username: '',
+        password: '',
+    }
 }
 </script>
 
