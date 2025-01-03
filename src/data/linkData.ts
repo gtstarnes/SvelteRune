@@ -43,6 +43,10 @@ const links = [
         text: "Rune Screen",
         href: "a/screensaver",
     },
+    {
+        text: "Rune Timer",
+        href: "/timer",
+    },
 ]
 
 export { links }
