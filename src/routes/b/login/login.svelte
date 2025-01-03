@@ -15,9 +15,10 @@ let details = $state({
 })
 
 //functions
-function handleLogin() {
-    if (!checkError){
-        
+function handleLogin(e: SubmitEvent) {
+    e.preventDefault
+    if (!checkError()){
+
     }
 }
 function checkError(){
@@ -36,7 +37,7 @@ function resetForm(){
 </script>
 
 <div>
-    <form>
+    <form onsubmit={handleLogin}>
         <span>{details.error}</span>
         <span>
             <label for="username">Username</label>
