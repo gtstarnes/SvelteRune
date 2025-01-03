@@ -1,10 +1,24 @@
 interface User {
     username: string,
-    name: string,
     password: string,
 }
 
-const users = $state<User[]>([]);
+const initial = [
+    {
+        username: 'AzzClappa',
+        password: '1234',
+    },
+    {
+        username: 'DixiEnormous',
+        password: '4321',
+    },
+    {
+        username: 'BobDucca',
+        password: 'password',
+    },
+]
+
+const users = $state<User[]>(initial);
 
 
 export {users}
