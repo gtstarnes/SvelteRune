@@ -6,7 +6,7 @@
 	import SignUp from "./signUp.svelte";
 	import { getUsers } from "./users.svelte";
 
-const users = getUsers();
+const users = $derived(getUsers());
 </script>
 
 <div>
