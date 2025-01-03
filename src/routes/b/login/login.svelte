@@ -57,14 +57,14 @@ function resetForm(){
 }
 </script>
 
-<div>
+<div class='container'>
     <form onsubmit={handleLogin}>
-        <span>{details.error}</span>
-        <span>
+        <span class="error">{details.error}</span>
+        <span class="inputs">
             <label for="username">Username</label>
             <input id="username" name="username" type="text" bind:value={details.username} />
         </span>
-        <span>
+        <span class="inputs">
             <label for="password">Password</label>
             <input id="password" name="password" type="password" bind:value={details.password} />
         </span>
