@@ -16,16 +16,22 @@ let details = $state({
 
 //functions
 function handleLogin() {
-
+    if (!checkError){
+        
+    }
 }
 function checkError(){
-
+    let err = true
+    if (details.username === "" && details.password === ''){
+        details.error = "username and password are required"
+    }
+    return err
 }
 function checkUsers(){
 
 }
 function resetForm(){
-    
+
 }
 </script>
 
