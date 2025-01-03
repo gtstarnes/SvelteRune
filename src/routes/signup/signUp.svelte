@@ -17,11 +17,11 @@ let details = $state({
     </span>
     <span>
         <label for="username">Username</label>
-        <input id="username" name="username" type="text" />
+        <input id="username" name="username" type="text" placeholder="(required)" />
     </span>
     <span>
         <label for="password">Password</label>
-        <input id="password" name="password" type="password" />
+        <input id="password" name="password" type="password" placeholder="(required)" />
     </span>
     <button>Sign Up</button>
 </form>
