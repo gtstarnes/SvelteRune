@@ -8,6 +8,14 @@
 //VARIABLES
     let username = $state('');
     let loggedIn = $state(false);
+
+// functions
+function handleLogOut() {
+    if (loggedIn === true){
+        loggedIn = false
+        username = ''
+    }
+}
 </script>
 
 <div>
@@ -15,7 +23,7 @@
         <Login bind:username bind:loggedIn />
     {:else}
         <span>Hello, {username}</span>
-        <button>Log Out</button>
+        <button onclick={handleLogOut}>Log Out</button>
     {/if}
 </div>
 
