@@ -13,6 +13,20 @@ let details = $state({
     password: '',
     error: '',
 })
+
+//functions
+function handleLogin() {
+
+}
+function checkError(){
+
+}
+function checkUsers(){
+
+}
+function resetForm(){
+    
+}
 </script>
 
 <div>
