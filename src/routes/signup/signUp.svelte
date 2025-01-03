@@ -2,7 +2,12 @@
 /**
  * REP: I
 */
-
+let details = $state({
+    name: '',
+    username: '',
+    password: '',
+    error: '',
+})
 </script>
 
 <form>
