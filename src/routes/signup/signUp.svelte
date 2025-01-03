@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { users } from "./users.svelte";
+
 /**
  * REP: I
 */
@@ -9,28 +11,49 @@ let details = $state({
     error: '',
 })
 
+
 //FUNCTIONS
 function handleSubmit(e: SubmitEvent) {
     e.preventDefault
+    if (!checkError() && checkUsers()){
+
+    }
     resetForm()
 }
 function checkError(){
+    let err = true
 
+    if (details.username === '' && details.password === ''){
+        details.error = 'cannot submit empty form'
+    } else if (details.username === ''){
+        details.error = 'username is required'
+    } else if (details.password === ''){
+        details.error = 'password is reuqired'
+    } else {
+        err = false;
+        details.error = '';
+    }
+
+    return err
 }
 function checkUsers(){
-
+    let err = false
+    const found = users.find(user => {
+        return user.username === details.username
+    })
+    if (found) {
+        err = true
+        details.error = "username already exists"
+    }
+    return err
 }
 function resetForm(){
-    details = {
-        ...details,
-        name: '',
-        username: '',
-        password: '',
-    }
+ details.name = details.username = details.password = ''
 }
 </script>
 
 <form onsubmit={handleSubmit}>
+    <span>{details.error}</span>
     <span>
         <label for="name">Name</label>
         <input bind:value={details.name} id="name" name="name" type="text" />
@@ -43,7 +66,7 @@ function resetForm(){
         <label for="password">Password</label>
         <input bind:value={details.password} id="password" name="password" type="password" placeholder="(required)" />
     </span>
-    <button>Sign Up</button>
+    <button type="submit">Sign Up</button>
 </form>
 
 <style></style>
