@@ -9,7 +9,7 @@
 const users = $derived(getUsers());
 </script>
 
-<div>
+<div class="container">
     <SignUp />
     <div>
         <ul>
@@ -20,4 +20,13 @@ const users = $derived(getUsers());
     </div>
 </div>
 
-<style></style>
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 99vw;
+        height: 90vh;
+    }
+</style>
