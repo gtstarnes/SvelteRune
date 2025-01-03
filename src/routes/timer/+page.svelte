@@ -8,6 +8,21 @@
         isRunning = true;
     }
 
+    $effect(() => {
+        let countdown:number;
+        if (isRunning && timer > 0){
+            countdown = setInterval(() => {
+                timer = timer - 1
+            }, 1000)
+        } else {
+            isRunning = false;
+        }
+
+        return () => {
+            clearInterval(countdown)
+        }
+    })
+
 </script>
 
 <div>
