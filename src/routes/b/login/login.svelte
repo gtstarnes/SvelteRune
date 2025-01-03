@@ -17,8 +17,9 @@ let details = $state({
 //functions
 function handleLogin(e: SubmitEvent) {
     e.preventDefault
-    if (!checkError()){
-
+    if (!checkError() && !checkUsers()){
+        username = details.username
+        loggedIn = true
     }
     resetForm();
 }
@@ -37,7 +38,18 @@ function checkError(){
     return err
 }
 function checkUsers(){
-
+    let err = true
+    const found = users.find(user => {
+        return user.username === details.username
+    })
+    if (!found){
+        details.error = "user does not exist"
+    } else if (found.password !== details.password){
+        details.error = "password does not match"
+    } else {
+        err = false
+    }
+    return err
 }
 function resetForm(){
     details.username = ''
