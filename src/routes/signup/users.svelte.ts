@@ -28,5 +28,8 @@ let userList = $state<User[]>(initial)
 function getUsers() {
     return userList;
 }
+function addUser(user:User){
+    userList = [...userList, user]
+}
 
 
