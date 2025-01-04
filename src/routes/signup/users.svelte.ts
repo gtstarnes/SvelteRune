@@ -38,3 +38,5 @@ function checkUsers(username:string){
     return found
 }
 
+export {getUsers, addUser, checkUsers}
+
