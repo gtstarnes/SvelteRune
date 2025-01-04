@@ -25,12 +25,35 @@ let {username = $bindable(''), loggedIn = $bindable(false), portal = $bindable(f
         <label for="password">Password</label>
         <input name="password" id="password" type="password" bind:value={details.password} />
     </span>
-    <div>
+    <div class="controls">
         <button>Submit</button>
         <button>Login</button>
     </div>
 </form>
 
 <style>
- 
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 50vw;
+    }
+    button {
+        width: 49.5%;
+        cursor: pointer;
+    }
+    span {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.35rem;
+    }
+    input {
+        width: 80%;
+    }
+
+    .controls{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
 </style>
