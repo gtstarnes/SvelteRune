@@ -14,13 +14,20 @@ let portal = $state(false)
 </script>
 
 <div class="container">
-    <Login />
-    <SignUp bind:username bind:loggedIn bind:portal />
-    <ul>
-        {#each users as user(user.username)}
-            <li>{user.username}</li>
-        {/each}
-    </ul>
+    {#if loggedIn === true}
+        <span>Hello {username}</span>
+        <ul>
+            {#each users as user(user.username)}
+                <li>{user.username}</li>
+            {/each}
+        </ul>
+    {:else}
+        {#if portal === true}
+        <Login />
+        {:else}
+            <SignUp bind:username bind:loggedIn bind:portal />
+        {/if}
+    {/if}
 </div>
 
 <style>
