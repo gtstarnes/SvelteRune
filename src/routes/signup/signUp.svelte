@@ -8,7 +8,19 @@ let details = $state({
     password: '',
     error: '',
 })
-let {username = $bindable(''), loggedIn = $bindable(false), portal = $bindable(false)} = $props();
+let {
+username = $bindable(''), 
+loggedIn = $bindable(false), 
+portal = $bindable(false)
+} = $props();
+
+//functions
+function handleSubmit(e: SubmitEvent){
+
+}
+function checkErrors(){
+    
+}
 </script>
 
 <form>
