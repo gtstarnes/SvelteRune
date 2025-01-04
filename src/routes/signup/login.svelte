@@ -1,5 +1,9 @@
 <script lang="ts">
 
+    //VARIABLES
+    let  {username = $bindable(''), 
+    loggedIn = $bindable(false),
+    portal = $bindable(true)} = $props();
 </script>
 
 <form>
