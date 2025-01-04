@@ -33,7 +33,7 @@ function handleLogOut() {
         </ul>
     {:else}
         {#if portal === true}
-            <Login bind:portal />
+            <Login bind:username bind:loggedIn bind:portal />
         {:else}
             <SignUp bind:username bind:loggedIn bind:portal />
         {/if}
