@@ -25,3 +25,8 @@ const initial:User[] = [
 
 let userList = $state<User[]>(initial)
 
+function getUsers() {
+    return userList;
+}
+
+
