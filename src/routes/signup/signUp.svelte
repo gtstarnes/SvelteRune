@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { addUser, checkUsers } from "./users.svelte";
+
 /**
  * REP: I
 */
@@ -16,7 +18,13 @@ portal = $bindable(false)
 
 //functions
 function handleSubmit(e: SubmitEvent){
-
+    if (!checkErrors && !checkUsers(details.username)){
+        addUser({
+          name: details.name,
+          username: details.username,
+          password: details.password
+        })
+    }
     resetDetails();
 }
 function checkErrors(){
@@ -29,7 +37,7 @@ function resetDetails() {
 }
 </script>
 
-<form>
+<form onsubmit={handleSubmit}>
     <span>{details.error}</span>
     <span>
         <label for="name">Name</label>
