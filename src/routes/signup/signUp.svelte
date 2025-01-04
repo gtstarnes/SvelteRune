@@ -18,17 +18,32 @@ portal = $bindable(false)
 
 //functions
 function handleSubmit(e: SubmitEvent){
-    if (!checkErrors && !checkUsers(details.username)){
+    if (!checkErrors()){
         addUser({
           name: details.name,
           username: details.username,
           password: details.password
         })
+        username = details.username
+        loggedIn = true;
     }
     resetDetails();
 }
 function checkErrors(){
-
+    let err = true;
+    if (details.username === '' && details.password ===''){
+        details.error = 'username and password are required'
+    } else if (details.username === ''){
+        details.error = 'password is required'
+    } else if (details.password === ''){
+        details.error = 'username is required'
+    } else if (checkUsers(details.username)){
+        details.error = 'username already exists'
+    } else {
+        err = false;
+        details.error = '';
+    }
+    return err
 }
 function resetDetails() {
     details.name = ''
