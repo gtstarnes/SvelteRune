@@ -17,9 +17,15 @@ portal = $bindable(false)
 //functions
 function handleSubmit(e: SubmitEvent){
 
+    resetDetails();
 }
 function checkErrors(){
-    
+
+}
+function resetDetails() {
+    details.name = ''
+    details.username = ''
+    details.password = ''
 }
 </script>
 
