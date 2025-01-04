@@ -8,6 +8,7 @@ let details = $state({
     password: '',
     error: '',
 })
+let {username = $bindable(''), loggedIn = $bindable(false)} = $props();
 </script>
 
 <form>
