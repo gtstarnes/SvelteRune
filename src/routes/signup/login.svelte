@@ -9,6 +9,20 @@
         password: '',
         error: ''
     })
+
+    //functions
+    function handleSubmit(){
+
+    }
+    function checkErrors(){
+
+    }
+    function resetInput(){
+
+    }
+    function togglePortal(){
+        portal = false
+    }
 </script>
 
 <form>
@@ -23,7 +37,7 @@
     </span>
     <div>
         <button>Log In</button>
-        <button>Sign Up</button>
+        <button onclick={togglePortal}>Sign Up</button>
     </div>
 </form>
 
