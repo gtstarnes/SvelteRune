@@ -68,7 +68,7 @@ function resetDetails() {
     </span>
     <div class="controls">
         <button type="submit">Submit</button>
-        <button type="button">Login</button>
+        <button type="button" onclick={() => portal = true}>Login</button>
     </div>
 </form>
 
