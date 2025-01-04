@@ -23,3 +23,5 @@ const initial:User[] = [
     },
 ]
 
+let userList = $state<User[]>(initial)
+
