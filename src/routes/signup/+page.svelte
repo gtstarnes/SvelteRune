@@ -11,11 +11,21 @@ const users = $derived(getUsers())
 let username = $state('')
 let loggedIn = $state(false)
 let portal = $state(false)
+
+//funcitons
+function handleLogOut() {
+    username = ''
+    loggedIn = false
+    portal = true
+}
 </script>
 
 <div class="container">
     {#if loggedIn === true}
-        <span>Hello {username}</span>
+        <div>
+            <span>Hello {username}</span>
+            <button onclick={handleLogOut}>Logout</button>
+        </div>
         <ul>
             {#each users as user(user.username)}
                 <li>{user.username}</li>
@@ -23,7 +33,7 @@ let portal = $state(false)
         </ul>
     {:else}
         {#if portal === true}
-        <Login />
+            <Login />
         {:else}
             <SignUp bind:username bind:loggedIn bind:portal />
         {/if}
