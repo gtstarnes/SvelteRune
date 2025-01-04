@@ -12,13 +12,15 @@
 
     //functions
     function handleSubmit(){
-
+        
+        resetInput();
     }
     function checkErrors(){
 
     }
     function resetInput(){
-
+        input.username = ''
+        input.password = ''
     }
     function togglePortal(){
         portal = false
@@ -36,8 +38,8 @@
         <input id='password' name='password' type='password' bind:value={input.password}  />
     </span>
     <div>
-        <button>Log In</button>
-        <button onclick={togglePortal}>Sign Up</button>
+        <button type="submit">Log In</button>
+        <button onclick={togglePortal} type="button">Sign Up</button>
     </div>
 </form>
 
