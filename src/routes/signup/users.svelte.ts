@@ -1,8 +1,4 @@
-interface User {
-    username: string,
-    name: string
-    password: string,
-}
+
 
 const initial = [
     {
@@ -22,14 +18,3 @@ const initial = [
     },
 ]
 
-let users = $state<User[]>(initial);
-
-function getUsers() {
-    return users
-}
-function addUser(user:User){
-    users = [...users, user]
-}
-
-
-export {addUser, getUsers}
