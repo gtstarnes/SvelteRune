@@ -67,8 +67,8 @@ function resetDetails() {
         <input name="password" id="password" type="password" bind:value={details.password} />
     </span>
     <div class="controls">
-        <button>Submit</button>
-        <button>Login</button>
+        <button type="submit">Submit</button>
+        <button type="button">Login</button>
     </div>
 </form>
 
