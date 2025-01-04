@@ -8,11 +8,14 @@
 	import { getUsers } from "./users.svelte";
 
 const users = $derived(getUsers())
+let username = $state('')
+let loggedIn = $state(false)
+let portal = $state(false)
 </script>
 
 <div class="container">
     <Login />
-    <SignUp />
+    <SignUp bind:username bind:loggedIn bind:portal />
     <ul>
         {#each users as user(user.username)}
             <li>{user.username}</li>
