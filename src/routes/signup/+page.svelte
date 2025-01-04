@@ -13,7 +13,11 @@ const users = $derived(getUsers())
 <div class="container">
     <Login />
     <SignUp />
-    
+    <ul>
+        {#each users as user(user.username)}
+            <li>{user.username}</li>
+        {/each}
+    </ul>
 </div>
 
 <style>
