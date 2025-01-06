@@ -9,6 +9,14 @@
 
 <div class="container">
     <Nav />
+    {#if active === "Home"}
+        <span>welcome</span>
+    {:else if active === "About"}
+        <span>about</span>
+    {:else}
+        <span>projects</span>
+    {/if}
+
 </div>
 
 <style>
