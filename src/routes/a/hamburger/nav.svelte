@@ -15,25 +15,9 @@
             active = a
         }
     }
-
-    //EFFECTS 
-    $effect(() => {
-       
-        function resize() { 
-            if (typeof window !== 'undefined'){
-                width = window.innerWidth
-            }
-        }
-
-        window.addEventListener('resize', resize)
-
-        return () => {
-            window.removeEventListener('resize', resize)
-        }
-       
-    })
     </script>
-    
+
+    <svelte:window bind:innerWidth={width}/>
     <div>
         <nav>
             <div>LOGO</div>
