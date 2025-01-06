@@ -9,15 +9,28 @@
 
 <div class="container">
     <Nav bind:active />
-    {#if active === "Home"}
-        <span>welcome</span>
-    {:else if active === "About"}
-        <span>about</span>
-    {:else}
-        <span>projects</span>
-    {/if}
-
+    <section>
+        {#if active === "Home"}
+            <span>welcome</span>
+        {:else if active === "About"}
+            <span>about</span>
+        {:else}
+            <span>projects</span>
+        {/if}
+    </section>
 </div>
 
 <style>
+    .container {
+        height: 85vh;
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    span {
+        font-size: 8rem;
+    }
 </style>
