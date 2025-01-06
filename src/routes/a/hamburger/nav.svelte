@@ -18,12 +18,33 @@
     <nav>
         <ul>
             {#each tabs as tab (tab)}
-                <li><button onclick={() => changeTab(tab)}>{tab}</button></li>
+                <li><button onclick={() => changeTab(tab)}
+                    class:active={tab === active}>{tab}</button></li>
             {/each}
         </ul>
     </nav>
 </div>
     
 <style>
-
+    div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+    }
+    li {
+        margin-right: 0.5em;
+    }
+    button {
+        background-color: inherit;
+        border: none;
+        cursor: pointer;
+    }
+    .active {
+        color: pink;
+        border-bottom: 2px solid pink;
+    }
 </style>
