@@ -19,15 +19,18 @@
 <svelte:window bind:innerWidth={width} />
 <div>
     <span>LOGO</span>
-    <nav>
-        <ul>
-            {#each tabs as tab (tab)}
-                <li><button onclick={() => changeTab(tab)}
-                    class:active={tab === active}>{tab}</button></li>
-            {/each}
-        </ul>
-    </nav>
-    <Hamburger />
+    {#if width >= 1040}
+        <nav>
+            <ul>
+                {#each tabs as tab (tab)}
+                    <li><button onclick={() => changeTab(tab)}
+                        class:active={tab === active}>{tab}</button></li>
+                {/each}
+            </ul>
+        </nav>
+    {:else}
+        <Hamburger />
+    {/if}
 </div>
     
 <style>
