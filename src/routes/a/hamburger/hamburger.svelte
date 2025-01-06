@@ -7,5 +7,7 @@
 </svg>
 
 <style>
-    
+    svg {
+        cursor: pointer;
+    }
 </style>
