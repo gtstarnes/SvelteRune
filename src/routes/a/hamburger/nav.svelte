@@ -7,8 +7,9 @@
 
     function changeTab(t: string){
         if (t !== active) {
-            active === t
+            active = t
         }
+       
     }
 </script>
 
