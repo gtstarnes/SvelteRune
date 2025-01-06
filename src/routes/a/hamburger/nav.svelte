@@ -6,6 +6,7 @@
     */
     let tabs = $state(["Home", "About", "Projects"]);
     let {active = $bindable("Home")} = $props();
+    let width = $state(0)
 
     function changeTab(t: string){
         if (t !== active) {
