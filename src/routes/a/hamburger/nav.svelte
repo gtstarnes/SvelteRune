@@ -2,7 +2,7 @@
 	import Hamburger from "./hamburger.svelte";
 
     /**
-     * REP: IV
+     * REP: V
     */
     let tabs = $state(["Home", "About", "Projects"]);
     let {active = $bindable("Home")} = $props();
