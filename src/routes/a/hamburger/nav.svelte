@@ -16,7 +16,7 @@
     }
 </script>
 
-  
+<svelte:window bind:innerWidth={width} />
 <div>
     <span>LOGO</span>
     <nav>
