@@ -3,6 +3,7 @@
      * REP: IV
     */
     let tabs = $state(["Home", "About", "Projects"]);
+    let {active = $bindable("Home")} = $props();
     </script>
 
   
