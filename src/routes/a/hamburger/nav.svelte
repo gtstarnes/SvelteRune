@@ -2,7 +2,7 @@
     /**
      * REP: IV
     */
-
+    let tabs = $state(["Home", "About", "Projects"]);
     </script>
 
   
@@ -10,7 +10,7 @@
         <span>LOGO</span>
         <nav>
             <ul>
-                
+
             </ul>
         </nav>
     </div>
