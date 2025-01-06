@@ -2,40 +2,17 @@
     /**
      * REP: IV
     */
-    import Hamburger from "./hamburger.svelte";
+  
 
     //VARIABLES
-    const links = ["Home", "About", "Projects"]
-    let {active = $bindable('Home')} = $props()
-    let width = $state(0);
 
     //FUNCTIONS
-    function changeActive(a: string) {
-        if (a !== active) {
-            active = a
-        }
-    }
+
     </script>
 
-    <svelte:window bind:innerWidth={width}/>
+  
     <div>
-        <nav>
-            <div>LOGO</div>
-            <div>
-                {#if width > 1040}
-                    <ul>
-                        {#each links as link (link)}
-                            <li><button 
-                                class:active={link === active}
-                                onclick={() => changeActive(link)}>{link}</button></li>
-                        {/each}
-                    </ul>
-                {:else}
-                    <Hamburger />
-                {/if}
 
-            </div>
-        </nav>
     </div>
     
     <style>
