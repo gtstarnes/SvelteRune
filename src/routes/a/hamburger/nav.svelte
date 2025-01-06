@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Hamburger from "./hamburger.svelte";
+
     /**
      * REP: IV
     */
@@ -24,6 +26,7 @@
             {/each}
         </ul>
     </nav>
+    <Hamburger />
 </div>
     
 <style>
