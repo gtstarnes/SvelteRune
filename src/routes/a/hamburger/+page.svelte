@@ -8,7 +8,7 @@
 </script>
 
 <div class="container">
-    <Nav />
+    <Nav bind:active />
     {#if active === "Home"}
         <span>welcome</span>
     {:else if active === "About"}
