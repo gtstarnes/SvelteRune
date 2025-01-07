@@ -42,5 +42,5 @@ function findUser(username:string){
     return found
 }
 
-
+export { getUsers, addUser, findUser}
 
