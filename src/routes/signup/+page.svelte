@@ -7,6 +7,7 @@ import { getUsers } from "./users.svelte";
 */
 
     const users = $derived(getUsers());
+    let username = $state('')
     let loggedIn = $state(false)
 </script>
 
