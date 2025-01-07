@@ -3,6 +3,11 @@
      * REP: I
     */
 
+let {portal = $bindable()} = $props()
+
+function togglePortal() {
+    portal = false
+}
 </script>
 
 <form>
@@ -16,7 +21,7 @@
     </span>
     <div>
         <button type="submit">Login</button>
-        <button type="button">Signup</button>
+        <button type="button" onclick={togglePortal}>Signup</button>
     </div>
 </form>
 
