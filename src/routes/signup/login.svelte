@@ -20,7 +20,8 @@ function checkErrors(){
 
 }
 function resetInput(){
-
+    input.username = ''
+    input.password = ''
 }
 </script>
 
