@@ -16,7 +16,8 @@ let input = $state({
 })
 
 //functions
-function handleSubmit() {
+function handleSubmit(e: SubmitEvent) {
+    e.preventDefault
     checkErrors()
     if (input.error === ""){
         addUser({
@@ -46,9 +47,12 @@ function resetInput() {
     input.username = ''
     input.password = ''
 }
+function togglePortal() {
+    portal = true
+}
 </script>
 
-<form>
+<form onsubmit={handleSubmit}>
     <span>{input.error}</span>
     <span>
         <label for="name">Name</label>
@@ -64,7 +68,7 @@ function resetInput() {
     </span>
     <div>
         <button type="submit">Sign Up</button>
-        <button type="button">Login</button>
+        <button type="button" onclick={togglePortal}>Login</button>
     </div>
 </form>
 
