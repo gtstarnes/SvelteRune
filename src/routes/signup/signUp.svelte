@@ -6,6 +6,11 @@
 /**
  * REP: I
 */
+let {
+    username = $bindable(''), 
+    loggedIn = $bindable(false), 
+    portal = $bindable(false)
+} = $props();
 let input = $state({
     name: "", username: '', password: '', error: '',
 })
