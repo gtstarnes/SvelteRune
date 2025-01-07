@@ -5,7 +5,7 @@
      * REP: I
     */
 
-let {portal = $bindable()} = $props()
+let {username = $bindable(''), loggedIn = $bindable(false), portal = $bindable(true)} = $props()
 let input = $state({
     username: '',
     password: '',
@@ -18,8 +18,9 @@ function togglePortal() {
 function handleSubmit(e: SubmitEvent){
     e.preventDefault
     checkErrors()
-    if (input.error = ''){
-
+    if (input.error === ''){
+        username = input.username
+        loggedIn = true
     }
     resetInput()
 }
@@ -34,7 +35,7 @@ function checkErrors(){
         case !findUser(input.username):
             return input.error = 'username not found'
         default:
-            input.error = ''
+            return input.error = ''
     }
 }
 function resetInput(){
@@ -43,7 +44,7 @@ function resetInput(){
 }
 </script>
 
-<form>
+<form onsubmit={handleSubmit}>
     <span>{input.error}</span>
     <span>
         <label for="username">Username</label>
