@@ -10,7 +10,7 @@ import SignUp from "./signUp.svelte";
 </script>
 
 <div>
-    {#if portal === false}
+    {#if portal === false && loggedIn === false}
         <SignUp bind:username bind:loggedIn bind:portal />
     {:else}
         <Login bind:username bind:loggedIn bind:portal />
