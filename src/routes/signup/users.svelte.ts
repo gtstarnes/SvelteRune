@@ -1,11 +1,11 @@
 
-interface User {
-    username: string,
-    name: string,
-    password: string,
-}
+/**
+ * REP: I
+ */
 
-const initial:User[] = [
+
+
+const initial = [
     {
         username: 'AzzClappa',
         name: "cacasdcsac",
@@ -23,20 +23,5 @@ const initial:User[] = [
     },
 ]
 
-let userList = $state<User[]>(initial)
 
-function getUsers() {
-    return userList;
-}
-function addUser(user:User){
-    userList = [...userList, user]
-}
-function checkUsers(username:string){
-    const found = userList.find(user => {
-        return user.username === username
-    })
-    return found
-}
-
-export {getUsers, addUser, checkUsers}
 
