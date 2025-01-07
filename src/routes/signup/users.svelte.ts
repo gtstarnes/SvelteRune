@@ -29,5 +29,10 @@ const initial:User[] = [
 
 let userList = $state(initial);
 
+function getUsers() {
+    return userList
+}
+
+
 
 
