@@ -1,18 +1,18 @@
 <script lang="ts">
-	import { getUsers } from "./users.svelte";
+	import Portal from "./portal.svelte";
+import { getUsers } from "./users.svelte";
 
 /**
  * REP: I
 */
 
-    const users = $derived(getUsers())
-    let panel = $state(false)
+    const users = $derived(getUsers());
     let loggedIn = $state(false)
 </script>
 
 <div class="container">
     {#if loggedIn === false}
-        <div></div>
+        <Portal />
     {:else}
         <div></div>
         <ul>
