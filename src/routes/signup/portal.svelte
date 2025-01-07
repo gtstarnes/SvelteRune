@@ -2,13 +2,16 @@
 	import Login from "./login.svelte";
 import SignUp from "./signUp.svelte";
 
-
+    let {
+        username = $bindable(), 
+        loggedIn = $bindable(),
+    } = $props()
     let portal = $state(false)
 </script>
 
 <div>
     {#if portal === false}
-        <SignUp />
+        <SignUp bind:username bind:loggedIn />
     {:else}
         <Login />
     {/if}
