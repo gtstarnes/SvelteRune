@@ -13,8 +13,13 @@ function togglePortal() {
     portal = false
 }
 
-function handleSubmit(){
+function handleSubmit(e: SubmitEvent){
+    e.preventDefault
+    checkErrors()
+    if (input.error = ''){
 
+    }
+    resetInput()
 }
 function checkErrors(){
 
