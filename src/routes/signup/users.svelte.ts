@@ -35,7 +35,12 @@ function getUsers() {
 function addUser(user:User){
     userList = [...userList, user]
 }
-
+function findUser(username:string){
+    const found = userList.find(user => {
+        return user.username === username
+    })
+    return found
+}
 
 
 
