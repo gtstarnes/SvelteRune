@@ -25,6 +25,8 @@ function handleSubmit(e: SubmitEvent) {
             username: input.username,
             password: input.password,
         })
+        username = input.username
+        loggedIn = true;
     }
     resetInput()
 }
@@ -34,9 +36,9 @@ function checkErrors() {
             return input.error = "username and password are required"
         case input.username === '':
             return input.error = "username is required"
-        case input.username === '' && input.password ==='':
+        case input.password ==='':
             return input.error = "password is required"
-        case !findUser(input.username):
+        case findUser(input.username):
             return input.error = "username already exists"
         default:
             return input.error = ""
