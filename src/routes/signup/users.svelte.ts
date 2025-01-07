@@ -43,6 +43,17 @@ function findUser(username:string){
         return true
     }
 }
+function checkPassword(username:string, password:string){
+    const found = userList.find(user => {
+        return user.username === username
+    })
+    if (found) {
+        if (found.password === password){
+            return true
+        }
+    }
+    
+}
 
-export { getUsers, addUser, findUser}
+export { getUsers, addUser, findUser, checkPassword}
 
