@@ -13,7 +13,7 @@ import SignUp from "./signUp.svelte";
     {#if portal === false}
         <SignUp bind:username bind:loggedIn bind:portal />
     {:else}
-        <Login bind:portal />
+        <Login bind:username bind:loggedIn bind:portal />
     {/if}
 </div>
 
