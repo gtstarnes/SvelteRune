@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { findUser } from "./users.svelte";
+	import { checkPassword, findUser } from "./users.svelte";
 
     /**
      * REP: I
@@ -34,6 +34,8 @@ function checkErrors(){
             return input.error = 'password is required'
         case !findUser(input.username):
             return input.error = 'username not found'
+        case !checkPassword(input.username, input.password):
+            return input.error = 'password is not correct'
         default:
             return input.error = ''
     }
