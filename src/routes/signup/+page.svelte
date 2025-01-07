@@ -9,6 +9,11 @@ import { getUsers } from "./users.svelte";
     const users = $derived(getUsers());
     let username = $state('')
     let loggedIn = $state(false)
+
+    function logOut() {
+        loggedIn = false
+        username = ''
+    }
 </script>
 
 <div class="container">
@@ -17,7 +22,7 @@ import { getUsers } from "./users.svelte";
     {:else}
         <div>
             {username}
-            <button>Log Out</button>
+            <button onclick={logOut}>Log Out</button>
         </div>
         <ul>
             {#each users as user (user.username)}
