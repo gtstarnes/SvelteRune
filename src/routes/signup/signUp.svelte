@@ -7,6 +7,17 @@
 let input = $state({
     name: "", username: '', password: '', error: '',
 })
+
+//functions
+function handleSubmit() {
+
+}
+function checkErrors() {
+
+}
+function resetInput() {
+    
+}
 </script>
 
 <form>
