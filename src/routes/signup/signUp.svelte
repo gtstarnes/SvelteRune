@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { findUser } from "./users.svelte";
+
 
 
 /**
@@ -13,10 +15,21 @@ function handleSubmit() {
 
 }
 function checkErrors() {
-
+    switch(true){
+        case input.username === '' && input.password ==='':
+            return input.error = "username and password are required"
+        case input.username === '':
+            return input.error = "username is required"
+        case input.username === '' && input.password ==='':
+            return input.error = "password is required"
+        case !findUser(input.username):
+            return input.error = "username already exists"
+        default:
+            return input.error = ""
+    }
 }
 function resetInput() {
-    
+
 }
 </script>
 
