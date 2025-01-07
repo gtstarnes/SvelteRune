@@ -4,10 +4,13 @@
 /**
  * REP: I
 */
-
+let input = $state({
+    name: "", username: '', password: '', error: '',
+})
 </script>
 
 <form>
+    <span></span>
     <span>
         <label for="name">Name</label>
         <input name="name" id="name" type="text" />
