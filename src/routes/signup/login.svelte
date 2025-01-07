@@ -62,5 +62,11 @@ function resetInput(){
 
 
 <style>
-
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    button {
+        cursor: pointer;
+    }
 </style>
