@@ -13,9 +13,12 @@ import { getUsers } from "./users.svelte";
 
 <div class="container">
     {#if loggedIn === false}
-        <Portal />
+        <Portal bind:username bind:loggedIn/>
     {:else}
-        <div></div>
+        <div>
+            {username}
+            <button>Log Out</button>
+        </div>
         <ul>
             {#each users as user (user.username)}
                 <li>{user.username}</li>
