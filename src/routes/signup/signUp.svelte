@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { findUser } from "./users.svelte";
+	import { addUser, findUser } from "./users.svelte";
 
 
 
@@ -12,7 +12,14 @@ let input = $state({
 
 //functions
 function handleSubmit() {
-
+    checkErrors()
+    if (input.error === ""){
+        addUser({
+            name: input.name,
+            username: input.username,
+            password: input.password,
+        })
+    }
 }
 function checkErrors() {
     switch(true){
