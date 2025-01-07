@@ -2,10 +2,14 @@
 /**
  * REP: I
  */
+interface User {
+    username: string,
+    name: string,
+    password: string,
+}
 
 
-
-const initial = [
+const initial:User[] = [
     {
         username: 'AzzClappa',
         name: "cacasdcsac",
