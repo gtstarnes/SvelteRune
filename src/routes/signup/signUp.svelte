@@ -20,6 +20,7 @@ function handleSubmit() {
             password: input.password,
         })
     }
+    resetInput()
 }
 function checkErrors() {
     switch(true){
@@ -36,7 +37,9 @@ function checkErrors() {
     }
 }
 function resetInput() {
-
+    input.name = ''
+    input.username = ''
+    input.password = ''
 }
 </script>
 
