@@ -27,5 +27,7 @@ const initial:User[] = [
     },
 ]
 
+let userList = $state(initial);
+
 
 
