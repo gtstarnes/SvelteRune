@@ -39,8 +39,8 @@ function findUser(username:string){
     const found = userList.find(user => {
         return user.username === username
     })
-    if(!found){
-        return false
+    if(found){
+        return true
     }
 }
 
