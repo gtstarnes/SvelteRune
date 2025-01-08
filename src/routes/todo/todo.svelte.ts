@@ -4,8 +4,8 @@
 
 interface Task {
     complete: boolean,
-    text: '',
-    edit: false,
+    text: string,
+    edit: boolean,
 }
 
 //STORE VARIABLE
@@ -16,8 +16,13 @@ let tasks = $state<Task[]>([])
 function getTasks() {
     return tasks
 }
-function addTask(task:Task){
-    tasks = [...tasks, task]
+function addTask(task:string){
+    const newTask = {
+        text: task,
+        complete: false,
+        edit: false,
+    }
+    tasks = [...tasks, newTask]
 }
 function deleteTask(task:string){
     tasks = tasks.filter(t => {
