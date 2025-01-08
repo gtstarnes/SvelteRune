@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { checkTasks } from "./todo.svelte";
+	import { addTask, checkTasks } from "./todo.svelte";
 
 /**
  * REP: 2
@@ -9,7 +9,12 @@
 
     //FUNCTIONS
     function handleSubmit(e: SubmitEvent){
-        
+        e.preventDefault
+        error = checkErrors();
+        if (error = ''){
+            addTask(input)
+        }
+        input = ''
     }
     function checkErrors(){
         switch(true){
@@ -28,7 +33,7 @@
 <form>
     <input type="text" placeholder="add task..." bind:value={input} />
     <span>
-        <button type="submit">Add</button>
+        <button type="submit" onsubmit={handleSubmit}>Add</button>
         <button type="button">Mass Delete</button>
     </span>
 </form>
