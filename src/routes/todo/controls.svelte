@@ -1,7 +1,17 @@
 <script lang="ts">
-
+/**
+ * REP: 2
+ */
     let input = $state('');
     let error = $state('');
+
+    //FUNCTIONS
+    function handleSubmit(e: SubmitEvent){
+
+    }
+    function checkErrors(){
+        
+    }
 </script>
 
 <form>
