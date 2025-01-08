@@ -8,22 +8,6 @@ const links = [
         href: "/todo",
     },
     {
-        text: "Rune Area ",
-        href: "/area",
-    },
-    {
-        text: "Rune Parent",
-        href: "/parent",
-    },
-    {
-        text: "Rune Binder",
-        href: "/binder",
-    },
-    {
-        text: "Rune Login",
-        href: "b/login",
-    },
-    {
         text: "Rune Sign Up",
         href: "/signup",
     },
