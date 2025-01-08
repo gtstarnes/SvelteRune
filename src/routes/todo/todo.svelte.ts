@@ -9,3 +9,10 @@ interface Task {
 }
 
 let tasks = $state<Task[]>([])
+
+function getTasks() {
+    return tasks
+}
+
+
+export {getTasks}
