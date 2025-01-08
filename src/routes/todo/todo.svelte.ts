@@ -21,6 +21,11 @@ function deleteTask(task:string){
         return t.text !== task
     })
 }
+function massDelete(){
+    tasks = tasks.filter(task => {
+        return task.complete !== true
+    })
+}
 
 
-export {getTasks, addTask, deleteTask}
+export {getTasks, addTask, deleteTask, massDelete}
