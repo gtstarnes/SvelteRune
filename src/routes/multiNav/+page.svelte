@@ -1,4 +1,8 @@
-<script lang="ts"></script>
+<script lang="ts">
+    /**
+     * REP: 1
+    */
+</script>
 
 <div class="container">
     <nav class="main">
