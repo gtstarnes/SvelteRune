@@ -26,6 +26,13 @@ function massDelete(){
         return task.complete !== true
     })
 }
+function checkTasks(task:string){
+    const found = tasks.some(t => {
+        return t.text === task
+    })
+
+    return found
+}
 
 
-export {getTasks, addTask, deleteTask, massDelete}
+export {getTasks, addTask, deleteTask, massDelete, checkTasks}
