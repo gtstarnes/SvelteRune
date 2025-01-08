@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { checkTasks } from "./todo.svelte";
+
 /**
  * REP: 2
  */
@@ -7,10 +9,19 @@
 
     //FUNCTIONS
     function handleSubmit(e: SubmitEvent){
-
+        
     }
     function checkErrors(){
-        
+        switch(true){
+            case input === '':
+                return "task cannot be empty"
+            case input.length > 20:
+                return "tasks cannot be longer than 20 characters"
+            case checkTasks(input):
+                return "task already exists"
+            default:
+                return ""
+        }
     }
 </script>
 
