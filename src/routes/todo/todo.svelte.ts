@@ -13,6 +13,9 @@ let tasks = $state<Task[]>([])
 function getTasks() {
     return tasks
 }
+function addTask(task:Task){
+    tasks = [...tasks, task]
+}
 
 
-export {getTasks}
+export {getTasks, addTask}
