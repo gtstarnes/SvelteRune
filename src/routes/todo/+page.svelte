@@ -4,7 +4,7 @@
      */
 
 	import Controls from "./controls.svelte";
-	import { getTasks } from "./todo.svelte";
+	import { deleteTask, getTasks } from "./todo.svelte";
 
     const tasks = $derived(getTasks())
 </script>
@@ -21,7 +21,7 @@
                         <div>{task.text}</div>
                         <span>
                             <button>Edit</button>
-                            <button>Delete</button>
+                            <button onclick={() => deleteTask(task.text)}>Delete</button>
                         </span>
                     </li>
                 {/each}
