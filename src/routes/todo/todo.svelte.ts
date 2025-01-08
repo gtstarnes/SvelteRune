@@ -8,8 +8,11 @@ interface Task {
     edit: false,
 }
 
+//STORE VARIABLE
 let tasks = $state<Task[]>([])
 
+
+//FUNCTIONS
 function getTasks() {
     return tasks
 }
