@@ -20,6 +20,7 @@
                     <li>
                         <div role="button" 
                             tabindex="0"
+                            class:done={task.complete === true}
                             ondblclick={() => toggleComplete(task.text)}>
                                 {task.text}
                         </div>
@@ -35,4 +36,8 @@
 </div>
 
 <style>
+    .done{
+        text-decoration: line-through;
+        color: grey;
+    }
 </style>
