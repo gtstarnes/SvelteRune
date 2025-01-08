@@ -41,6 +41,14 @@ function checkTasks(task:string){
 
     return found
 }
+function toggleComplete(task:string){
+    const found = tasks.find(t => {
+        return t.text === task
+    })
+    if (found){
+        found.complete = !found.complete
+    }
+}
 
 
-export {getTasks, addTask, deleteTask, massDelete, checkTasks}
+export {getTasks, addTask, deleteTask, massDelete, checkTasks, toggleComplete}
