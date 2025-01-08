@@ -2,7 +2,7 @@
 	import { addTask, checkTasks, massDelete } from "./todo.svelte";
 
 /**
- * REP: 2
+ * REP: 3
  */
     let input = $state('');
     let error = $state('');
