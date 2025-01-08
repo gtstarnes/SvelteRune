@@ -1,6 +1,7 @@
 <script lang="ts">
 
     let input = $state('');
+    let error = $state('');
 </script>
 
 <form>
@@ -10,5 +11,6 @@
         <button type="button">Mass Delete</button>
     </span>
 </form>
+<span>{error}</span>
 
 <style></style>
