@@ -7,3 +7,5 @@ interface Task {
     text: '',
     edit: false,
 }
+
+let tasks = $state<Task[]>([])
