@@ -10,8 +10,8 @@
     //FUNCTIONS
     function handleSubmit(e: SubmitEvent){
         e.preventDefault
-        error = checkErrors();
-        if (error = ''){
+        checkErrors();
+        if (error === ''){
             addTask(input)
         }
         input = ''
@@ -19,24 +19,24 @@
     function checkErrors(){
         switch(true){
             case input === '':
-                return "task cannot be empty"
+                return error = "task cannot be empty"
             case input.length > 20:
-                return "tasks cannot be longer than 20 characters"
+                return error = "tasks cannot be longer than 20 characters"
             case checkTasks(input):
-                return "task already exists"
+                return error = "task already exists"
             default:
-                return ""
+                return error = ""
         }
     }
 </script>
 
-<form>
+<form onsubmit={handleSubmit}>
     <input type="text" placeholder="add task..." bind:value={input} />
     <span>
-        <button type="submit" onsubmit={handleSubmit}>Add</button>
+        <button type="submit" >Add</button>
         <button type="button">Mass Delete</button>
     </span>
 </form>
-<span>{error}</span>
+<div>{error}</div>
 
 <style></style>
