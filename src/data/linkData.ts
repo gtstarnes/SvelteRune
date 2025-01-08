@@ -31,6 +31,10 @@ const links = [
         text: "Rune Timer",
         href: "/timer",
     },
+    {
+        text: "Rune Multi",
+        href: "/multiNav",
+    },
 ]
 
 export { links }
