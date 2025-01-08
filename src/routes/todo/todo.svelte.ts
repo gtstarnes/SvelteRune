@@ -16,6 +16,11 @@ function getTasks() {
 function addTask(task:Task){
     tasks = [...tasks, task]
 }
+function deleteTask(task:string){
+    tasks = tasks.filter(t => {
+        return t.text !== task
+    })
+}
 
 
-export {getTasks, addTask}
+export {getTasks, addTask, deleteTask}
