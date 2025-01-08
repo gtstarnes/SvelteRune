@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { addTask, checkTasks } from "./todo.svelte";
+	import { addTask, checkTasks, massDelete } from "./todo.svelte";
 
 /**
  * REP: 2
@@ -34,7 +34,7 @@
     <input type="text" placeholder="add task..." bind:value={input} />
     <span>
         <button type="submit" >Add</button>
-        <button type="button">Mass Delete</button>
+        <button type="button" onclick={massDelete}>Mass Delete</button>
     </span>
 </form>
 <div>{error}</div>
