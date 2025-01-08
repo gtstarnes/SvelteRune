@@ -4,7 +4,7 @@
      */
 
 	import Controls from "./controls.svelte";
-	import { deleteTask, getTasks } from "./todo.svelte";
+	import { deleteTask, getTasks, toggleComplete } from "./todo.svelte";
 
     const tasks = $derived(getTasks())
 </script>
@@ -18,7 +18,11 @@
             <ul>
                 {#each tasks as task(task)}
                     <li>
-                        <div>{task.text}</div>
+                        <div role="button" 
+                            tabindex="0"
+                            ondblclick={() => toggleComplete(task.text)}>
+                                {task.text}
+                        </div>
                         <span>
                             <button>Edit</button>
                             <button onclick={() => deleteTask(task.text)}>Delete</button>
