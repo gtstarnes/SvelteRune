@@ -17,7 +17,13 @@
 </script>
 
 <div class="container">
-
+    <div>{count}</div>
+    <div>
+        <button>+</button>
+        <button>clr</button>
+        <button>_</button>
+    </div>
+    <div>{squared}</div>
 </div>
 
 <style>
