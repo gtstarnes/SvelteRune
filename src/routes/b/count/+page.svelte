@@ -25,13 +25,13 @@
 </script>
 
 <div class="container">
-    <div>{count}</div>
-    <div>
-        <button onclick={add}>+</button>
-        <button onclick={reset}>clr</button>
-        <button onclick={minus}>-</button>
+    <div class="display">{count}</div>
+    <div class="controls">
+        <button class="math" onclick={add}>+</button>
+        <button class="reset" onclick={reset}>clr</button>
+        <button class="math" onclick={minus}>-</button>
     </div>
-    <div>{squared}</div>
+    <div class="display">{squared}</div>
 </div>
 
 <style>
