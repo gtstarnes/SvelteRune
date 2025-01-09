@@ -25,7 +25,9 @@
         <nav>
             <ul>
                 {#each tabs as tab(tab)}
-                    <li><button>{tab}</button></li>
+                    <li class:active={tab === active}>
+                        <button 
+                        onclick={() => changeTab(tab)}>{tab}</button></li>
                 {/each}
             </ul>
         </nav>
@@ -53,11 +55,16 @@
         height: 100%;
         background-color: inherit;
         border: none;
-        height: 2rem
+        height: 2rem;
+        width: 4rem;
+        padding-top: 6px;
     }
-    button:hover {
+    button:hover, li:hover {
         background-color: blueviolet;
         cursor: pointer;
+    }
+    .active {
+        border-bottom: 4px solid blueviolet;
     }
 
 </style>
