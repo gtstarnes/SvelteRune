@@ -35,5 +35,29 @@
 </div>
 
 <style>
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: grey;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        height: 100%;
+        margin: 0;
+    }
+    button {
+        height: 100%;
+        background-color: inherit;
+        border: none;
+        height: 2rem
+    }
+    button:hover {
+        background-color: blueviolet;
+        cursor: pointer;
+    }
 
 </style>
