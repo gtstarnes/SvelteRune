@@ -8,20 +8,28 @@
  *      commit after task blocks
  */
 
- //VARIABLES
+    //VARIABLES
     let count = $state<number>(0);
     let squared = $derived(count * count);
 
-
-
+    //FUNCTIONS
+    function add() {
+        count++
+    }
+    function reset(){
+        count = 0
+    }
+    function minus(){
+        count--
+    }
 </script>
 
 <div class="container">
     <div>{count}</div>
     <div>
-        <button>+</button>
-        <button>clr</button>
-        <button>_</button>
+        <button onclick={add}>+</button>
+        <button onclick={reset}>clr</button>
+        <button onclick={minus}>-</button>
     </div>
     <div>{squared}</div>
 </div>
