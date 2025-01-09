@@ -8,22 +8,43 @@
     <nav class="main">
         <ul>
             <li><button>Home</button></li>
-            <li><button>About</button></li>
-            <li><button>Projects</button></li>
+            <li>
+                <div class="subnav">
+                    <button>About</button>
+                    <nav class="subnav-content">
+                        <ul>
+                            <li><button>D</button></li>
+                            <li><button>E</button></li>
+                            <li><button>F</button></li>
+                        </ul>
+                    </nav>
+                </div>
+            </li>
+            <li>
+                <div class="subnav">
+                    <button>Projects</button>
+                    <nav class="subnav-content">
+                        <ul>
+                            <li><button>A</button></li>
+                            <li><button>B</button></li>
+                            <li><button>C</button></li>
+                        </ul>
+                    </nav>
+                </div>
+            </li>
         </ul>
     </nav>
 </div>
 
 
 <style>
-    * {
-        border: 1px solid black
-    }
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 90vh;
+        overflow: hidden;
+        position: relative;
     }
     .main {
         background-color: grey;
@@ -31,6 +52,7 @@
         display: flex;
         justify-content: end;
         padding-right: 2rem;
+        overflow: hidden;
     }
     ul {
         display: flex;
@@ -45,7 +67,26 @@
         height: 4rem;
         width: 6rem;
     }
-    button:hover {
+    .main button:hover, .subnav:hover {
         background-color: blueviolet;
     }
+    .subnav-content {
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        padding-right: 2rem;
+        background-color: blueviolet;
+        visibility: hidden;
+    }
+    .subnav-content button:hover{
+        background-color: gray;
+    }
+    .subnav:hover .subnav-content{
+        visibility: visible;
+    }
+
 </style>
