@@ -35,5 +35,35 @@
 </div>
 
 <style>
-
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+    .display {
+        font-size: 6rem;
+    }
+    .controls {
+        display: flex;
+        gap: 0.3rem;
+    }
+    button {
+        height: 4rem;
+        width: 6rem;
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+    }
+    .math {
+        background-color: orange;
+    }
+    .math:active {
+        background-color: darkorange;
+        scale: 0.95;
+    }
+    .reset {
+        transform: translate(0, 0.3rem);
+    }
 </style>
