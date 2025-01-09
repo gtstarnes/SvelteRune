@@ -8,6 +8,11 @@
  *      commit after task blocks
  */
 
+ //VARIABLES
+    let count = $state<number>(0);
+    let squared = $derived(count * count);
+
+
 
 </script>
 
