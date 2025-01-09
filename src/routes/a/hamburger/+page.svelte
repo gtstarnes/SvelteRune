@@ -24,5 +24,16 @@
 </div>
 
 <style>
-    
+    .container {
+        height:90vh;
+    }
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    span {
+        font-size: 8rem;
+    }
 </style>
