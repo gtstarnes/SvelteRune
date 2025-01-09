@@ -5,7 +5,7 @@
 </script>
 
 <div class="container">
-    <nav>
+    <nav class="main">
         <ul>
             <li>Home</li>
             <li>About</li>
@@ -16,5 +16,19 @@
 
 
 <style>
-
+    .container {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .main {
+        background-color: grey;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+    }
 </style>
