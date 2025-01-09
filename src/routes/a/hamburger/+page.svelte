@@ -5,6 +5,13 @@
     //VARIABLES
     const tabs = ["Home", "About", "Projects", ]
     let {active = $bindable("Home")} = $props()
+
+    //FUNCTIONS
+    function changeTab(tab:string) {
+        if (tab !== active){
+            active = tab
+        }
+    }
 </script>
 
 <div class="container">
