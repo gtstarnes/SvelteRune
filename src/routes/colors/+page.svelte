@@ -14,7 +14,7 @@
         <ul>
             {#each colors as color (color.id)}
                 <li>
-                    <div>{color.color}</div>
+                    <div class="color" style={`background-color: ${color.color}`}>{color.color}</div>
                 </li>
             {/each}
         </ul>
@@ -28,4 +28,18 @@
         align-items: center;
         height: 90vh;
     }
+    ul{
+        display: flex;
+        list-style: none;
+    }
+    .color {
+        width: 4rem;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+
 </style>
