@@ -31,6 +31,7 @@
     ul{
         display: flex;
         list-style: none;
+        gap: 1rem;
     }
     .color {
         width: 4rem;
@@ -39,6 +40,11 @@
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        transition: width 0.1s ease-in;
+    }
+    .color:hover {
+        width: 6rem;
+        transition: width 0.2s ease-in;
     }
 
 
