@@ -42,4 +42,11 @@
         background-color: gray;
         position: relative;
     }
+    .main button:hover {
+        background-color: blueviolet;
+    }
+    button {
+        border: none;
+        cursor: pointer;
+    }
 </style>
