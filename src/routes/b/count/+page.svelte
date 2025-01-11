@@ -24,5 +24,32 @@
 </div>
 
 <style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+    }
+    .count {
+        font-size: 6rem;
+    }
+    button {
+        width: 5rem;
+        height: 3rem;
+        font-size: 2rem;
+        cursor: pointer;
+        border: none;
+    }
+    .math {
+        background-color: orange;
+    }
+    .math:active {
+        background-color: darkorange;
+        scale: 95%;
+    }
+    .clear {
+        transform: translateY(0.35rem);
+    }
 
 </style>
