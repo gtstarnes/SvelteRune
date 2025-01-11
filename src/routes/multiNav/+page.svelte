@@ -38,6 +38,8 @@
     ul {
         display: flex;
         list-style: none;
+        margin: 0;
+        padding: 0;
     }
     button {
         background-color: inherit;
@@ -52,5 +54,19 @@
         align-items: center;
         justify-content: space-between;
         padding-left: 1rem;
+        background-color: grey;
     }
+    .subnav-content {
+        position: absolute;
+        right: 0;
+        background-color: blueviolet;
+        visibility: hidden;
+    }
+    .subnav:hover .subnav-content {
+        visibility: visible;
+    }
+    .subnav-content button:hover {
+        background-color: grey;
+    }
+
 </style>
