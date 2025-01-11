@@ -8,16 +8,19 @@
  *      commit after task blocks
  */
 
+//variables
+    let count = $state(0)
+    let square = $derived(count * count)
 </script>
 
 <div class="container">
-    <div class="count"></div>
+    <div class="count">{count}</div>
     <div>
         <button class="math">+</button>
         <button class="clear">clr</button>
         <button class="math">-</button>
     </div>
-    <div class="count"></div>
+    <div class="count">{square}</div>
 </div>
 
 <style>
