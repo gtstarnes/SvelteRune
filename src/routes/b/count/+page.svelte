@@ -16,9 +16,9 @@
 <div class="container">
     <div class="count">{count}</div>
     <div>
-        <button class="math">+</button>
-        <button class="clear">clr</button>
-        <button class="math">-</button>
+        <button class="math" onclick={() => count++}>+</button>
+        <button class="clear" onclick={() => count = 0}>clr</button>
+        <button class="math" onclick={() => count--}>-</button>
     </div>
     <div class="count">{square}</div>
 </div>
