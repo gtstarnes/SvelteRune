@@ -35,5 +35,22 @@
 
 
 <style>
-
+    ul {
+        display: flex;
+        list-style: none;
+    }
+    button {
+        background-color: inherit;
+        border: none;
+        width: 4rem;
+        height: 2rem;
+        cursor: pointer;
+    }
+    .container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 1rem;
+    }
 </style>
