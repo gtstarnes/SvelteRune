@@ -48,6 +48,9 @@
         height: 2rem;
         cursor: pointer;
     }
+    button:hover {
+        background-color: blueviolet;
+    }
     .container {
         position: relative;
         display: flex;
@@ -67,6 +70,7 @@
     }
     .subnav-content button:hover {
         background-color: grey;
+        border-bottom: none;
     }
 
 </style>
