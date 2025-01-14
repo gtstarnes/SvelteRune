@@ -13,7 +13,7 @@
     <div>
         <ul>
             {#each colors as color(color.id)}
-                <li><button>{color.color}</button></li>
+                <li><button style={`background-color: ${color.color}`}>{color.color}</button></li>
             {/each}
         </ul>
     </div>
@@ -26,5 +26,18 @@
         align-items: center;
         justify-content: center;
         height: 90vh;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 4px;
+    }
+    button {
+        height: 7rem;
+        width: 5rem;
+        padding: 1rem;
+        border:none;
+        text-align: center;
+        cursor: pointer;
     }
 </style>
