@@ -39,6 +39,10 @@ const links = [
         text: "Aniborder",
         href: "/aniborder",
     },
+    {
+        text: "Dark Mode",
+        href: "/dark",
+    },
 ]
 
 export { links }
