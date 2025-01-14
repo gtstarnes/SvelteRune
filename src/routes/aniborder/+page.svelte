@@ -23,12 +23,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;
-}
-.card {
-    width: 16rem;
-    display: columns;
-    text-align: center;
+    height: 90vh;    
 }
 
 </style>
