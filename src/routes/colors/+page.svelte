@@ -39,5 +39,9 @@
         border:none;
         text-align: center;
         cursor: pointer;
+        transition: width 0.7s;
+    }
+    button:hover{
+        width: 8rem;
     }
 </style>
