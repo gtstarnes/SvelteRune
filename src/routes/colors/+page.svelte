@@ -2,7 +2,7 @@
 /**
  * REPS: III
 */
-
+    import { colors } from "./colors";
 
 
 
