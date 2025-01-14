@@ -5,7 +5,7 @@ const toggle = () => {
     }
 </script>
 
-<button>
+<button onclick={toggle}>
     Click meh
 </button>
 
@@ -16,9 +16,10 @@ const toggle = () => {
         height: 2.5rem;
         width: 5rem;
         cursor: pointer;
+        color: white;
     }
     :global(body.dark-mode) button {
-        background-color: antiquewhite;
+        background-color: white;
         color: blueviolet
     }
 </style>
