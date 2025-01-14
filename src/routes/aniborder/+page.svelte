@@ -23,7 +23,27 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 90vh;    
+    height: 90vh; 
+}
+.card {
+    width: 18rem;
+    text-align: center;
+    padding: 3em;
+    border-radius: 10px;
+    position: relative;
+    background-color: black;
+    
+}
+.card::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: gold;
+    inset: 0;
+    z-index: -1;
+    padding: 3px;
+    
 }
 
 </style>
