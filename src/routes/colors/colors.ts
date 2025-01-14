@@ -4,7 +4,7 @@ const colors = [
         id: Math.random(),
     },
     {
-        color: "purple",
+        color: "blueviolet",
         id: Math.random(),
     },
     {
