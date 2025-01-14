@@ -18,8 +18,15 @@ const toggle = () => {
         cursor: pointer;
         color: white;
     }
-    :global(body.dark-mode) button {
-        background-color: white;
+    :global(body){
+    margin: 0;
+    padding: 1rem;
+    background-color: white;
+    transition: background-color 0.5s
+    }
+    :global(body.dark-mode) {
+        background-color: black;
         color: blueviolet
     }
+
 </style>
