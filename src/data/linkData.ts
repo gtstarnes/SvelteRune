@@ -35,6 +35,10 @@ const links = [
         text: "Rune Multi",
         href: "/multiNav",
     },
+    {
+        text: "Aniborder",
+        href: "/aniborder",
+    },
 ]
 
 export { links }
