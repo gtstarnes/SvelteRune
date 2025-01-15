@@ -1,4 +1,18 @@
 body {
     margin: 0;
     padding: 1rem;
+    background-color: whitesmoke;
+    color: black;
+    transition: background-color 0.5s;
+}
+
+.dark-mode {
+    color: whitesmoke;
+    background-color: black;
+}
+
+.dark-mode footer {
+    background-color: black;
+    color: whitesmoke;
+    transition: background-color 0.5s;
 }

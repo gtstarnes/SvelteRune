@@ -15,11 +15,5 @@
         height: 1.4rem;
         width: 100%;
         padding-left: 1rem;
-        background-color: white;
-        transition: backgound-color 0.5s;
-    }
-    :global(body.dark-mode) footer{
-        background-color: black;
-        color: blueviolet
     }
 </style>
