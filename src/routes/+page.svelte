@@ -20,7 +20,7 @@
     ul {
         list-style: none;
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto auto auto;
         align-items: center;
         justify-content: center;
         gap: 1rem;
