@@ -5,7 +5,7 @@
 </script>
 
 <div class="container">
-    <div>
+    <div class="header">
         <span>Logo</span>
         <input />
         <nav class="main">
@@ -41,4 +41,10 @@
     .container {
         height: 90vh;
     }
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 </style>
