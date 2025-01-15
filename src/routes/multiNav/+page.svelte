@@ -63,6 +63,9 @@
     }
     .main button:hover, .subnav:hover {
         background-color: blueviolet;
+    }    
+    .subnav-content button:hover {
+        background-color: grey;
     }
     ul {
         display: flex;
@@ -77,6 +80,9 @@
         cursor: pointer;
         height: 2rem;
         width: 4rem;
+    }
+    input {
+        
     }
 
 </style>
