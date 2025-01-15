@@ -40,22 +40,43 @@
 <style>
     .container {
         height: 90vh;
+
     }
     .header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         background-color: grey;
+        padding-left: 0.5rem;
+    }
+    .main {
+        position: relative;
+    }
+    .subnav-content {
+        position: absolute;
+        right: 0;
+        visibility: hidden;
+        background-color: blueviolet;
+    }
+    .subnav:hover .subnav-content {
+        visibility: visible;
+    }
+    .main button:hover, .subnav:hover {
+        background-color: blueviolet;
     }
     ul {
         display: flex;
         list-style: none;
+        margin: 0;
+        padding: 0;
     }
     button {
         border: none;
         background-color: inherit;
         color: whitesmoke;
         cursor: pointer;
+        height: 2rem;
+        width: 4rem;
     }
 
 </style>
