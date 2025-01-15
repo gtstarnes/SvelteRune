@@ -3,19 +3,24 @@
 </script>
 
 
-<a href={href}>{text}</a>
+<button>
+    <a href={href}>{text}</a>
+</button>
 
 
 <style>
-    a {
-        text-decoration: none; 
-        color: black;
+    button {
         height: 3rem;
         width: 6rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         background-color: grey;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 4px solid;
+        border-image: linear-gradient(to right, rgb(42, 94, 235), blueviolet) 1;
+    }
+    a {
+        text-decoration: none;
+        color: whitesmoke
     }
 </style>
