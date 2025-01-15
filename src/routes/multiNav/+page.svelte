@@ -8,13 +8,13 @@
     <div>
         <span>Logo</span>
         <input />
-        <nav>
+        <nav class="main">
             <ul>
                 <li>Home</li>
                 <li>
-                    <nav>
+                    <nav class="subnav">
                         <button>About</button>
-                        <ul>
+                        <ul class="subnav-content">
                             <li><button>A</button></li>
                             <li><button>B</button></li>
                             <li><button>C</button></li>
@@ -22,9 +22,9 @@
                     </nav>
                 </li>
                 <li>
-                    <nav>
+                    <nav class="subnav">
                         <button>Projects</button>
-                        <ul>
+                        <ul class="subnav-content">
                             <li><button>D</button></li>
                             <li><button>E</button></li>
                             <li><button>F</button></li>
