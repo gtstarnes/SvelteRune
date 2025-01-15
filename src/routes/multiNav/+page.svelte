@@ -10,7 +10,7 @@
         <input />
         <nav class="main">
             <ul>
-                <li>Home</li>
+                <li><button>Home</button></li>
                 <li>
                     <nav class="subnav">
                         <button>About</button>
@@ -45,6 +45,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        background-color: grey;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+    }
+    button {
+        border: none;
+        background-color: inherit;
+        color: whitesmoke;
+        cursor: pointer;
     }
 
 </style>
