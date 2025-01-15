@@ -23,9 +23,10 @@
         text-align: center;
         border-radius: 10px;
         position: relative;
-        z-index: 1;
+        border: 10px solid;
+        border-image: linear-gradient(to right, rgb(31, 97, 238), blueviolet) 1;
     }
-    .border {
+    /* .border {
         content: '';
         position: absolute;
         height: 100%;
@@ -34,5 +35,5 @@
         inset: 0;
         z-index: -1;
         padding: 7px;
-    }
+    } */
 </style>
