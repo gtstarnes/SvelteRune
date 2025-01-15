@@ -7,7 +7,7 @@
 <div class="container">
     <div class="header">
         <span>Logo</span>
-        <input />
+        <input type="text" />
         <nav class="main">
             <ul>
                 <li><button>Home</button></li>
@@ -82,7 +82,14 @@
         width: 4rem;
     }
     input {
-        
+        border: 2px solid blueviolet;
+        border-radius: 8px;
+        width: 50%;
+        padding-left: 1rem;
+        caret-color: blueviolet;
+    }
+    input[type=text]:focus {
+        accent-color: blueviolet;
     }
 
 </style>
