@@ -6,8 +6,7 @@
 
 </script>
 
-<div>
-    <div>Mini Projects:</div>
+<div class="container">
     <div>
         <ul>
             {#each links as link(link.href)}
@@ -25,5 +24,11 @@
         align-items: center;
         justify-content: center;
         gap: 1rem;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
     }
 </style>
