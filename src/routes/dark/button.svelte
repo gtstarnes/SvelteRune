@@ -3,6 +3,9 @@
  * REP: !
  */
 
+ const toggle = () => {
+    document.querySelector("body")?.classList.toggle("dark-mode")
+ }
 
 </script>
 
