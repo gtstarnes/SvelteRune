@@ -38,6 +38,26 @@
 
 
 <style>
-
+    .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: grey;
+        padding-left: 1rem;
+    }
+    .main {
+        position: relative;
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+    }
+    button {
+        background-color: inherit;
+        border: none;
+        cursor: pointer;
+        color: whitesmoke;
+    }
 
 </style>
