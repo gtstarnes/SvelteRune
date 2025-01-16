@@ -55,9 +55,6 @@
     .main button:hover {
         background-color: blueviolet;
     }
-    .subnav:hover {
-        background-color: blueviolet;
-    }
     .subnav-content {
         position: absolute;
         right:0;
