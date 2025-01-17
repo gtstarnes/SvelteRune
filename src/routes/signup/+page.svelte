@@ -13,7 +13,7 @@
     {#if loggedIn}
         <div>Hello</div>
     {:else}
-        <Portal />
+        <Portal bind:loggedIn />
     {/if}
 </div>
 
