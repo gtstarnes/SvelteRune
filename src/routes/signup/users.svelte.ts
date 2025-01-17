@@ -24,14 +24,11 @@ function getLoggedIn() {
 function getPortal() {
     return portal
 }
-function toggleLogIn(){
-
-}
-function togglePortal(){
-
+function toggle(state:boolean){
+    return state = !state;
 }
 function addUser(user:User){
-
+    users = [...users, user]
 }
 function deleteUser(username:string){
 
@@ -46,7 +43,7 @@ function checkDuplicates(username:string){
 //EXPORTS
 export {
     getUsers, getPortal, getLoggedIn,
-    toggleLogIn, togglePortal, addUser,
+    toggle, addUser,
     deleteUser, checkErrors, checkDuplicates
 }
 
