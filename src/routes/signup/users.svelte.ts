@@ -42,8 +42,7 @@ function deleteUser(username:string){
         return user.username !== username;
     })
 }
-function checkErrors(details: User){
-    const {username, password} = details
+function checkErrors(username: string, password:string){
     switch(true){
         case username === '' && password === '':
             return 'username and password are required'

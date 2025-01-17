@@ -24,7 +24,7 @@
 
 </script>
 
-<form>
+<form onsubmit={handleSubmit}>
     <span>
         <label for="username">Username:</label>
         <input name="username" id="username" type="text" bind:value={details.username}/>
