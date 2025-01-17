@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { togglePortal } from "./users.svelte";
+	import { addUser, checkSignUpErrors, togglePortal } from "./users.svelte";
 
 /**
  * REP: I
@@ -12,8 +12,16 @@ let details = $state({
     error: '',
 })
 
-function handleSubmit() {
-
+function handleSubmit(e: SubmitEvent) {
+    details.error = checkSignUpErrors(details.username, details.password)
+    if (details.error === ''){
+        const newUser = {
+            name: details.name,
+            username: details.username,
+            password: details.password,
+        }
+        addUser(newUser)
+    }
 }
 function handleChange() {
     details.error = '';
@@ -21,7 +29,7 @@ function handleChange() {
 
 </script>
 
-<form onchange={handleChange}>
+<form onsubmit={handleSubmit} onchange={handleChange}>
     <span>
         <label for="name">Name: </label>
         <input name='name' id='name' type='text' bind:value={details.name} />
