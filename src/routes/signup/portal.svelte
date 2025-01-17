@@ -5,13 +5,14 @@
 
 
 let portal = $derived(getPortal());
+let {username = $bindable()} = $props();
 </script>
 
 <div>
     {#if portal}
-        <SignUp />
+        <SignUp bind:username />
     {:else}
-        <Login />
+        <Login bind:username />
     {/if}
 </div>
 
