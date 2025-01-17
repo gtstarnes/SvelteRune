@@ -66,6 +66,8 @@ function checkLoginErrors(username: string, password:string){
             return 'user does not exist'
         case password === '':
             return 'password is required'
+        case checkPassword(username, password):
+            return 'password does not match'
         default:
             return '';
     }
@@ -75,6 +77,15 @@ function findUser(username:string){
         return user.username === username
     })
     return found
+}
+function checkPassword(username: string,password:string) {
+    const found = users.find(user => {
+        return user.username = username
+    })
+    if (found && password === found.password) {
+        return true
+    }
+    return false
 }
 
 //EXPORTS
