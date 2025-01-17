@@ -13,3 +13,35 @@ type User = {
 let users = $state<User[]>([]);
 let loggedIn = $state(false);
 let portalType = $state(false);
+
+//FUNCTIONS
+function getUsers() {
+
+}
+function getLoggedIn() {
+
+}
+function getPortalType() {
+
+}
+function toggleLogIn(){
+
+}
+function togglePortal(){
+
+}
+function addUser(user:User){
+
+}
+function deleteUser(username:string){
+
+}
+function checkErrors(){
+
+}
+function checkDuplicates(username:string){
+
+}
+
+
+
