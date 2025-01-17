@@ -16,12 +16,12 @@ function handleSubmit() {
 
 }
 function handleChange() {
-    
+    details.error = '';
 }
 
 </script>
 
-<form>
+<form onchange={handleChange}>
     <span>
         <label for="name">Name: </label>
         <input name='name' id='name' type='text' bind:value={details.name} />
