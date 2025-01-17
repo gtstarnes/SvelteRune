@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { addUser, checkSignUpErrors, togglePortal } from "./users.svelte";
+	import { addUser, checkSignUpErrors, toggleLogIn, togglePortal } from "./users.svelte";
 
 /**
  * REP: I
@@ -21,7 +21,8 @@ function handleSubmit(e: SubmitEvent) {
             username: details.username,
             password: details.password,
         }
-        addUser(newUser)
+        addUser(newUser);
+        toggleLogIn();
     }
 }
 function handleChange() {
