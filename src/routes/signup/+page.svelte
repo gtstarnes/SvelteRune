@@ -8,13 +8,17 @@
  * REP: I
 */
     let loggedIn = $derived(getLoggedIn());
+    let username = $state('')
 </script>
 
 <div class="container">
     {#if loggedIn}
-        <div>Hello</div>
+        <div>
+            Hello, {username}
+            <button>Log Out</button>
+        </div>
     {:else}
-        <Portal />
+        <Portal bind:username/>
     {/if}
 </div>
 
