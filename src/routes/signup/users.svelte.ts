@@ -2,58 +2,5 @@
 /**
  * REP: I
  */
-interface User {
-    username: string,
-    name: string,
-    password: string,
-}
 
-
-const initial:User[] = [
-    {
-        username: 'AzzClappa',
-        name: "cacasdcsac",
-        password: '1234',
-    },
-    {
-        username: 'DixiEnormous',
-        name: "cacasdcsac",
-        password: '4321',
-    },
-    {
-        username: 'BobDucca',
-        name: "cacasdcsac",
-        password: 'password',
-    },
-]
-
-let userList = $state(initial);
-
-function getUsers() {
-    return userList
-}
-function addUser(user:User){
-    userList = [...userList, user]
-}
-function findUser(username:string){
-    const found = userList.find(user => {
-        return user.username === username
-    })
-    if(found){
-        return true
-    }
-}
-function checkPassword(username:string, password:string){
-    const found = userList.find(user => {
-        return user.username === username
-    })
-    if (found) {
-        if (found.password === password){
-            return true
-        }
-    }
-    
-}
-
-export { getUsers, addUser, findUser, checkPassword}
 
