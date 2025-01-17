@@ -9,5 +9,7 @@ type User = {
     password: string,
 }
 
-
-let users = $state<User[]>([])
+// VARAIBLES
+let users = $state<User[]>([]);
+let loggedIn = $state(false);
+let portalType = $state(false);
