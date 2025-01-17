@@ -31,7 +31,9 @@ function addUser(user:User){
     users = [...users, user]
 }
 function deleteUser(username:string){
-
+    users = users.filter(user => {
+        return user.username !== username;
+    })
 }
 function checkErrors(){
 
