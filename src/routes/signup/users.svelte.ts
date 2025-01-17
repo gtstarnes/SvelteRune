@@ -25,6 +25,12 @@ function getLoggedIn() {
 function getPortal() {
     return portal
 }
+function toggleLogIn(){
+    loggedIn = toggle(loggedIn)
+}
+function togglePortal(){
+    portal = toggle(portal)
+}
 function toggle(state:boolean){
     return state = !state;
 }
@@ -60,7 +66,7 @@ function findUser(username:string){
 
 //EXPORTS
 export {
-    getUsers, getPortal, getLoggedIn, toggle, 
+    getUsers, getPortal, getLoggedIn, toggleLogIn, togglePortal, 
     addUser, deleteUser, checkErrors, findUser
 }
 
