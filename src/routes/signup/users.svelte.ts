@@ -42,7 +42,7 @@ function deleteUser(username:string){
         return user.username !== username;
     })
 }
-function checkErrors(username: string, password:string){
+function checkSignUpErrors(username: string, password:string){
     switch(true){
         case username === '' && password === '':
             return 'username and password are required'
@@ -52,6 +52,20 @@ function checkErrors(username: string, password:string){
             return 'password is required'
         case findUser(username):
             return 'user already exists'
+        default:
+            return '';
+    }
+}
+function checkLoginErrors(username: string, password:string){
+    switch(true){
+        case username === '' && password === '':
+            return 'username and password are required'
+        case username === '':
+            return 'username is required'
+        case password === '':
+            return 'password is required'
+        case !findUser(username):
+            return 'could not find'
         default:
             return '';
     }
@@ -66,6 +80,6 @@ function findUser(username:string){
 //EXPORTS
 export {
     getUsers, getPortal, getLoggedIn, toggleLogIn, togglePortal, 
-    addUser, deleteUser, checkErrors, findUser
+    addUser, deleteUser, checkSignUpErrors, checkLoginErrors, findUser
 }
 
