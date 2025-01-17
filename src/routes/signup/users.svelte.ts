@@ -13,6 +13,7 @@ type User = {
 let users = $state<User[]>([]);
 let loggedIn = $state(false);
 let portal = $state(false);
+let error = $state('');
 
 //FUNCTIONS
 function getUsers() {
@@ -39,7 +40,7 @@ function checkErrors(){
 
 }
 function checkDuplicates(username:string){
-
+    let error = ''
 }
 function findUser(username:string){
     const found = users.find(user => {
