@@ -1,17 +1,26 @@
 <script lang="ts">
-	import { togglePortal } from "./users.svelte";
+	import { checkErrors, toggleLogIn, togglePortal } from "./users.svelte";
 
 
 
     /**
      * REP: I
     */
-
+    let {username = $bindable()} = $props();
     let details = $state({
         username: '',
         password: '',
         error: ''
     })
+
+    function handleSubmit(e: SubmitEvent){
+        e.preventDefault
+        details.error = checkErrors(details.username, details.password);
+        if (details.error === ''){
+            username = details.username
+            toggleLogIn();
+        }
+    }
 
 </script>
 
