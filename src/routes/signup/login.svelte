@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { checkErrors, toggleLogIn, togglePortal } from "./users.svelte";
+	import { checkLoginErrors, toggleLogIn, togglePortal } from "./users.svelte";
 
 
 
@@ -15,7 +15,7 @@
 
     function handleSubmit(e: SubmitEvent){
         e.preventDefault
-        details.error = checkErrors(details.username, details.password);
+        details.error = checkLoginErrors(details.username, details.password);
         if (details.error === ''){
             username = details.username
             toggleLogIn();
