@@ -83,9 +83,9 @@ function checkPassword(username: string,password:string) {
         return user.username = username
     })
     if (found && password === found.password) {
-        return true
+        return false
     }
-    return false
+    return true
 }
 
 //EXPORTS
