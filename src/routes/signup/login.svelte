@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { togglePortal } from "./users.svelte";
+
 
 
     /**
@@ -19,7 +21,7 @@
     </span>
     <div>
         <button type="submit">Log In</button>
-        <button type="button">Sign Up</button>
+        <button type="button" onclick={togglePortal}>Sign Up</button>
     </div>
 </form>
 
