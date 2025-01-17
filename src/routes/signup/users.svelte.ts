@@ -19,7 +19,7 @@ function getUsers() {
     return users;
 }
 function getLoggedIn() {
-
+    return loggedIn
 }
 function getPortalType() {
 
