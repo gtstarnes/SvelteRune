@@ -13,7 +13,7 @@ type User = {
 let users = $state<User[]>([]);
 let loggedIn = $state(false);
 let portal = $state(false);
-let error = $state('');
+
 
 //FUNCTIONS
 function getUsers() {
