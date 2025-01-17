@@ -9,3 +9,5 @@ type User = {
     password: string,
 }
 
+
+let users = $state<User[]>([])
