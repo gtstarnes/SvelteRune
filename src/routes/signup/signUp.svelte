@@ -13,6 +13,7 @@ let details = $state({
 })
 
 function handleSubmit(e: SubmitEvent) {
+    e.preventDefault
     details.error = checkSignUpErrors(details.username, details.password)
     if (details.error === ''){
         const newUser = {
