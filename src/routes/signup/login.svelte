@@ -6,7 +6,7 @@
     /**
      * REP: I
     */
-    let {loggedIn = $bindable(false)} = $props();
+
 
 </script>
 
