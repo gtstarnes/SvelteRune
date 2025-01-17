@@ -62,10 +62,10 @@ function checkLoginErrors(username: string, password:string){
             return 'username and password are required'
         case username === '':
             return 'username is required'
+        case !findUser(username):
+            return 'user does not exist'
         case password === '':
             return 'password is required'
-        case !findUser(username):
-            return 'could not find'
         default:
             return '';
     }
