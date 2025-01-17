@@ -41,6 +41,12 @@ function checkErrors(){
 function checkDuplicates(username:string){
 
 }
+function findUser(username:string){
+    const found = users.find(user => {
+        return user.username === username
+    })
+    return found
+}
 
 //EXPORTS
 export {
