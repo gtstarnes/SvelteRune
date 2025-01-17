@@ -54,7 +54,7 @@ function checkErrors(details: User){
         case findUser(username):
             return 'user already exists'
         default:
-            throw new Error('idk man')
+            return '';
     }
 }
 function findUser(username:string){
