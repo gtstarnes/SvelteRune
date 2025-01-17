@@ -1,8 +1,4 @@
 <script lang="ts">
-	import { addUser, findUser } from "./users.svelte";
-
-
-
 /**
  * REP: I
 */
