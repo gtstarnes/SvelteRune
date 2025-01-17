@@ -4,7 +4,7 @@
 /**
  * REP: I
 */
-
+    let loggedIn = $state(false);
 </script>
 
 <div class="container">
