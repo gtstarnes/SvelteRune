@@ -40,10 +40,13 @@ function checkErrors(){
 
 }
 function checkDuplicates(username:string){
-    let error = ''
+    if (findUser(username)){
+        error = 'user already exists'
+    }
+    return error;
 }
 function findUser(username:string){
-    const found = users.find(user => {
+    const found = users.some(user => {
         return user.username === username
     })
     return found
