@@ -39,7 +39,7 @@
     <div>{details.error}</div>
     <div>
         <button type="submit">Log In</button>
-        <button type="button" onclick={togglePortal}>Sign Up</button>
+        <button type="button" onclick={() => togglePortal('signup')}>Sign Up</button>
     </div>
 </form>
 

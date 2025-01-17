@@ -8,11 +8,12 @@ type User = {
     username: string,
     password: string,
 }
+type Portal = 'login' | 'signup'
 
 // VARAIBLES
 let users = $state<User[]>([]);
 let loggedIn = $state(false);
-let portal = $state(false);
+let portal = $state<Portal>('login');
 
 
 //FUNCTIONS
@@ -28,8 +29,10 @@ function getPortal() {
 function toggleLogIn(){
     loggedIn = toggle(loggedIn)
 }
-function togglePortal(){
-    portal = toggle(portal)
+function togglePortal(state:Portal){
+    if (portal !== state){
+        portal = state
+    }
 }
 function toggle(state:boolean){
     return state = !state;

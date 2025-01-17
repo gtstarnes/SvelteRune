@@ -49,7 +49,7 @@ function handleChange() {
     <div>{details.error}</div>
     <div>
         <button type="submit">Sign Up</button>
-        <button type="button" onclick={togglePortal}>Log In</button>
+        <button type="button" onclick={() => togglePortal('login')}>Log In</button>
     </div>
 </form>
 
