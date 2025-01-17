@@ -12,7 +12,7 @@ type User = {
 // VARAIBLES
 let users = $state<User[]>([]);
 let loggedIn = $state(false);
-let portalType = $state(false);
+let portal = $state(false);
 
 //FUNCTIONS
 function getUsers() {
@@ -21,8 +21,8 @@ function getUsers() {
 function getLoggedIn() {
     return loggedIn
 }
-function getPortalType() {
-
+function getPortal() {
+    return portal
 }
 function toggleLogIn(){
 
@@ -45,7 +45,7 @@ function checkDuplicates(username:string){
 
 //EXPORTS
 export {
-    getUsers, getPortalType, getLoggedIn,
+    getUsers, getPortal, getLoggedIn,
     toggleLogIn, togglePortal, addUser,
     deleteUser, checkErrors, checkDuplicates
 }
