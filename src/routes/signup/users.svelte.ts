@@ -36,8 +36,20 @@ function deleteUser(username:string){
         return user.username !== username;
     })
 }
-function checkErrors(){
-
+function checkErrors(details: User){
+    const {username, password} = details
+    switch(true){
+        case username === '' && password === '':
+            return 'username and password are required'
+        case username === '':
+            return 'username is required'
+        case password === '':
+            return 'password is required'
+        case findUser(username):
+            return 'user already exists'
+        default:
+            throw new Error('idk man')
+    }
 }
 function checkDuplicates(username:string){
     if (findUser(username)){
@@ -54,8 +66,7 @@ function findUser(username:string){
 
 //EXPORTS
 export {
-    getUsers, getPortal, getLoggedIn,
-    toggle, addUser,
-    deleteUser, checkErrors, checkDuplicates
+    getUsers, getPortal, getLoggedIn, toggle, 
+    addUser, deleteUser, checkErrors, checkDuplicates
 }
 
