@@ -3,11 +3,11 @@
 import SignUp from "./signUp.svelte";
 
 let {loggedIn = $bindable(false)} = $props();
-let portalToggle = $state(false);
+let portal = $state(false);
 </script>
 
 <div>
-    {#if portalToggle}
+    {#if portal}
         <SignUp />
     {:else}
         <Login />
