@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Portal from "./portal.svelte";
+
 
 
 /**
@@ -8,7 +10,11 @@
 </script>
 
 <div class="container">
-
+    {#if loggedIn}
+        <div>Hello</div>
+    {:else}
+        <Portal />
+    {/if}
 </div>
 
 <style>
