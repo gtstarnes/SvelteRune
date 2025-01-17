@@ -12,6 +12,13 @@ let details = $state({
     error: '',
 })
 
+function handleSubmit() {
+
+}
+function handleChange() {
+    
+}
+
 </script>
 
 <form>
