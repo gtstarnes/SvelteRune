@@ -21,10 +21,13 @@
             toggleLogIn();
         }
     }
+    function handleChange() {
+        details.error = ''
+    }
 
 </script>
 
-<form onsubmit={handleSubmit}>
+<form onsubmit={handleSubmit} onchange={handleChange}>
     <span>
         <label for="username">Username:</label>
         <input name="username" id="username" type="text" bind:value={details.username}/>
