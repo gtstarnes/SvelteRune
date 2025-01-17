@@ -1,19 +1,20 @@
 <script lang="ts">
 	import Portal from "./portal.svelte";
+	import { getLoggedIn } from "./users.svelte";
 
 
 
 /**
  * REP: I
 */
-    let loggedIn = $state(false);
+    let loggedIn = $derived(getLoggedIn());
 </script>
 
 <div class="container">
     {#if loggedIn}
         <div>Hello</div>
     {:else}
-        <Portal bind:loggedIn />
+        <Portal />
     {/if}
 </div>
 
