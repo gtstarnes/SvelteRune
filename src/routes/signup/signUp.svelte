@@ -5,6 +5,7 @@
  * REP: I
 */
 
+let {username = $bindable()} = $props();
 let details = $state({
     name: '',
     username: '',
@@ -22,6 +23,7 @@ function handleSubmit(e: SubmitEvent) {
             password: details.password,
         }
         addUser(newUser);
+        username = details.username
         toggleLogIn();
     }
 }
