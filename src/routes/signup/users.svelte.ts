@@ -16,7 +16,7 @@ let portalType = $state(false);
 
 //FUNCTIONS
 function getUsers() {
-
+    return users;
 }
 function getLoggedIn() {
 
@@ -43,5 +43,10 @@ function checkDuplicates(username:string){
 
 }
 
-
+//EXPORTS
+export {
+    getUsers, getPortalType, getLoggedIn,
+    toggleLogIn, togglePortal, addUser,
+    deleteUser, checkErrors, checkDuplicates
+}
 
