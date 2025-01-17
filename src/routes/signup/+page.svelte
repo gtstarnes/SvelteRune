@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Portal from "./portal.svelte";
-	import { getLoggedIn } from "./users.svelte";
+	import { getLoggedIn, toggleLogIn } from "./users.svelte";
 
 
 
@@ -15,7 +15,7 @@
     {#if loggedIn}
         <div>
             Hello, {username}
-            <button>Log Out</button>
+            <button onclick={toggleLogIn}>Log Out</button>
         </div>
     {:else}
         <Portal bind:username/>
