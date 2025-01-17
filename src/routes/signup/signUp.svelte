@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { togglePortal } from "./users.svelte";
+
 /**
  * REP: I
 */
@@ -28,7 +30,7 @@ let details = $state({
     <div>{details.error}</div>
     <div>
         <button type="submit">Sign Up</button>
-        <button type="button">Log In</button>
+        <button type="button" onclick={togglePortal}>Log In</button>
     </div>
 </form>
 
