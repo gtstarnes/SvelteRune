@@ -7,6 +7,11 @@
      * REP: I
     */
 
+    let details = $state({
+        username: '',
+        password: '',
+        error: ''
+    })
 
 </script>
 
