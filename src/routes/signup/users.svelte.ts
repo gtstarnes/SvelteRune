@@ -51,12 +51,6 @@ function checkErrors(details: User){
             throw new Error('idk man')
     }
 }
-function checkDuplicates(username:string){
-    if (findUser(username)){
-        error = 'user already exists'
-    }
-    return error;
-}
 function findUser(username:string){
     const found = users.some(user => {
         return user.username === username
@@ -67,6 +61,6 @@ function findUser(username:string){
 //EXPORTS
 export {
     getUsers, getPortal, getLoggedIn, toggle, 
-    addUser, deleteUser, checkErrors, checkDuplicates
+    addUser, deleteUser, checkErrors, findUser
 }
 
