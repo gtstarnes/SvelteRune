@@ -11,7 +11,7 @@ let {username = $bindable()} = $props();
 </script>
 
 <div>
-    {#if portal}
+    {#if portal === 'signup'}
         <SignUp bind:username />
     {:else}
         <Login bind:username />
