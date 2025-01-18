@@ -31,4 +31,19 @@
     align-items: center;
     padding-left: 1rem;
  }
+ input {
+    width: 50%;
+    background-color: inherit;
+    outline: none;
+    border: none;
+    caret-color: whitesmoke;
+    border-bottom: 1px solid whitesmoke;
+    padding-bottom: 2px;
+ }
+ input::placeholder {
+    color: whitesmoke;
+ }
+ input:hover {
+    cursor: pointer;
+ }
 </style>
