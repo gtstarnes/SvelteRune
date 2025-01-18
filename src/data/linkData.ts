@@ -1,7 +1,7 @@
 const links = [
     {
-        text: "Rune Count",
-        href: "b/count",
+        text: "Count",
+        href: "/count",
     },
     {
         text: "Rune Todo",
@@ -20,8 +20,8 @@ const links = [
         href: "/colors",
     },
     {
-        text: "Rune Burger",
-        href: "a/hamburger",
+        text: "Nav Bar",
+        href: "/nav",
     },
     {
         text: "Rune Screen",
@@ -30,10 +30,6 @@ const links = [
     {
         text: "Rune Timer",
         href: "/timer",
-    },
-    {
-        text: "Rune Multi",
-        href: "/multiNav",
     },
     {
         text: "Aniborder",
