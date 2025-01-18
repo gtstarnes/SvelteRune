@@ -31,6 +31,13 @@
     align-items: center;
     padding-left: 1rem;
  }
+ .content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 6rem;
+ }
  input {
     width: 50%;
     background-color: inherit;
