@@ -4,17 +4,17 @@
     */
 
     const tabs = ['Home', {main: 'About', sub:['A', 'B', 'C']}, {main: 'Projects', sub:['D', 'E', 'F']}];
-    let active = $state('Home');
+    let {active = $bindable('Home')} = $props();
 </script>
 
 
-<nav class="container">
+<nav class="main">
     <ul>
         {#each tabs as tab (tab)}
             {#if typeof tab === 'object'}
-                <nav>
+                <nav class='subnav'>
                     <li><button>{tab.main}</button></li>
-                    <div>
+                    <div class="subnav-content">
                         {#each tab.sub as sub}
                             <li><button>{sub}</button></li>
                         {/each}
