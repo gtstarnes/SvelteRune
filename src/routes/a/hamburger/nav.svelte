@@ -3,8 +3,11 @@
      * REP: VI
     */
 
+	import Hamburger from "./hamburger.svelte";
+
     const tabs = ['Home', {main: 'About', sub:['A', 'B', 'C']}, {main: 'Projects', sub:['D', 'E', 'F']}];
     let {active = $bindable('Home')} = $props();
+    let width = $state(0)
 
     function changeActive(tab:string) {
         if (active !== tab){
@@ -13,7 +16,9 @@
     }
 </script>
 
+<svelte:window bind:innerWidth={width}/>
 
+{#if (width > 500)}
 <nav class="main">
     <ul>
         {#each tabs as tab (tab)}
@@ -36,6 +41,9 @@
         {/each}
     </ul>
 </nav>
+{:else}
+    <Hamburger />
+{/if}
 
 <style>
     ul {
