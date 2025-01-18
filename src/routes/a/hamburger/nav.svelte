@@ -33,6 +33,7 @@
     ul {
         list-style: none;
         margin: 0;
+        padding: 0;
         display: flex;
     }
     button {
@@ -43,11 +44,20 @@
         height: 2rem;
         cursor: pointer;
     }
-    .main button:hover, .subnav {
+    .main {
+        position: relative;
+    }
+    .main button:hover, .subnav:hover {
         background-color: blueviolet;
     }
     .subnav-content {
         background-color: blueviolet;
+        position: absolute;
+        right: 0;
+        visibility: hidden;
+    }
+    .subnav:hover .subnav-content {
+        visibility: visible;
     }
     .subnav-content button:hover {
         background-color: grey;
