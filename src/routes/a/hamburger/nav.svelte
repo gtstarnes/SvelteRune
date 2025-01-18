@@ -15,9 +15,11 @@
                 <nav class='subnav'>
                     <li><button>{tab.main}</button></li>
                     <div class="subnav-content">
-                        {#each tab.sub as sub}
-                            <li><button>{sub}</button></li>
-                        {/each}
+                        <ul>
+                            {#each tab.sub as sub}
+                                <li><button>{sub}</button></li>
+                            {/each}
+                        </ul>
                     </div>
                 </nav>
             {:else}
@@ -28,5 +30,17 @@
 </nav>
 
 <style>
-
+    ul {
+        list-style: none;
+        margin: 0;
+        display: flex;
+    }
+    button {
+        background-color: inherit;
+        border: none;
+        color: inherit;
+        width: 4rem;
+        height: 2rem;
+        cursor: pointer;
+    }
 </style>
