@@ -13,10 +13,10 @@
     <div class="header">
         <span>LOGO</span>
         <input type='text' placeholder="search..." />
-        <Nav />
+        <Nav bind:active />
     </div>
-    <div>
-        welcome.
+    <div class="content">
+        {active.toLowerCase()}.
     </div>
 </div>
 
