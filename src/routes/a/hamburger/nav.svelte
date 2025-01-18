@@ -5,6 +5,12 @@
 
     const tabs = ['Home', {main: 'About', sub:['A', 'B', 'C']}, {main: 'Projects', sub:['D', 'E', 'F']}];
     let {active = $bindable('Home')} = $props();
+
+    function changeActive(tab:string) {
+        if (active !== tab){
+            active = tab
+        }
+    }
 </script>
 
 
@@ -13,11 +19,11 @@
         {#each tabs as tab (tab)}
             {#if typeof tab === 'object'}
                 <nav class='subnav'>
-                    <li><button>{tab.main}</button></li>
+                    <li><button onclick={() =>changeActive(tab.main)}>{tab.main}</button></li>
                     <div class="subnav-content">
                         <ul>
                             {#each tab.sub as sub}
-                                <li><button>{sub}</button></li>
+                                <li><button onclick={() =>changeActive(sub)}>{sub}</button></li>
                             {/each}
                         </ul>
                     </div>
