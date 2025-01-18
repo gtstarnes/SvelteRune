@@ -10,7 +10,7 @@
 
 
 <div class="container">
-    <div>
+    <div class="header">
         <span>LOGO</span>
         <input type='text' placeholder="search..." />
         <Nav />
@@ -23,5 +23,12 @@
 <style>
  .container {
     height:90vh;
+ }
+ .header {
+    background-color: grey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
  }
 </style>
