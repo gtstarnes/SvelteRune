@@ -29,7 +29,7 @@
                     </div>
                 </nav>
             {:else}
-                <li><button>{tab}</button></li>
+                <li><button onclick={() =>changeActive(tab)}>{tab}</button></li>
             {/if}
         {/each}
     </ul>
