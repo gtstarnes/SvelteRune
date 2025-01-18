@@ -43,4 +43,13 @@
         height: 2rem;
         cursor: pointer;
     }
+    .main button:hover, .subnav {
+        background-color: blueviolet;
+    }
+    .subnav-content {
+        background-color: blueviolet;
+    }
+    .subnav-content button:hover {
+        background-color: grey;
+    }
 </style>
