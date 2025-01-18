@@ -19,7 +19,8 @@
         {#each tabs as tab (tab)}
             {#if typeof tab === 'object'}
                 <nav class='subnav'>
-                    <li><button onclick={() =>changeActive(tab.main)}>{tab.main}</button></li>
+                    <li><button onclick={() =>changeActive(tab.main)}
+                            class:active={tab.main === active}>{tab.main}</button></li>
                     <div class="subnav-content">
                         <ul>
                             {#each tab.sub as sub}
@@ -29,7 +30,8 @@
                     </div>
                 </nav>
             {:else}
-                <li><button onclick={() =>changeActive(tab)}>{tab}</button></li>
+                <li><button onclick={() =>changeActive(tab)}
+                        class:active={tab === active}>{tab}</button></li>
             {/if}
         {/each}
     </ul>
@@ -67,5 +69,8 @@
     }
     .subnav-content button:hover {
         background-color: grey;
+    }
+    .active {
+        border-top: 4px solid blueviolet;
     }
 </style>
