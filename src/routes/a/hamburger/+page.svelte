@@ -3,13 +3,24 @@
  * REP: VI
 */
 
+	import Nav from "./nav.svelte";
+
 </script>
 
 
 <div class="container">
-
+    <div>
+        <span>LOGO</span>
+        <input type='text' placeholder="search..." />
+        <Nav />
+    </div>
+    <div>
+        welcome.
+    </div>
 </div>
 
 <style>
-
+ .container {
+    height:90vh;
+ }
 </style>
