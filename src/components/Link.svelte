@@ -21,6 +21,9 @@
     }
     a {
         text-decoration: none;
-        color: whitesmoke
+        color: whitesmoke;
+        height: 100%;
+        display:flex;
+        align-items: center;
     }
 </style>

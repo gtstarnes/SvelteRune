@@ -1,14 +1,18 @@
 const links = [
     {
-        text: "Count",
+        text: "Count (C)",
         href: "/count",
     },
     {
-        text: "Rune Todo",
+        text: "NavBar (B)",
+        href: "/nav",
+    },
+    {
+        text: "Rune Todo (A)",
         href: "/todo",
     },
     {
-        text: "Rune Sign Up",
+        text: "Rune Portal (A)",
         href: "/signup",
     },
     {
@@ -19,13 +23,10 @@ const links = [
         text: "Rune Colors",
         href: "/colors",
     },
-    {
-        text: "Nav Bar",
-        href: "/nav",
-    },
+
     {
         text: "Rune Screen",
-        href: "a/screensaver",
+        href: "/screensaver",
     },
     {
         text: "Rune Timer",
