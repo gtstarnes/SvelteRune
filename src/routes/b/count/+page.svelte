@@ -9,11 +9,18 @@
  */
 
 //variables
-
+let count = $state(0)
+let square = $derived(count*count)
 </script>
 
 <div class="container">
-
+    <div>{count}</div>
+    <div>
+        <button>+</button>
+        <button>clr</button>
+        <button>-</button>
+    </div>
+    <div>{square}</div>
 </div>
 
 <style>
