@@ -11,7 +11,7 @@ type User = {
 type Portal = 'login' | 'signup'
 
 // VARAIBLES
-let users = $state<User[]>([]);
+const users = $state<User[]>([]);
 let loggedIn = $state(false);
 let portal = $state<Portal>('login');
 
@@ -38,12 +38,7 @@ function toggle(state:boolean){
     return state = !state;
 }
 function addUser(user:User){
-    users = [...users, user]
-}
-function deleteUser(username:string){
-    users = users.filter(user => {
-        return user.username !== username;
-    })
+    users.push(user)
 }
 function checkSignUpErrors(username: string, password:string){
     switch(true){
@@ -94,6 +89,6 @@ function checkPassword(username: string,password:string) {
 //EXPORTS
 export {
     getUsers, getPortal, getLoggedIn, toggleLogIn, togglePortal, 
-    addUser, deleteUser, checkSignUpErrors, checkLoginErrors, findUser
+    addUser, checkSignUpErrors, checkLoginErrors, findUser
 }
 

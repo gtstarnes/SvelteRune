@@ -24,12 +24,22 @@ function handleSubmit(e: SubmitEvent) {
         }
         addUser(newUser);
         username = details.username
+        details.username = '';
+        details.password = '';
         toggleLogIn();
+
     }
 }
 function handleChange() {
     details.error = '';
 }
+
+function toogle() {
+        details.password ='';
+        details.username = '';
+        togglePortal('login')
+
+    }
 
 </script>
 
@@ -49,7 +59,7 @@ function handleChange() {
     <div>{details.error}</div>
     <div>
         <button type="submit">Sign Up</button>
-        <button type="button" onclick={() => togglePortal('login')}>Log In</button>
+        <button type="button" onclick={toogle}>Log In</button>
     </div>
 </form>
 

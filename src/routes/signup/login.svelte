@@ -18,11 +18,20 @@
         details.error = checkLoginErrors(details.username, details.password);
         if (details.error === ''){
             username = details.username
+            details.password ='';
+            details.username = '';
             toggleLogIn();
         }
+
     }
     function handleChange() {
         details.error = ''
+    }
+    function toogle() {
+        details.password ='';
+        details.username = '';
+        togglePortal('signup')
+
     }
 
 </script>
@@ -39,7 +48,7 @@
     <div>{details.error}</div>
     <div>
         <button type="submit">Log In</button>
-        <button type="button" onclick={() => togglePortal('signup')}>Sign Up</button>
+        <button type="button" onclick={toogle}>Sign Up</button>
     </div>
 </form>
 

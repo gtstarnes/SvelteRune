@@ -8,7 +8,7 @@ const links = [
         href: "/nav",
     },
     {
-        text: "Rune Todo (A)",
+        text: "Todo (A)",
         href: "/todo",
     },
     {
@@ -16,28 +16,27 @@ const links = [
         href: "/signup",
     },
     {
-        text: "Rune Comments",
+        text: "Comments (A)",
         href: "/comments",
     },
     {
-        text: "Rune Colors",
+        text: "Colors (A)",
         href: "/colors",
     },
-
     {
-        text: "Rune Screen",
+        text: "Screen (A)",
         href: "/screensaver",
     },
     {
-        text: "Rune Timer",
+        text: "Timer (A)",
         href: "/timer",
     },
     {
-        text: "Aniborder",
+        text: "Aniborder (A)",
         href: "/aniborder",
     },
     {
-        text: "Dark Mode",
+        text: "Dark Mode (A)",
         href: "/dark",
     },
 ]
