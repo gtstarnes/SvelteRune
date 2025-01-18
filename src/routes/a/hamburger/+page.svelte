@@ -5,6 +5,7 @@
 
 	import Nav from "./nav.svelte";
 
+    let active = $state('Home')
 </script>
 
 
