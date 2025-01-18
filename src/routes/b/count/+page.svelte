@@ -16,9 +16,9 @@ let square = $derived(count*count)
 <div class="container">
     <div>{count}</div>
     <div>
-        <button>+</button>
-        <button>clr</button>
-        <button>-</button>
+        <button onclick={() =>count += 1}>+</button>
+        <button onclick={() =>count = 0}>clr</button>
+        <button onclick={() =>count -= 1}>-</button>
     </div>
     <div>{square}</div>
 </div>
