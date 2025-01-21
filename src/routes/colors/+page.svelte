@@ -1,8 +1,8 @@
 <script lang="ts">
 /**
- * REPS: IV
+ * REPS: V
 */
-    import { colors } from "./colors";
+import { colors } from "./colors";
 
 
 
@@ -33,6 +33,11 @@
         border: 0.4rem solid black;
         border-radius: 4px;
         box-shadow: 8px 8px 10px rgba(0, 0, 0, .5);
+        transition: width 0.75s;
+    }
+    .color:hover {
+        width: 12rem;
+        transition: width 1s;
     }
     .color-list {
         display: flex;
@@ -40,4 +45,8 @@
         overflow: hidden;
         width: 100vw;
     }
+    :global(.dark-mode .color){
+        border: 0.4rem solid grey;
+    }
+
 </style>
