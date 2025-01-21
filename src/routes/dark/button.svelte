@@ -14,8 +14,11 @@ const toggleDark = () => {
 }
 </script>
 
-<button onclick={toggleDark}><Sun /></button>
-<button onclick={toggleDark}><Moon /></button>
+{#if toggle === true}
+    <button onclick={toggleDark}><Sun /></button>
+{:else}
+    <button onclick={toggleDark}><Moon /></button>
+{/if}
 
 <style>
     button {
