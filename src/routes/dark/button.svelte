@@ -3,13 +3,15 @@
  * REP: II
  */
 
-	import Sun from "./sun.svelte";
+	import Moon from "./moon.svelte";
+import Sun from "./sun.svelte";
 
 
 
 </script>
 
 <button><Sun /></button>
+<button><Moon /></button>
 
 <style>
     button {

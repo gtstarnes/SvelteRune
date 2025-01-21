@@ -6,5 +6,7 @@
 </svg>
 
 <style>
-
+    svg {
+        color: rgb(51, 145, 223)
+    }
 </style>
