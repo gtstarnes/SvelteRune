@@ -29,10 +29,13 @@
     .color {
         height: 7rem;
         width: 6rem;
+        cursor: pointer;
+        border: 0.4rem solid black;
+        border-radius: 4px;
     }
     .color-list {
         display: flex;
-        gap: 0.2rem;
+        gap: 1rem;
         overflow: hidden;
         width: 100vw;
     }
