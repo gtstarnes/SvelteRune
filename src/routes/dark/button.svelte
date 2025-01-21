@@ -9,13 +9,13 @@ import Sun from "./sun.svelte";
 let toggle = $state(false)
 
 const toggleDark = () => {
-    toggle = true
+    toggle = !toggle
     document.querySelector("body")?.classList.toggle("dark-mode")
 }
 </script>
 
-<button><Sun /></button>
-<button><Moon /></button>
+<button onclick={toggleDark}><Sun /></button>
+<button onclick={toggleDark}><Moon /></button>
 
 <style>
     button {
@@ -24,5 +24,6 @@ const toggleDark = () => {
         display: flex;
         align-items: center;
         justify-content: center;
+        cursor: pointer;
     }
 </style>
