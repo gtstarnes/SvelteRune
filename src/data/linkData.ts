@@ -20,7 +20,7 @@ const links = [
         href: "/comments",
     },
     {
-        text: "Colors (A)",
+        text: "Colors (B)",
         href: "/colors",
     },
     {
