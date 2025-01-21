@@ -32,6 +32,7 @@
         cursor: pointer;
         border: 0.4rem solid black;
         border-radius: 4px;
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, .5);
     }
     .color-list {
         display: flex;
