@@ -22,5 +22,12 @@ let toggle = $state<boolean>(false)
 {/if}
 
 <style>
-
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: inherit;
+        border: none;
+        cursor: pointer;
+    }
 </style>
