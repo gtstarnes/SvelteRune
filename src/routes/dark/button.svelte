@@ -3,6 +3,8 @@
  * REP: III
  */
 
+let darkToggle = $state<boolean>(false)
+
 
 </script>
 
