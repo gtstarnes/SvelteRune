@@ -16,9 +16,9 @@ let toggle = $state<boolean>(false)
 </script>
 
 {#if !toggle}
-    <button><Moon /></button>
+    <button onclick={toggleDark}><Moon /></button>
 {:else}
-    <button><Sun /></button>
+    <button onclick={toggleDark}><Sun /></button>
 {/if}
 
 <style>
