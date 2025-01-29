@@ -3,8 +3,12 @@
  * REP: III
  */
 
-let darkToggle = $state<boolean>(false)
+let toggle = $state<boolean>(false)
 
+    function toggleDark() {
+        toggle = !toggle;
+        document.body.classList.toggle("dark-mode")
+    }
 
 </script>
 
