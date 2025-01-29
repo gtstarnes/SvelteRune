@@ -37,13 +37,16 @@ import { colors } from "./colors";
     }
     .color:hover {
         width: 12rem;
+        translate: 0 1rem;
         transition: width 1s;
+        transition: translate 0.4s;
     }
     .color-list {
         display: flex;
         gap: 1rem;
         overflow: hidden;
         width: 100vw;
+        height: 12rem;
     }
     :global(.dark-mode .color){
         border: 0.4rem solid grey;
