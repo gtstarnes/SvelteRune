@@ -3,6 +3,9 @@
  * REP: III
  */
 
+ import  Moon  from "./moon.svelte"
+  import  Sun  from "./sun.svelte"
+
 let toggle = $state<boolean>(false)
 
     function toggleDark() {
@@ -12,7 +15,11 @@ let toggle = $state<boolean>(false)
 
 </script>
 
-
+{#if !toggle}
+    <button><Moon /></button>
+{:else}
+    <button><Sun /></button>
+{/if}
 
 <style>
 
