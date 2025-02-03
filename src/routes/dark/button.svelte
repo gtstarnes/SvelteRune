@@ -1,12 +1,23 @@
 <script lang="ts">
+	import Moon from "./moon.svelte";
+	import Sun from "./sun.svelte";
+
 /**
  * REP: IV
  */
-
+ let darkMode = $state(false);
+ function toggle(){
+    darkMode = !darkMode;
+    document.body.classList.toggle("dark-mode");
+ }
 </script>
 
-<button>
-    cdsa
+<button class="dark-mode-button">
+    {#if darkMode}
+        <Moon />
+    {:else}
+        <Sun />
+    {/if}
 </button>
 
 <style>
