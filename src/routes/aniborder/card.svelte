@@ -22,7 +22,7 @@
         padding: 1rem;
         border: 0.25rem solid;
         border-radius: 10px;
-        border-image: linear-gradient(var(--angle), black 75%, pink) 1;
+        border-image: linear-gradient(var(--angle), black 75%, gold) 1;
         animation: 4s rotate linear infinite;
     }
 
@@ -33,7 +33,7 @@
     }
 
     @property --angle {
-        syntax: '<angle>';
+        syntax: "<angle>";
         initial-value: 0deg;
         inherits: false;
     }
