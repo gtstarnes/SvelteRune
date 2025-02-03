@@ -11,11 +11,18 @@
 </script>
 
 {#if toggle}
-    <button><Moon /></button>
+    <button class="dark-mode-button"><Moon /></button>
 {:else}
-    <button><Sun /></button>
+    <button class="dark-mode-button"><Sun /></button>
 {/if}
 
 <style>
-
+    .dark-mode-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: inherit;
+        border: none;
+        cursor:pointer;
+    }
 </style>
