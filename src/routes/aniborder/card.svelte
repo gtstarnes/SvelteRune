@@ -14,38 +14,28 @@
 </div>
 
 <style>
+
     .card {
+        --angle: 0deg;
         height: 22rem;
-        width: 14rem;
+        width: 16rem;
         padding: 1rem;
-        display: flex;
-        flex-direction: column;
+        border: 0.25rem solid;
         border-radius: 10px;
-        position: relative;
-        background: white;
-        z-index: 1;
+        border-image: linear-gradient(var(--angle), lightblue, pink) 1;
+        animation: 4s rotate linear infinite;
     }
 
-    .card::after {
-        content: "";
-        position: absolute;
-        top: -8px;
-        left: -8px;
-        right: -8px;
-        bottom: -8px;
-        border-radius: 12px;
-        background: conic-gradient(lightblue, pink, lightblue);
-        z-index: -1;
-        animation: rotate-border 4s linear infinite;
-    }
-
-    @keyframes rotate-border {
-        from {
-            transform: rotate(0deg);
-        }
+    @keyframes rotate {
         to {
-            transform: rotate(360deg);
+            --angle: 360deg;
         }
+    }
+
+    @property --angle {
+        syntax: '<angle>';
+        initial-value: 0deg;
+        inherits: false;
     }
 
     .card:hover {
