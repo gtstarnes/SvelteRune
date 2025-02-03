@@ -1,18 +1,19 @@
 <script lang="ts">
+	import { browser } from "$app/environment";
 	import Moon from "./moon.svelte";
 	import Sun from "./sun.svelte";
 
 /**
- * REP: IV
+ * REP: V
  */
- let darkMode = $state(false);
+ let darkMode = $state(browser ? document.body.classList.contains("dark-mode"): new Error('no browsers'));
  function toggle(){
     darkMode = !darkMode;
     document.body.classList.toggle("dark-mode");
  }
 </script>
 
-<button class="dark-mode-button">
+<button class="dark-mode-button" onclick={toggle}>
     {#if darkMode}
         <Moon />
     {:else}
