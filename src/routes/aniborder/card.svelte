@@ -11,29 +11,44 @@
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
         Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
-    <div class='border'></div>
 </div>
 
 <style>
     .card {
-        padding: 2em;
-        width: 18rem;
-        height: 18rem;
-        background-color: #1c1f2b;
-        text-align: center;
+        height: 22rem;
+        width: 14rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
         border-radius: 10px;
         position: relative;
-        border: 10px solid;
-        border-image: linear-gradient(to right, rgb(31, 97, 238), blueviolet) 1;
+        background: white;
+        z-index: 1;
     }
-    /* .border {
-        content: '';
+
+    .card::after {
+        content: "";
         position: absolute;
-        height: 100%;
-        width: 100%;
-        background-color: gold;
-        inset: 0;
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+        border-radius: 12px;
+        background: conic-gradient(lightblue, pink, lightblue);
         z-index: -1;
-        padding: 7px;
-    } */
+        animation: rotate-border 4s linear infinite;
+    }
+
+    @keyframes rotate-border {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .card:hover {
+        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
+    }
 </style>
