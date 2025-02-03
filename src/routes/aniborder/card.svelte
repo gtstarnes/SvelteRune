@@ -22,7 +22,7 @@
         padding: 1rem;
         border: 0.25rem solid;
         border-radius: 10px;
-        border-image: linear-gradient(var(--angle), lightblue, pink) 1;
+        border-image: linear-gradient(var(--angle), black 75%, pink) 1;
         animation: 4s rotate linear infinite;
     }
 
