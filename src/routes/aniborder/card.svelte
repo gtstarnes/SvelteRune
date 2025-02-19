@@ -14,7 +14,9 @@
 </div>
 
 <style>
+    
 
+/*
     .card {
         --angle: 0deg;
         height: 22rem;
@@ -38,9 +40,10 @@
         syntax: "<angle>";
         initial-value: 0deg;
         inherits: false;
-    }
+   }
 
     .card:hover {
         box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
     }
+*/
 </style>
