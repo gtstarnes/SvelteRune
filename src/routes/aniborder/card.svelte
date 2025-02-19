@@ -17,7 +17,7 @@
 
     @property --angle {
         syntax: "<angle>";
-        initial-valeu: 0deg;
+        initial-value: 0deg;
         inherits: false;
         }
     @keyframes rotate {
@@ -35,7 +35,8 @@
     .card:hover {
         box-shadow: 8px 8px 10px rgba(0,0,0,0.25);
         border: 0.25rem solid;
-        border-image: linear-gradient(var(--angle), rgba(0,0,0,0) 80%, gold) 1;
+        border-image: linear-gradient(var(--angle), rgba(0,0,0,0) 70%, gold) 1;
+        animation: 4s rotate linear infinite;
     }
 
 /*
