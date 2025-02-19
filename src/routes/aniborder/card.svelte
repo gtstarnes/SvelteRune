@@ -20,6 +20,11 @@
         initial-valeu: 0deg;
         inherits: false;
         }
+    @keyframes rotate {
+        to {
+            --angle: 360deg;
+        }
+    }
 
     .card {
         --angle: 0deg;
@@ -29,6 +34,8 @@
     }
     .card:hover {
         box-shadow: 8px 8px 10px rgba(0,0,0,0.25);
+        border: 0.25rem solid;
+        border-image: linear-gradient(var(--angle), rgba(0,0,0,0) 80%, gold) 1;
     }
 
 /*
