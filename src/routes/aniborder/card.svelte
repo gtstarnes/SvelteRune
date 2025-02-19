@@ -23,7 +23,7 @@
     }
     .card:hover {
         border: 0.25rem solid;
-        border-image: linear-gradient(var(--angle), black 75%, gold) 1;
+        border-image: linear-gradient(var(--angle), rgba(0,0,0,0) 75%, gold) 1;
         animation: 4s rotate linear infinite;
         
     }
