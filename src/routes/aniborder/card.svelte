@@ -14,7 +14,22 @@
 </div>
 
 <style>
-    
+
+    @property --angle {
+        syntax: "<angle>";
+        initial-valeu: 0deg;
+        inherits: false;
+        }
+
+    .card {
+        --angle: 0deg;
+        width: 18rem;
+        height: 20rem;
+        padding: 1rem;
+    }
+    .card:hover {
+        box-shadow: 8px 8px 10px rgba(0,0,0,0.25);
+    }
 
 /*
     .card {
