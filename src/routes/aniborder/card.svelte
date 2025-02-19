@@ -38,35 +38,4 @@
         border-image: linear-gradient(var(--angle), rgba(0,0,0,0) 70%, gold) 1;
         animation: 4s rotate linear infinite;
     }
-
-/*
-    .card {
-        --angle: 0deg;
-        height: 22rem;
-        width: 16rem;
-        padding: 1rem;
-    }
-    .card:hover {
-        border: 0.25rem solid;
-        border-image: linear-gradient(var(--angle), rgba(0,0,0,0) 75%, gold) 1;
-        animation: 4s rotate linear infinite;
-        
-    }
-
-    @keyframes rotate {
-        to {
-            --angle: 360deg;
-        }
-    }
-
-    @property --angle {
-        syntax: "<angle>";
-        initial-value: 0deg;
-        inherits: false;
-   }
-
-    .card:hover {
-        box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.1);
-    }
-*/
 </style>
