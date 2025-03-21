@@ -22,6 +22,11 @@ function addTask(task:string){
     console.log(newTask)
     tasks = [...tasks, newTask]
 }
+function findTask(task:string){
+    return tasks.find(t => {
+        return t.task === task
+    })
+}
 function delTask(task:string){
     tasks = tasks.filter(t => {
         return t.task !== task
@@ -33,4 +38,4 @@ function massDelete(){
     })
 }
 
-export {getTasks, addTask, delTask, massDelete}
+export {getTasks, addTask, delTask, massDelete, findTask}
