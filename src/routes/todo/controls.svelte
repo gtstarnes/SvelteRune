@@ -33,7 +33,7 @@
     }
 </script>
 
-<form>
+<div>
     <span>
         <input type="text" placeholder="add a task..." bind:value={input} />
         <div>
@@ -42,7 +42,7 @@
         </div>
     </span>
     <span>{error}</span>
-</form>
+</div>
 
 
 <style></style>
