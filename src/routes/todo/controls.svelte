@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { addTask } from "./todo.svelte";
+
 	
 
 /**
@@ -9,7 +11,10 @@
  let error = $state('')
 
     function createTask(){
-
+        if (isValid(input)){
+            addTask(input)
+        }
+        input = "";
     }
     function isValid(input: string){
         let valid = false
@@ -32,7 +37,7 @@
     <span>
         <input type="text" placeholder="add a task..." bind:value={input} />
         <div>
-            <button>Add</button>
+            <button onclick={createTask}>Add</button>
             <button>Remove Completed</button>
         </div>
     </span>
