@@ -18,7 +18,7 @@
             <button>Remove Completed</button>
         </div>
     </span>
-    <span></span>
+    <span>{error}</span>
 </form>
 
 
