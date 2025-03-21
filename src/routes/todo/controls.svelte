@@ -8,6 +8,24 @@
  let input = $state('')
  let error = $state('')
 
+    function createTask(){
+
+    }
+    function isValid(input: string){
+        let valid = false
+        switch(true) {
+            case input === '':
+                error = 'tasks cannot be empty'
+                break
+            case input.length > 20:
+                error = 'task cannot be longer than 20 characters'
+                break
+            default:
+                error = ''
+                valid = true
+        }
+        return valid
+    }
 </script>
 
 <form>
