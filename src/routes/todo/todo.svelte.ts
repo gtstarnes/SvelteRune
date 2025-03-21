@@ -7,3 +7,5 @@ type Task = {
     status: boolean,
     edit: boolean,
 }
+
+const tasks: Task[] = [];
