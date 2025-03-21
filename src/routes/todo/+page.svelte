@@ -13,17 +13,21 @@
 <div>
     <Controls />
     <section>
-        <ul>
-            {#each tasks as task (task.task)}
-                <li>
-                        <input type="checkbox" bind:checked={task.status} />
-                        <p class:active={task.status === true}>{task.task}</p>
-                        <span>
-                            <button onclick={() => delTask(task.task)}>Delete</button>
-                        </span>
-                </li>
-            {/each}
-        </ul>
+        {#if tasks.length === 0}
+            <p>Task list is empty</p>
+        {:else}
+            <ul>
+                {#each tasks as task (task.task)}
+                    <li>
+                            <input type="checkbox" bind:checked={task.status} />
+                            <p class:active={task.status === true}>{task.task}</p>
+                            <span>
+                                <button onclick={() => delTask(task.task)}>Delete</button>
+                            </span>
+                    </li>
+                {/each}
+            </ul>        
+        {/if}
     </section>
 </div>
 
