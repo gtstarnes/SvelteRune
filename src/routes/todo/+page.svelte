@@ -17,7 +17,7 @@
             {#each tasks as task (task.task)}
                 <li>
                         <input type="checkbox" bind:checked={task.status} />
-                        <p>{task.task}</p>
+                        <p class:active={task.status === true}>{task.task}</p>
                         <span>
                             <button>Delete</button>
                         </span>
@@ -44,6 +44,11 @@
                 width: 100%;
                 align-items: center ;
                 justify-content: space-between;
+
+                .active {
+                    text-decoration: line-through;
+                    color: grey
+                }
             }
         }
     }
