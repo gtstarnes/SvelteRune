@@ -8,9 +8,11 @@ type Task = {
     edit: boolean,
 }
 
-const tasks: Task[] = [];
+let tasks: Task[] = [];
 
 function getTasks(){
     return tasks;
 }
-
+function addTask(task:Task){
+    tasks = [...tasks, task]
+}
