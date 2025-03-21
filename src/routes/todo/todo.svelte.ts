@@ -9,3 +9,8 @@ type Task = {
 }
 
 const tasks: Task[] = [];
+
+function getTasks(){
+    return tasks;
+}
+
