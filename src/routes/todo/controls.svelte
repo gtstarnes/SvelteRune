@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { addTask } from "./todo.svelte";
+	import { addTask, massDelete } from "./todo.svelte";
 
 	
 
@@ -38,7 +38,7 @@
         <input type="text" placeholder="add a task..." bind:value={input} />
         <div>
             <button onclick={createTask}>Add</button>
-            <button>Remove Completed</button>
+            <button onclick={massDelete}>Remove Completed</button>
         </div>
     </span>
     <span>{error}</span>
