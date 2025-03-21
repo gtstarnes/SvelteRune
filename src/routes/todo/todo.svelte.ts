@@ -32,4 +32,4 @@ function massDelete(){
     })
 }
 
-export default {getTasks, addTask, delTask, massDelete}
+export {getTasks, addTask, delTask, massDelete}
