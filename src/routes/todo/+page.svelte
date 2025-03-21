@@ -13,7 +13,19 @@
 <div>
     <Controls />
     <section>
-
+        <ul>
+            {#each tasks as task (task.task)}
+                <li>
+                    <div>
+                        <input type="checkbox" />
+                        <p>{task.task}</p>
+                        <span>
+                            <button>Delete</button>
+                        </span>
+                    </div>
+                </li>
+            {/each}
+        </ul>
     </section>
 </div>
 
