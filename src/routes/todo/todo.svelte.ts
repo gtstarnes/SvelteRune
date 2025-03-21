@@ -31,3 +31,5 @@ function massDelete(){
         return t.status !== true;
     })
 }
+
+export default {getTasks, addTask, delTask, massDelete}
