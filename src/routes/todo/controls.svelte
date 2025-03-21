@@ -5,11 +5,14 @@
  * REP: 3
  */
 
+ let input = $state('')
+ let error = $state('')
+
 </script>
 
 <form>
     <span>
-        <input type="text" placeholder="add a task..." />
+        <input type="text" placeholder="add a task..." bind:value={input} />
         <div>
             <button>Add</button>
             <button>Remove Completed</button>
