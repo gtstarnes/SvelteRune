@@ -8,7 +8,7 @@ type Task = {
     edit: boolean,
 }
 
-let tasks: Task[] = [];
+let tasks: Task[] = $state([]);
 
 function getTasks(){
     return tasks;
@@ -19,6 +19,7 @@ function addTask(task:string){
         status: false,
         edit: false,
     }
+    console.log(newTask)
     tasks = [...tasks, newTask]
 }
 function delTask(task:string){
