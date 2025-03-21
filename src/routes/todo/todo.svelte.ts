@@ -37,5 +37,10 @@ function massDelete(){
         return t.status !== true;
     })
 }
+function massSelect(){
+    tasks.forEach(t => {
+        return t.status = !t.status
+    })
+}
 
-export {getTasks, addTask, delTask, massDelete, findTask}
+export {getTasks, addTask, delTask, massDelete, findTask, massSelect}
