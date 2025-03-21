@@ -4,7 +4,7 @@
      */
 
 	import Controls from "./controls.svelte";
-	import { getTasks } from "./todo.svelte";
+	import { delTask, getTasks } from "./todo.svelte";
     let tasks = $derived(getTasks())
 
 
@@ -19,7 +19,7 @@
                         <input type="checkbox" bind:checked={task.status} />
                         <p class:active={task.status === true}>{task.task}</p>
                         <span>
-                            <button>Delete</button>
+                            <button onclick={() => delTask(task.task)}>Delete</button>
                         </span>
                 </li>
             {/each}
