@@ -23,7 +23,7 @@ function addTask(task:string){
     tasks = [...tasks, newTask]
 }
 function findTask(task:string){
-    return tasks.find(t => {
+    return tasks.some(t => {
         return t.task === task
     })
 }
