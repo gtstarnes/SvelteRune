@@ -16,3 +16,8 @@ function getTasks(){
 function addTask(task:Task){
     tasks = [...tasks, task]
 }
+function delTask(task:string){
+    tasks = tasks.filter(t => {
+        return t.task !== task
+    })
+}
