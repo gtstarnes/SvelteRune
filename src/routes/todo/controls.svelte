@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { addTask, massDelete } from "./todo.svelte";
+	import { addTask, findTask, massDelete } from "./todo.svelte";
 
 	
 
@@ -25,6 +25,9 @@
             case input.length > 20:
                 error = 'task cannot be longer than 20 characters'
                 break
+            case findTask(input):
+                error = 'task already exists'
+                break;
             default:
                 error = ''
                 valid = true
