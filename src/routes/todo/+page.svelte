@@ -5,7 +5,7 @@
 
 	import Controls from "./controls.svelte";
 	import { getTasks } from "./todo.svelte";
-    const tasks = $derived(getTasks())
+    let tasks = $derived(getTasks())
 
 
 </script>
@@ -17,7 +17,7 @@
             {#each tasks as task (task.task)}
                 <li>
                     <div>
-                        <input type="checkbox" />
+                        <input type="checkbox" bind:checked={task.status} />
                         <p>{task.task}</p>
                         <span>
                             <button>Delete</button>
