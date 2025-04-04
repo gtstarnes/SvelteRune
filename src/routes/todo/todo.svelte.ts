@@ -10,6 +10,9 @@ let error = $state<string>("")
 function getTasks(){
     return tasks;
 }
+function getError(){
+    return error
+}
 function addTask(task:string){
     if (!checkError(task)){
         tasks = [... tasks, {
