@@ -4,8 +4,18 @@
 
     
 const tabs:Filter[] = ['All', 'Incomplete', 'Complete'];
-let active = $state<Filter>('All')
-let tasks = $derived(getTasks(active))
+let active = $state('All')
+let tasks = $derived.by(() => {
+    switch(active){
+        case 'Complete': 
+            return filterComplete()
+        case 'Incomplete':
+            return filterIncomplete()
+        default:
+            return getTasks();
+    }
+})
+
 
 function changeActive(tab:Filter){
     if (active !== tab){
@@ -23,7 +33,7 @@ function changeActive(tab:Filter){
             {/each}
         </div>
         {#if tasks.length === 0}
-            <div>There are no tasks</div>
+            <div>There are no {active} tasks</div>
         {:else}
             <ul>
                 {#each tasks as task (task.task)}
