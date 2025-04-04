@@ -1,7 +1,10 @@
 <script lang="ts">
-	import { addTask, massDelTask, massSetStatus } from "./todo.svelte";
+	import { addTask, getError, massDelTask, massSetStatus } from "./todo.svelte";
 
     let input = $state("");
+    let error = $derived(getError())
+
+    
 </script>
 
 <div>
@@ -11,7 +14,7 @@
         <button onclick={massSetStatus}>Mass Select</button>
         <button onclick={massDelTask}>Delete Completed</button>
     </div>
-    <div></div>
+    <div>{error}</div>
 </div>
 
 
