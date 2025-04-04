@@ -3,13 +3,20 @@ export type Task = {
     status: boolean,
     edit: boolean,
 }
-type Filter = 'All' | 'Incomplete' | 'Complete'
+export type Filter = 'All' | 'Incomplete' | 'Complete'
 
 let tasks = $state<Task[]>([])
 let error = $state<string>("")
 
 function getTasks(filter: Filter){
-    return tasks;
+    switch (filter){
+        case 'Incomplete':
+            return filterIncomplete()
+        case 'Complete':
+            return filterComplete()
+        default:
+            return tasks;
+    }
 }
 function getError(){
     return error
