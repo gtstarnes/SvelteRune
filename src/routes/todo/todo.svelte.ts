@@ -5,6 +5,7 @@ type Task = {
 }
 
 let tasks = $state<Task[]>([])
+let error = $state<string>("")
 
 function getTasks(){
     return tasks;
@@ -15,6 +16,25 @@ function addTask(task:string){
         status: false,
         edit: false
     }]
+}
+function checkError(task:string){
+    let err = true;
+    switch (true){
+        case task === '':
+            error = 'tasks cannot be empty'
+            break;
+        case task.length > 20:
+            error = 'tasks cannot be longer than 20 characters'
+            break;
+        case findTask(task):
+            error = "task already exists"
+            break;
+        default:
+            error = ''
+            err = false
+    }
+
+    return err
 }
 function findTask(task:string){
     return tasks.some(t => {
