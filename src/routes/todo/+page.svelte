@@ -27,7 +27,7 @@ function changeActive(tab:Filter){
 <div>
     <Controls />
     <section>
-        <div>
+        <div class="tabs">
             {#each tabs as tab (tab)}
                 <button onclick={() => changeActive(tab)}>{tab}</button>
             {/each}
@@ -37,9 +37,11 @@ function changeActive(tab:Filter){
         {:else}
             <ul>
                 {#each tasks as task (task.task)}
-                    <li>
-                        <input type="checkbox" bind:checked={task.status}>
-                        <span>{task.task}</span>
+                    <li class="task">
+                        <span>
+                            <input type="checkbox" bind:checked={task.status}>
+                            <span>{task.task}</span>
+                        </span>
                         <span>
                             <button>Edit</button>
                             <button onclick={() => delTask(task.task)}>Delete</button>
@@ -53,5 +55,43 @@ function changeActive(tab:Filter){
 </div>
 
 <style>
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+        height: 80dvh;
 
+        .tabs {
+            display: flex;
+
+            button {
+                width: 8rem;
+            }
+        }
+
+        ul {
+            list-style: none;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+
+            .task {
+                width: 100%;
+                height: 3rem;
+                box-shadow: 6px 10px 6px rgba(0,0,0,0.2);
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+                padding: 0.2rem
+            }
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
 </style>
