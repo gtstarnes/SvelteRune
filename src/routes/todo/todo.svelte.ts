@@ -11,11 +11,13 @@ function getTasks(){
     return tasks;
 }
 function addTask(task:string){
-    tasks = [... tasks, {
-        task: task,
-        status: false,
-        edit: false
-    }]
+    if (!checkError(task)){
+        tasks = [... tasks, {
+            task: task,
+            status: false,
+            edit: false
+        }] 
+    }
 }
 function checkError(task:string){
     let err = true;
