@@ -8,15 +8,9 @@ export type Filter = 'All' | 'Incomplete' | 'Complete'
 let tasks = $state<Task[]>([])
 let error = $state<string>("")
 
-function getTasks(filter: Filter){
-    switch (filter){
-        case 'Incomplete':
-            return filterIncomplete()
-        case 'Complete':
-            return filterComplete()
-        default:
-            return tasks;
-    }
+function getTasks(){
+
+     return tasks;
 }
 function getError(){
     return error
