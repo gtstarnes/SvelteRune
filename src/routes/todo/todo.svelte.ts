@@ -71,3 +71,5 @@ function massSetStatus(){
         return task.status = !task.status;
     })
 }
+
+export { getTasks, getError, addTask, filterComplete, filterIncomplete, delTask, massDelTask, massSetStatus}
