@@ -3,32 +3,12 @@
      * REP: 3
      */
 
-	import Controls from "./controls.svelte";
-	import { delTask, getTasks } from "./todo.svelte";
-    let tasks = $derived(getTasks())
 
 
 </script>
 
 <div>
-    <Controls />
-    <section>
-        {#if tasks.length === 0}
-            <p>Task list is empty</p>
-        {:else}
-            <ul>
-                {#each tasks as task (task.task)}
-                    <li>
-                            <input type="checkbox" bind:checked={task.status} />
-                            <p class:active={task.status === true}>{task.task}</p>
-                            <span>
-                                <button onclick={() => delTask(task.task)}>Delete</button>
-                            </span>
-                    </li>
-                {/each}
-            </ul>        
-        {/if}
-    </section>
+
 </div>
 
 <style>
