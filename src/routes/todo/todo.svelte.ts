@@ -21,3 +21,8 @@ function delTask(task:string){
         return t.task !== task
     })
 }
+function massSetStatus(){
+    tasks.forEach(task => {
+        return task.status = !task.status;
+    })
+}
