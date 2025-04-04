@@ -16,6 +16,11 @@ function addTask(task:string){
         edit: false
     }]
 }
+function findTask(task:string){
+    return tasks.some(t => {
+        return t.task === task
+    })
+}
 function delTask(task:string){
     tasks = tasks.filter(t => {
         return t.task !== task
