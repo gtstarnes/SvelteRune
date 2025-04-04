@@ -50,12 +50,12 @@ function findTask(task:string){
 }
 function filterComplete() {
     return tasks.filter(t => {
-        return t.status = true;
+        return t.status === true;
     })
 }
 function filterIncomplete() {
     return tasks.filter(t => {
-        return t.status = false
+        return t.status === false
     })
 }
 function delTask(task:string){
