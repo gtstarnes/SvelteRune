@@ -1,10 +1,17 @@
 <script lang="ts">
 	import Controls from "./controls.svelte";
-	import { getTasks } from "./todo.svelte";
+	import { delTask, filterComplete, filterIncomplete, getTasks, type Filter, type Task } from "./todo.svelte";
 
-const tabs = ['All', 'Incomplete', 'Complete'];
-const tasks = $derived(getTasks());
-let active = $state('All')
+    
+const tabs:Filter[] = ['All', 'Incomplete', 'Complete'];
+let active = $state<Filter>('All')
+let tasks = $derived(getTasks(active))
+
+function changeActive(tab:Filter){
+    if (active !== tab){
+        active = tab
+    }
+}
 </script>
 
 <div>
@@ -12,7 +19,7 @@ let active = $state('All')
     <section>
         <div>
             {#each tabs as tab (tab)}
-                <button>{tab}</button>
+                <button onclick={() => changeActive(tab)}>{tab}</button>
             {/each}
         </div>
         {#if tasks.length === 0}
@@ -21,11 +28,11 @@ let active = $state('All')
             <ul>
                 {#each tasks as task (task.task)}
                     <li>
-                        <input type="checkbox">
+                        <input type="checkbox" bind:checked={task.status}>
                         <span>{task.task}</span>
                         <span>
                             <button>Edit</button>
-                            <button>Delete</button>
+                            <button onclick={() => delTask(task.task)}>Delete</button>
                         </span>
                     </li>
                 {/each}

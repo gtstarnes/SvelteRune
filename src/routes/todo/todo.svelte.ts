@@ -71,7 +71,7 @@ function delTask(task:string){
 }
 function massDelTask(){
     tasks = tasks.filter(t => {
-        return t.status === true
+        return t.status !== true
     })
 }
 function massSetStatus(){
