@@ -1,13 +1,14 @@
-type Task = {
+export type Task = {
     task: string,
     status: boolean,
     edit: boolean,
 }
+type Filter = 'All' | 'Incomplete' | 'Complete'
 
 let tasks = $state<Task[]>([])
 let error = $state<string>("")
 
-function getTasks(){
+function getTasks(filter: Filter){
     return tasks;
 }
 function getError(){
@@ -72,4 +73,4 @@ function massSetStatus(){
     })
 }
 
-export { getTasks, getError, addTask, filterComplete, filterIncomplete, delTask, massDelTask, massSetStatus}
+export {getTasks, getError, addTask, filterComplete, filterIncomplete, delTask, massDelTask, massSetStatus}
