@@ -3,3 +3,5 @@ type Task = {
     status: boolean,
     edit: boolean,
 }
+
+const tasks = $state<Task[]>([])
