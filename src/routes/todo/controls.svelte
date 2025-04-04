@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { massDelTask, massSetStatus } from "./todo.svelte";
+
 
 </script>
 
@@ -6,8 +8,8 @@
     <input type="text" placeholder="what needs doing" />
     <div>
         <button>Add Task</button>
-        <button>Mass Select</button>
-        <button>Delete Completed</button>
+        <button onclick={massSetStatus}>Mass Select</button>
+        <button onclick={massDelTask}>Delete Completed</button>
     </div>
 </div>
 
