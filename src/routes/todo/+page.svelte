@@ -8,11 +8,10 @@ const tasks = $derived(getTasks());
 
 <div>
     <Controls />
-    <div>
-        
-    </div>
     <section>
-
+        {#each tabs as tab (tab)}
+            <button>{tab}</button>
+        {/each}
     </section>
 </div>
 
