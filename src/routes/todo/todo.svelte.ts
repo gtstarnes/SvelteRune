@@ -5,3 +5,7 @@ type Task = {
 }
 
 const tasks = $state<Task[]>([])
+
+function getTasks(){
+    return tasks;
+}
