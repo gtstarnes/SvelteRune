@@ -46,6 +46,16 @@ function findTask(task:string){
         return t.task === task
     })
 }
+function filterComplete() {
+    return tasks.filter(t => {
+        return t.status = true;
+    })
+}
+function filterIncomplete() {
+    return tasks.filter(t => {
+        return t.status = false
+    })
+}
 function delTask(task:string){
     tasks = tasks.filter(t => {
         return t.task !== task
